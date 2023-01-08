@@ -1,0 +1,67 @@
+h1, p{
+    padding-left:15px;
+}
+
+form{
+    border: #7f8c8d solid 2px;
+    padding:20px;
+    margin:15px;
+    border-radius: 8px;
+}
+
+form .element-row{
+    margin-bottom: 15px;
+}
+
+/*
+    Salah satu contoh penggunaan pseudo class yang kita gunakan untuk form element seperti text.
+    Background hanya berubah menjadi kuning ketika dalam keadaan focus.
+*/
+.classic-textbox:focus{
+    background-color: #f1c40f;
+}
+.classic-textbox:disabled{
+    border:2px solid #8e44ad;
+}
+
+/*Kita bisa menggunakan pseudo class checked untuk menseleksi suatu form element yang sifatnya bisa dipilh yang kondisinya terpilih*/
+[type=checkbox]:checked + label,
+[type=radio]:checked + label{
+    font-weight: bold;
+    color: #c0392b;
+}
+
+/*Beginilah cara kita men-style sebuah check box yang ada*/
+[name=kendaraan]{
+    display:none;
+    /*Awalnya kita akan menghilangkan checkbox yang ada, walaupun di display none, checkbox tersebut sebenarnya berfungsi dengan normal.*/
+}
+.check-replacement{
+    display:inline-block;
+    width:18px;
+    height:18px;
+    box-sizing: border-box;
+    border:solid 2px #16a085;
+    vertical-align: middle;
+    border-radius: 9px;
+    /*Buatlah check box yang ada dengan menggunakan empty label, karena label kita bisa style selayaknya sebuah div atau tag lainnya.*/
+}
+[name="kendaraan"]:checked + .check-replacement{
+    background-color: #16a085;
+    /*Buatlah selector dimana styling label yang tepat disebelah checkbox yang di display none, dimana checkbox tersebut dalam keadaan di checked.*/
+}
+
+textarea{
+    resize: none;
+    width:300px;
+    height:90px;;
+}
+
+/*
+    Button dan input type submit, button, dan reset pada dasarnya tidak memiliki kemampuan cursor hover seperti pada link.
+    Kalau kalian perhatikan pointer akan berubah bentuk pada saat hover di atas sebuah link tapi tidak pada button.
+    Kita bisa men-setting itu dengan CSS.
+*/
+button, [type=reset], [type=button], [type=submit]{
+    cursor: pointer;
+}

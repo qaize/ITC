@@ -1,0 +1,33 @@
+USE membuat koneksi menuju database
+
+GO digunakan untutk memutuskan sebuah querry sehingga menghasilkan querry baru
+
+fungsi begin dan END seperti pemisah bracket { } pada bahasa pemrograman semacam fungsi atau class
+
+scope
+
+begin ( begin end ) end 
+
+public var = dapat digunakan oleh semua
+lokal var = hanya dapat digunakan pada wilayahnya sendiri
+
+ada view, table, function yang memiliki relasi agar membentuk sebuah database
+
+
+tabel ini memiliki yang kolom sebagai karakteristik/deskripsi tabel
+dalam tabel ada yang unik primary key yang membedakan data satu dengan yang lain
+
+nvarchar = unicode yang mengenal bahasa asing
+varchar = yang hanya mengenal abjad a-z
+
+
+Primary key Foreign key
+
+composite dapat membuat dua buah foreign key atau primary key skaligus
+
+bisa pake UI - tinggal tambahin klik klik
+
+Key - Unique, FK, PK dan DF
+
+MDF - attach
+BAK - restore

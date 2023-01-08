@@ -1,0 +1,1059 @@
+import java.time.*;
+import java.math.*;
+
+/* Interface adalah kontrak atau template keharusan dari setiap class atau interface lain yang mewariskannya untuk mengikuti setiap member yang interface tuliskan.
+ * Sifat-sifat interface adalah:
+ * 1.Semua class yang mewariskan interface harus memiliki method yang dituliskan interface.
+ * 2.Interface hanya bisa inherit dari interface lain.
+ * 3.Seluruh method di dalam interface hanya bisa di deklarasi, tetapi tidak bisa diimplementasikan.
+ * 4.Naming convention dari interface sama seperti class, bedanya ada huruf I besar di depan namanya.
+ * 5.Interface gak bisa di instantiate atau dibuat objectnya secara langsung.
+ * 6.Satu class bisa inherit lebih dari satu interface.
+ */
+
+/* Abstract class adalah campuran daripada interface dan base class biasa.
+ * Sifat-sifat abstract class kurang lebih:
+ * 1. Tidak bisa di instantiate seperti Interface, karena tidak ada gunanya membuat object dari class yang sifatnya abstrak.
+ * 2. Tidak seperti Interface, abstract bisa memiliki member yang diimplementasi
+ * 3. Method yang tidak diimplementasi dan menjadi contract, di label sebagai abstract.
+ * 4. Method abstract wajib di override di class yang menjadi keturunannya.
+ * 5. Sisa method yang tidak di declare abstract akan bersifat seperti member dari super class biasa.
+ */
+
+//Tidak bisa instantiate Electronic, Employee, ICitizen, IMobilePhone, IPerson, IResident, Item
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Customer alexa = new Customer();
+		alexa.setFirstName("Alexa");
+		alexa.setLastName("Red");
+		alexa.setGender("Female");
+		alexa.setBirthDate(LocalDate.of(1989, Month.OCTOBER, 21));
+		alexa.setBirthPlace("Jakarta");
+		alexa.setIDCardNumber("314999006788");
+		alexa.setCitizenship("Indonesia");
+		alexa.setMaritalStatus("Single");
+		alexa.setMemberCode("KC8371934");
+		alexa.setBalance(new BigDecimal(500000));
+		
+		IPerson susan = new Customer("KC8371934", new BigDecimal(500000)); //Bisa di set di constructor saja.
+		susan.setFirstName("Susan");
+		susan.setLastName("Ryle");
+		susan.setGender("Female");
+		susan.setBirthDate(LocalDate.of(1978, Month.OCTOBER, 21));
+		susan.setBirthPlace("Jakarta");
+		susan.setIDCardNumber("314999006788");	
+		susan.setCitizenship("Indonesia");
+		susan.setMaritalStatus("Single");
+		//susan.setMemberCode("KC8371934");
+		//susan.setBalance(new BigDecimal(500000));
+		
+	    System.out.println("==================== ALEXA THE CUSTOMER ======================");
+	    long umurAlexa = alexa.calculateAge();
+	    alexa.printBiodata();
+	    alexa.printPersonIdentity();
+	    alexa.printMemberInformation();
+	    System.out.println("==============================================================\n");		
+		
+	    System.out.println("==================== SUSAN THE IPERSON, CUSTOMER ======================");
+	    long umurSusan = susan.calculateAge();
+	    susan.printBiodata();
+	    susan.printPersonIdentity();
+	    System.out.println("==============================================================\n");
+	    
+	    TaxResident john = new TaxResident();
+	    john.setVisaStatus("Citizen");
+	    john.setTaxFileNumber("HG768324XNN");
+	    john.setVisaGrantTime(LocalDate.of(1978, Month.OCTOBER, 21));
+	    john.setFirstName("John");
+	    john.setLastName("Connor");
+	    john.setGender("Male");
+	    john.setBirthDate(LocalDate.of(1978, Month.OCTOBER, 21));
+		john.setBirthPlace("Jakarta");
+		john.setIDCardNumber("314999006788");	
+	    john.setCitizenship("United States of America");
+		john.setMaritalStatus("Married");	
+		john.setCitizenMedicalInsuranceProgram(true);
+	    john.setCitizenLifeInsuranceProgram(false);
+		john.setCitizenRetirementProgram(false);
+	    
+	    System.out.println("==================== JOHN THE TAX RESIDENT ======================");
+	    long umurJohn = john.calculateAge();
+	    john.printBiodata();
+	    john.printPersonIdentity();
+	    john.payTax();
+	    john.residencyInformation();
+	    System.out.println("==============================================================\n");		
+		
+	    IResident andre = new TaxResident();
+	    ICitizen silvia = new TaxResident();
+	    IPerson sumandi = new TaxResident();
+	    
+	    Manager sheldon = new Manager("Temporary Resident", "JK7998714VVN", LocalDate.of(2012, Month.NOVEMBER, 12), "Sheldon", 
+	            "Cooper", "Male", LocalDate.of(1967, Month.NOVEMBER, 8), "Texas", "93417923741093824", "USA", "Single");
+	    sheldon.setEmployeeNumber("123");
+	    sheldon.setHireDate(LocalDate.of(2012, Month.JULY, 22));
+	    sheldon.setSalary(new BigDecimal(7000000));
+	    
+        System.out.println("==================== SHELDON THE MANAGER ======================");
+        long umurSheldon = sheldon.calculateAge();
+        sheldon.employeeInformation();
+        sheldon.payTax();
+        sheldon.printBiodata();
+        sheldon.printPersonIdentity();
+        sheldon.residencyInformation();
+        sheldon.getAnnualSalary();
+        sheldon.yearsOfWorking();
+        System.out.println("==============================================================\n");	
+	        
+        Employee brian = new Manager("Temporary Resident", "JK799KJDLFJ", LocalDate.of(2012, Month.NOVEMBER, 12), "Brian",
+                "Soprano", "Male", LocalDate.of(1967, 10, 8), "Texas", "93417923741093824", "USA", "Single");
+        IResident mustafa = new Manager("Temporary Resident", "JK788KDFJFJ", LocalDate.of(2012, Month.NOVEMBER, 12), "Mustafa",
+            "Mamfud", "Male", LocalDate.of(1987, 10, 8), "Saudi Arabia", "93417923741093824", "Saudi Arabia", "Married");
+            
+        Item permata = new Jewelries("9837592734", "gelang permata", "brumani", new BigDecimal(50000000), "platinum");
+        Item iphone = new SmartPhone("7491273941", "iphone 6", "Apple", new BigDecimal(10000000), 2, "GSM", "IOS");
+        Item cocaCola = new SoftDrink("874917234829", "coca-cola", "Coca Cola", new BigDecimal(5000), LocalDate.of(2019, Month.OCTOBER, 19));
+        
+	}	
+}
+
+/*====================================================================================================================================*/
+
+public interface ICitizen {
+    public boolean getCitizenMedicalInsuranceProgram();
+    public void setCitizenMedicalInsuranceProgram(boolean citizenMedicalInsuranceProgram);
+    
+    public boolean getCitizenLifeInsuranceProgram();
+    public void setCitizenLifeInsuranceProgram(boolean citizenLifeInsuranceProgram);
+    
+    public boolean getCitizenRetirementProgram();
+    public void setCitizenRetirementProgram(boolean citizenRetirementProgram);
+}
+
+/*====================================================================================================================================*/
+
+public interface IMobilePhone {
+	
+    public String getPhoneType();
+    public void setPhoneType(String phoneType);
+    
+    public double getDisplaySize();
+    public void setDisplaySize(double displaySize);
+    
+    public int getBatteryCapacity();
+    public void setBatteryCapacity(int batteryCapacity);
+    
+    public String getOperatingSystem();
+    public void setOperatingSystem(String operatingSystem);
+
+    public void operatingSystemInformation();
+    public void executeCalling(String phoneNumber);
+}
+
+/*====================================================================================================================================*/
+
+import java.time.*;
+
+public interface IPerson {
+	
+    public String getFirstName();
+    public void setFirstName(String firstName);
+    
+    public String getLastName();
+    public void setLastName(String lastName);
+    
+    public String getGender();
+    public void setGender(String gender);
+    
+    public LocalDate getBirthDate();
+    public void setBirthDate(LocalDate birthDate);
+    
+    public String getBirthPlace();
+    public void setBirthPlace(String birthPlace);
+    
+    public String getIDCardNumber();
+    public void setIDCardNumber(String idCardNumber);
+
+    public String getCitizenship();
+    public void setCitizenship(String citizenship);
+    
+    public String getMaritalStatus();
+    public void setMaritalStatus(String maritalStatus);
+
+    public void printBiodata();
+    public void printPersonIdentity();
+    public long calculateAge();
+}
+
+/*====================================================================================================================================*/
+
+import java.time.*;
+
+/*
+ * IResident adalah interface kependudukan. Penduduk belum tentu warga negara, penduduk hanyalah seseorang yang berada di satu negara karena
+ * hal-hal tertentu seperti traveling, bekerja, atau belajar. Setiap penduduk pasti harus membayar pajak apabila bekerja dan beraktifitas di negara tersebut.
+ */
+
+public interface IResident extends IPerson{
+	public String getVisaStatus();
+	public void setVisaStatus(String visaStatus);
+	
+	public String getTaxFileNumber();
+	public void setTaxFileNumber(String taxFileNumber);
+	
+	public LocalDate getVisaGrantTime();
+	public void setVisaGrantTime(LocalDate visaGrantTime);
+
+	public void payTax();
+	public void residencyInformation();	 
+}
+
+/*====================================================================================================================================*/
+
+import java.time.*;
+import java.math.*;
+import java.time.temporal.ChronoUnit;
+
+/*
+ * Employee adalah abstract class yang akan di inherit oleh setiap class pekerja.
+ */
+public abstract class Employee {
+	protected String employeeNumber;
+	protected LocalDate hireDate;
+	private BigDecimal salary;
+	
+	public String getEmployeeNumber() {
+		return this.employeeNumber;
+	}
+	public void setEmployeeNumber(String employeeNumber) {
+		this.employeeNumber = employeeNumber;
+	}
+	
+	public LocalDate getHireDate() {
+		return this.hireDate;
+	}
+	public void setHireDate(LocalDate hireDate) {
+		this.hireDate = hireDate;
+	}
+	
+	public BigDecimal getSalary() {
+		return this.salary;
+	}
+	public void setSalary(BigDecimal salary) {
+		this.salary = salary;
+	}
+	
+	public abstract void employeeInformation();
+	
+    public BigDecimal getAnnualSalary() {
+        return this.salary.multiply(new BigDecimal(12));
+    }
+    
+    public long yearsOfWorking() {
+    	long years = ChronoUnit.YEARS.between(this.hireDate, LocalDate.now());
+    	return years;
+    }
+}
+
+/*====================================================================================================================================*/
+
+/*
+ * Item merupakan abstract class, karena aplikasi ini tidak mengijin kan program untuk membuat object tanpa item yang spesifik.
+ */
+import java.math.*;
+
+public abstract class Item {
+    private String itemCode;
+    private String name;
+    private String brand;
+    private BigDecimal price;
+    protected double taxPercentage;
+    
+    public String getItemCode() {
+    	return this.itemCode;
+    }
+    public void setItemCode(String itemCode) {
+    	this.itemCode = itemCode;
+    }
+    
+    public String getName() {
+    	return this.name;
+    }
+    public void setName(String name) {
+    	this.name = name;
+    }
+    
+    public String getBrand() {
+    	return this.brand;
+    }
+    public void setBrand(String brand) {
+    	this.brand = brand;
+    }
+    
+    public BigDecimal getPrice() {
+    	return this.price;
+    }
+    public void setPrice(BigDecimal price) {
+    	this.price = price;
+    }
+    
+    public abstract double getTaxPercentage();
+    public abstract void setTaxPercentage(double taxPercentage);
+
+    public Item(String itemCode, String name, String brand, BigDecimal price) {
+        this.itemCode = itemCode;
+        this.name = name;
+        this.brand = brand;
+        this.price = price;
+    }
+    
+    public BigDecimal calculatePriceAndTax() {
+    	BigDecimal taxPercentage = new BigDecimal(this.taxPercentage);
+    	taxPercentage = taxPercentage.divide(new BigDecimal(100));
+    	BigDecimal tax = taxPercentage.multiply(this.price);
+    	BigDecimal total = this.price.add(tax);
+    	return total; 	
+    }
+
+    public abstract String getInformationPerPack();
+}
+
+/*====================================================================================================================================*/
+
+import java.math.*;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class Customer implements IPerson{
+	private String firstName;
+	private String lastName;
+	private String gender;
+	private LocalDate birthDate;
+	private String birthPlace;
+	private String iDCardNumber;
+	private String citizenship;
+	private String maritalStatus;	
+	
+    public String memberCode;
+    public BigDecimal balance;
+	
+    public Customer() {
+    	
+    }
+    
+    public Customer(String memberCode, BigDecimal balance) {
+    	this.memberCode = memberCode;
+    	this.balance = balance;
+    }
+    
+	@Override
+    public String getFirstName() {
+    	return this.firstName;
+    }   
+    @Override
+    public void setFirstName(String firstName) {
+    	this.firstName = firstName;
+    } 
+    @Override
+    public String getLastName() {
+    	return this.lastName;
+    }
+    @Override
+    public void setLastName(String lastName) {
+    	this.lastName = lastName;
+    }
+    @Override
+    public String getGender() {
+    	return this.gender;
+    }
+    @Override
+    public void setGender(String gender) {
+    	this.gender = gender;
+    } 
+    @Override
+    public LocalDate getBirthDate() {
+    	return this.birthDate;
+    }
+    @Override
+    public void setBirthDate(LocalDate birthDate) {
+    	this.birthDate = birthDate;
+    }
+    @Override
+    public String getBirthPlace() {
+    	return this.birthPlace;
+    }
+    @Override
+    public void setBirthPlace(String birthPlace) {
+    	this.birthPlace = birthPlace;
+    }
+    @Override
+    public String getIDCardNumber() {
+    	return this.iDCardNumber;
+    }
+    @Override
+    public void setIDCardNumber(String idCardNumber) {
+    	this.iDCardNumber = idCardNumber;
+    }
+    @Override
+    public String getCitizenship() {
+    	return this.citizenship;
+    }
+    @Override
+    public void setCitizenship(String citizenship) {
+    	this.citizenship = citizenship;
+    }
+    @Override
+    public String getMaritalStatus() {
+    	return this.maritalStatus;
+    }
+    @Override
+    public void setMaritalStatus(String maritalStatus) {
+    	this.maritalStatus = maritalStatus;
+    }
+
+    public String getMemberCode() {
+    	return this.memberCode;
+    }
+    public void setMemberCode(String memberCode) {
+    	this.memberCode = memberCode;
+    }
+    
+    public BigDecimal getBalance() {
+    	return this.balance;
+    }
+    public void setBalance(BigDecimal balance) {
+    	this.balance = balance;
+    }
+    
+    @Override
+    public void printBiodata() {
+        String fullName = String.format("%s %s", this.firstName, this.lastName);
+        System.out.printf("Nama dari orang ini %s, Jenis Kelamin %s, Status Pernikahan %s\n", fullName, this.gender, this.maritalStatus);    	
+    }
+    
+    @Override
+    public void printPersonIdentity() {
+        System.out.printf("Nomor Kartu Identitas %s, Kewarganegaraan %s\n", this.iDCardNumber, this.citizenship);    	
+    }
+    
+    public void printMemberInformation() {
+        System.out.printf("Member with code: %s, still has %s\n", this.memberCode, this.balance);
+    }    
+    
+    @Override
+    public long calculateAge() {
+        LocalDate today = LocalDate.now();
+        long yearsPeriod = ChronoUnit.YEARS.between(this.birthDate, today);
+        return yearsPeriod;
+    }
+}
+
+/*====================================================================================================================================*/
+
+/*
+ * Electronic merupakan jenis Item yang sifatnya abstract class,
+ * artinya belum bisa di instantiate tanpa mengetahui jelas ini electronic macam apa.
+ */
+
+import java.math.*;
+import java.time.*;
+
+public abstract class Electronic extends Item {
+	private int yearsOfWarranty;
+	
+	public int getYearsOfWarranty() {
+		return this.yearsOfWarranty;
+	}
+	
+	public void setYearsOfWarranty(int yearsOfWarranty) {
+		this.yearsOfWarranty = yearsOfWarranty;
+	}
+	
+	@Override
+    public double getTaxPercentage() {
+		return this.taxPercentage;
+	};
+	
+	@Override
+    public void setTaxPercentage(double taxPercentage) {
+		this.taxPercentage = taxPercentage;
+	};
+	
+    public Electronic(String itemCode, String name, String brand, BigDecimal price, int yearsOfWarranty) {
+    	super(itemCode, name, brand, price);
+    	this.yearsOfWarranty = yearsOfWarranty;
+    }
+    
+    @Override
+    public String getInformationPerPack() {
+        return "Electronic item has no pack";
+    }    
+    
+    public LocalDate calculateWarrantyExpire(LocalDate purchaseDate) {
+        LocalDate warrantyExpireDate = purchaseDate.plusYears(yearsOfWarranty);
+        return warrantyExpireDate;
+    }    
+}
+
+/*====================================================================================================================================*/
+
+import java.math.*;
+
+public class Jewelries extends Item {
+	private String material;
+	private double weight;
+	
+	public String getMaterial() {
+		return this.material;
+	}
+	public void setMaterial(String material) {
+		this.material = material;
+	}
+	
+	public double getWeight() {
+		return this.weight;
+	}
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	
+	@Override
+    public double getTaxPercentage() {
+    	return this.taxPercentage;
+    }
+	
+	@Override
+    public void setTaxPercentage(double taxPercentage) {
+    	if((this.getPrice().compareTo(new BigDecimal(20000000)))==1) {
+    		this.setPrice(new BigDecimal(15));
+    	}
+    	this.setPrice(new BigDecimal(10));
+    }
+
+    public Jewelries(String itemCode, String name, String brand, BigDecimal price, String material){
+    	super(itemCode, name, brand, price);
+        this.material = material;
+    }	
+	
+    @Override
+    public String getInformationPerPack() {
+        return "Jelewries item has no pack";
+    }
+    
+    public String jewelryInformation() {
+        String information = String.format("the jewelry consist of %s gram of %f.2\n", this.material, this.weight);
+        return information;
+    }
+}
+
+/*====================================================================================================================================*/
+
+/*
+ * Manager adalah class yang meng-inherit Employee dan IResident.
+ */
+import java.util.*;
+import java.time.*;
+import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeFormatter;
+import java.math.*;
+import java.text.NumberFormat;
+
+public class Manager extends Employee implements IResident {
+    public String visaStatus;
+    public String taxFileNumber;
+    public LocalDate visaGrantTime;
+    public String firstName;
+    public String lastName;
+    public String gender;
+    public LocalDate birthDate;
+    public String birthPlace;
+    public String iDCardNumber;
+    public String citizenship;
+    public String maritalStatus;
+    
+	@Override
+    public String getFirstName() {
+    	return this.firstName;
+    }   
+    @Override
+    public void setFirstName(String firstName) {
+    	this.firstName = firstName;
+    } 
+    @Override
+    public String getLastName() {
+    	return this.lastName;
+    }
+    @Override
+    public void setLastName(String lastName) {
+    	this.lastName = lastName;
+    }
+    @Override
+    public String getGender() {
+    	return this.gender;
+    }
+    @Override
+    public void setGender(String gender) {
+    	this.gender = gender;
+    } 
+    @Override
+    public LocalDate getBirthDate() {
+    	return this.birthDate;
+    }
+    @Override
+    public void setBirthDate(LocalDate birthDate) {
+    	this.birthDate = birthDate;
+    }
+    @Override
+    public String getBirthPlace() {
+    	return this.birthPlace;
+    }
+    @Override
+    public void setBirthPlace(String birthPlace) {
+    	this.birthPlace = birthPlace;
+    }
+    @Override
+    public String getIDCardNumber() {
+    	return this.iDCardNumber;
+    }
+    @Override
+    public void setIDCardNumber(String idCardNumber) {
+    	this.iDCardNumber = idCardNumber;
+    }
+    @Override
+    public String getCitizenship() {
+    	return this.citizenship;
+    }
+    @Override
+    public void setCitizenship(String citizenship) {
+    	this.citizenship = citizenship;
+    }
+    @Override
+    public String getMaritalStatus() {
+    	return this.maritalStatus;
+    }
+    @Override
+    public void setMaritalStatus(String maritalStatus) {
+    	this.maritalStatus = maritalStatus;
+    }   
+    
+    @Override
+	public String getVisaStatus() {
+		return this.visaStatus;
+	}	
+	@Override
+	public void setVisaStatus(String visaStatus) {
+		this.visaStatus = visaStatus;
+	}	
+	@Override
+	public String getTaxFileNumber() {
+		return this.taxFileNumber;
+	}	
+	@Override
+	public void setTaxFileNumber(String taxFileNumber) {
+		this.taxFileNumber = taxFileNumber;
+	}
+	@Override
+	public LocalDate getVisaGrantTime() {
+		return this.visaGrantTime;
+		
+	}
+	@Override
+	public void setVisaGrantTime(LocalDate visaGrantTime) {
+		this.visaGrantTime = visaGrantTime;
+	}
+    
+    public Manager(String visaStatus, String taxFileNumber, LocalDate visaGrantTime, String firstName, String lastName, 
+    		String gender, LocalDate birthDate, String birthPlace, String iDCardNumber, String citizenship, String maritalStatus) {
+        this.visaStatus = visaStatus;
+        this.taxFileNumber = taxFileNumber;
+        this.visaGrantTime = visaGrantTime;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.birthPlace = birthPlace;
+        this.iDCardNumber = iDCardNumber;
+        this.citizenship = citizenship;
+        this.maritalStatus = maritalStatus;
+    }
+    
+    public long calculateAge() {
+       long years = ChronoUnit.YEARS.between(this.birthDate, LocalDate.now());
+       return years;
+    }
+    
+    @Override
+    public void employeeInformation() {
+        DateTimeFormatter shortFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String formatted = shortFormat.format(this.hireDate);
+    	System.out.printf("The employee number of %s is %s, and he/she is start working from %s\n", this.firstName, this.employeeNumber, formatted);
+    }
+    
+    public void payTax() {
+        BigDecimal annualSalary = getAnnualSalary();
+        BigDecimal totalTax;
+        if (annualSalary.compareTo(new BigDecimal(40000000)) == 1) {
+            totalTax = annualSalary.multiply(new BigDecimal(0.1));
+        } else {
+            totalTax = annualSalary.multiply(new BigDecimal(0.05));
+        }
+        Locale locale = new Locale("id", "ID");
+        String formatted = NumberFormat.getCurrencyInstance(locale).format(totalTax);
+        System.out.printf("%s must pay %s annually from his/her salary", this.firstName, formatted);
+    }
+
+    public void printBiodata() {
+        String fullName = String.format("%s %s", this.firstName, this.lastName);
+        System.out.printf("Nama dari orang ini %s, Jenis Kelamin %s, Status Pernikahan %s\n", fullName, this.gender, this.maritalStatus);
+    }
+    
+    public void printPersonIdentity() {
+        System.out.printf("Nomor Kartu Identitas %s, Kewarganegaraan %s\n", this.iDCardNumber, this.citizenship);
+    }
+
+    public void residencyInformation() {
+        System.out.printf("%s grant a %s, on %s\n", this.firstName, this.visaStatus, this.visaGrantTime);
+    }    
+}
+
+/*====================================================================================================================================*/
+
+/*
+ * SmartPhone merupakan salah satu jenis Electronic, tetapi juga mewariskan template dari IMobilePhone
+ */
+
+import java.util.*;
+import java.math.*;
+
+public class SmartPhone extends Electronic implements IMobilePhone {
+	
+    public String phoneType;
+    public double displaySize;
+    public int batteryCapacity;
+    public String operatingSystem;
+    public List<String> applications;
+     
+    @Override
+    public String getPhoneType() {
+    	return this.phoneType;
+    }
+    
+    @Override
+    public void setPhoneType(String phoneType) {
+    	this.phoneType = phoneType;
+    }
+    
+    @Override
+    public double getDisplaySize() {
+    	return this.displaySize;
+    }
+    
+    @Override
+    public void setDisplaySize(double displaySize) {
+    	this.displaySize = displaySize;
+    }
+    
+    @Override
+    public int getBatteryCapacity() {
+    	return this.batteryCapacity;
+    }
+    
+    @Override
+    public void setBatteryCapacity(int batteryCapacity) {
+    	this.batteryCapacity = batteryCapacity;
+    }
+    
+    @Override
+    public String getOperatingSystem()
+    {
+    	return this.operatingSystem;
+    }
+    
+    @Override
+    public void setOperatingSystem(String operatingSystem) {
+    	this.operatingSystem = operatingSystem;
+    }
+    
+    public List<String> getApplications(){
+    	return this.applications;
+    }
+    
+    public void setApplications(List<String> applications) {
+    	this.applications = applications;
+    }
+    
+    public SmartPhone(String itemCode, String name, String brand, BigDecimal price, int yearsOfWarranty, String phoneType, String operatingSystem) {
+    	super(itemCode, name, brand, price, yearsOfWarranty);
+        this.phoneType = phoneType;
+        this.operatingSystem = operatingSystem;
+    }
+    
+    @Override
+    public void executeCalling(String phoneNumber) {
+    	System.out.printf("Calling this number %s\n", phoneNumber);
+    }
+    
+    @Override
+    public void operatingSystemInformation() {
+    	System.out.printf("Operating system in this phone is %s", this.operatingSystem);    	
+    }
+}
+
+/*====================================================================================================================================*/
+
+/*
+ * Softdrink adalah salah satu jenis Item dan merupakan class regular
+ */
+import java.time.*;
+import java.math.*;
+import java.time.temporal.*;
+
+public class SoftDrink extends Item {
+	private LocalDate expireDate;
+	private int totalPerPack;
+	private int type;
+	private int volume;
+	
+	@Override
+    public double getTaxPercentage() {
+    	return this.taxPercentage;
+    };
+    
+    @Override
+    public void setTaxPercentage(double taxPercentage) {
+    	this.taxPercentage = taxPercentage;
+    };	
+    
+    public LocalDate getExpireDate() {
+    	return this.expireDate;
+    }
+    public void setExpireDate(LocalDate expireDate) {
+    	this.expireDate = expireDate;
+    }
+    
+    public int getTotalPerPack() {
+    	return this.totalPerPack;
+    }
+    public void setTotalPerPack(int totalPerPack) {
+    	this.totalPerPack = totalPerPack;
+    }
+    
+    public int getType() {
+    	return this.type;
+    }
+    public void setType(int type) {
+    	this.type = type;
+    }
+    
+    public int getVolume() {
+    	return this.volume;
+    }
+    public void setVolume(int volume) {
+    	this.volume = volume;
+    }
+  
+    public SoftDrink(String itemCode, String name, String brand, BigDecimal price, LocalDate expireDate){
+    	super(itemCode, name, brand, price);
+        this.expireDate = expireDate;
+    } 
+    
+    @Override
+    public String getInformationPerPack() {
+        String information = String.format("%d %d of %d per pack\n", this.totalPerPack, this.volume, this.type);
+        return information;
+    }    
+    
+    public long daysToExpire() {
+    	long range = ChronoUnit.DAYS.between(LocalDate.now(), this.expireDate);
+    	return range;
+    }    
+}
+
+/*====================================================================================================================================*/
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+
+public class TaxResident implements ICitizen, IResident{
+    public String visaStatus;
+    public String taxFileNumber;
+    public LocalDate visaGrantTime;
+    public String firstName;
+    public String lastName;
+    public String gender;
+    public LocalDate birthDate;
+    public String birthPlace;
+    public String iDCardNumber;
+    public String citizenship;
+    public String maritalStatus;
+    public boolean citizenMedicalInsuranceProgram;
+    public boolean citizenLifeInsuranceProgram;
+    public boolean citizenRetirementProgram;
+    
+    public String getFirstName() {
+    	return this.firstName;
+    }   
+
+    public void setFirstName(String firstName) {
+    	this.firstName = firstName;
+    }
+
+    public String getLastName() {
+    	return this.lastName;
+    }
+
+    public void setLastName(String lastName) {
+    	this.lastName = lastName;
+    }  
+
+    public String getGender() {
+    	return this.gender;
+    }
+
+    public void setGender(String gender) {
+    	this.gender = gender;
+    }    
+
+    public LocalDate getBirthDate() {
+    	return this.birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+    	this.birthDate = birthDate;
+    }
+
+    public String getBirthPlace() {
+    	return this.birthPlace;
+    }
+
+    public void setBirthPlace(String birthPlace) {
+    	this.birthPlace = birthPlace;
+    }
+
+    public String getIDCardNumber() {
+    	return this.iDCardNumber;
+    }
+
+    public void setIDCardNumber(String idCardNumber) {
+    	this.iDCardNumber = idCardNumber;
+    }
+
+    public String getCitizenship() {
+    	return this.citizenship;
+    }
+    
+    public void setCitizenship(String citizenship) {
+    	this.citizenship = citizenship;
+    }
+
+    public String getMaritalStatus() {
+    	return this.maritalStatus;
+    }
+
+    public void setMaritalStatus(String maritalStatus) {
+    	this.maritalStatus = maritalStatus;
+    } 
+    
+    @Override
+	public String getVisaStatus() {
+    	return this.visaStatus;
+    }
+	
+	@Override
+	public void setVisaStatus(String visaStatus) {
+		this.visaStatus = visaStatus;
+	}
+	
+	@Override
+	public String getTaxFileNumber() {
+		return this.taxFileNumber;
+	}
+	
+	@Override
+	public void setTaxFileNumber(String taxFileNumber) {
+		this.taxFileNumber = taxFileNumber;
+	}
+	
+	@Override
+	public LocalDate getVisaGrantTime() {
+		return this.visaGrantTime;
+	}
+	
+	@Override
+	public void setVisaGrantTime(LocalDate visaGrantTime) {
+		this.visaGrantTime = visaGrantTime;
+	}
+
+	@Override
+    public boolean getCitizenMedicalInsuranceProgram() {
+		return this.citizenMedicalInsuranceProgram;
+	}
+	
+	@Override
+    public void setCitizenMedicalInsuranceProgram(boolean citizenMedicalInsuranceProgram) {
+		this.citizenMedicalInsuranceProgram = citizenMedicalInsuranceProgram;
+	}
+	
+	@Override
+    public boolean getCitizenLifeInsuranceProgram() {
+		return this.citizenLifeInsuranceProgram;
+	}
+	
+	@Override
+    public void setCitizenLifeInsuranceProgram(boolean citizenLifeInsuranceProgram) {
+		this.citizenLifeInsuranceProgram = citizenLifeInsuranceProgram;
+	}
+	
+	@Override
+    public boolean getCitizenRetirementProgram() {
+		return this.citizenRetirementProgram;
+	}
+	
+	@Override
+    public void setCitizenRetirementProgram(boolean citizenRetirementProgram) {
+		this.citizenRetirementProgram = citizenRetirementProgram;
+	}
+	
+	@Override
+	public void payTax() {
+        double taxPercentage = 5;
+        if (this.citizenMedicalInsuranceProgram == true) {
+            taxPercentage += 5;
+        }
+        if (this.citizenLifeInsuranceProgram == true) {
+            taxPercentage += 5;
+        }
+        if (this.citizenRetirementProgram == true) {
+            taxPercentage += 5;
+        }
+        System.out.printf("Total percentage of tax is %.2f %%, paid by %s\n", taxPercentage, this.visaStatus);		
+	}
+	
+	@Override
+	public void residencyInformation() {
+		DateTimeFormatter shortFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+	    String grantTime = shortFormat.format(this.visaGrantTime);
+		System.out.printf("%s grant a %s, on %s\n", this.firstName, this.visaStatus, grantTime);		
+	}
+	
+    //Ini hanya contoh, tetapi pada dasarnya kalau ini semua satu aplikasi, ini contoh yang tidak baik, karena double code dengan Customer
+    public long calculateAge() {
+        LocalDate today = LocalDate.now();
+        long yearsPeriod = ChronoUnit.YEARS.between(this.birthDate, today);
+        return yearsPeriod;
+    }
+
+    public void printBiodata() {
+        String fullName = String.format("%s %s", this.firstName, this.lastName);
+        System.out.printf("Nama dari orang ini %s, Jenis Kelamin %s, Status Pernikahan %s\n", fullName, this.gender, this.maritalStatus);    	
+    }
+    
+    public void printPersonIdentity() {
+        System.out.printf("Nomor Kartu Identitas %s, Kewarganegaraan %s\n", this.iDCardNumber, this.citizenship);    	
+    }
+}
+

@@ -1,0 +1,130 @@
+.experimenting-position{
+    background-color:lightgray;
+}
+
+.experimenting-position > .block{
+    color:white;
+    width:100px;
+    height:100px;
+}
+.experimenting-position > .block:nth-child(1){
+    background-color: #c0392b;
+}
+.experimenting-position > .block:nth-child(2){
+    background-color: #d35400;
+}
+.experimenting-position > .block:nth-child(3){
+    background-color: #f1c40f;
+}
+.experimenting-position > .block:nth-child(4){
+    background-color: #2980b9;
+}
+.experimenting-position > .block:nth-child(5){
+    background-color: #8e44ad;
+}
+.experimenting-position > .block:nth-child(6){
+    background-color: #e84393;
+}
+.experimenting-position > .block:nth-child(7){
+    background-color: #5758BB;
+}
+.experimenting-position > .block:nth-child(8){
+    background-color: #006266;
+}
+h1, h2, h3, p{
+    padding-left: 20px;
+}
+
+.static{
+    position:static;
+    top: 10px;
+    left: 10px;
+    /*position static tidak akan memberikan dampak pada top dan left di bawah ini.*/
+}
+.relative{
+    position: relative;
+    top: 10px;
+    left: 115px;
+    /*
+        Perhatikan hasilnya, lokasi yang tadinya ditempati block 3 ini, masih menghasilkan ruang.
+        Seolah-olah masih ada bekas tempat block 3 menempatinya.
+
+        Selain itu lihatlah hasilnya, block 3 bergeser 10px ke bawah dan 115px ke kanan dari
+        posisi semula dia berada.
+    */
+}
+.absolute{
+    position: absolute;
+    top:20px;
+    right:30px;
+    /*
+        Perhatikan kondisi pada block 5, ini sangat berbeda dengan block 3. Yang tadinya block 5 berada di antara block 4 dan block 6,
+        sekarang block 4 nempel dengan block 6. Dari hasil ini seolah-olah posisi block 5 pada awalnya sudah tidak dianggap.
+
+        Block 5 posisinya bergeser 20px dari atas dan 30px bergeser dari kanan, tapi dari posisi layar browser.
+    */
+}
+.fixed{
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    /*
+        Posisi dan kondisi block 7, kelihatanya mirip dengan block 5 yang absolute, tetapi fixed sangat berbeda dengan absolute,
+        cobalah scroll halaman site, kalian akan melihat block 7 akan tetap berada di sana, atau tidak akan ikut ke scroll.
+    */
+}
+
+.parent-position{
+    position: relative;
+    background-color: rgba(0,0,0, 0.2)
+}
+.parent-position .block{
+    width:150px;
+    height:150px;
+    border:solid black 1px;
+    margin-bottom:5px;
+    background-color: #f1c40f;
+}
+.static-parent{
+    position: static;
+}
+.relative-parent{
+    position: relative;
+}
+.absolute-parent{
+    position: absolute;
+}
+.fixed-parent{
+    position:fixed;
+    bottom: 6px;
+    right: 119px;
+}
+
+/*
+    Setiap child box pada contoh di bawah ini memiliki properties yang sama persis, tetapi resultnya berbeda,
+    karena memiliki parent dengan position yang berbeda-beda juga.
+
+    1. Child dari static parent tidak akan bisa melihat posisi parentnya, sehingga 0,0 nya di dapat dari container abu transparant dengan class .parent-position.
+    Ini disebabkan karena position static bisa dikatakan tidak ada posisinya, oleh karena itu childnya tidak mengerti harus berpatokan bottom:0 dan right:0 dari mana.
+
+    2. Child dari relative parent akan bisa mendeteksi position parentnya, sehingga child mengetahui bahwa titik 0 dari bawah dan titik 0 dari kanan nya adalah 
+    milik parentnya.
+
+    3. Child dari absolute parent sama seperti pada relative, childnya bisa mengetahui dan melihat posisi parentnya. Tapi seperti yang kita lihat di contoh,
+    karena position parentnya absolute, maka secara keseluruhan tidak akan dianggap oleh container abu-abu transparantnya.
+
+    4. Scenario yang sama dialami child dari fixed parent, child bisa melihat posisi parentnya dan anaknya juga akan dibawa sebagai fixed element.
+    Sehingga kalau di scroll pun akan mengikut dengan parentnya dan tidak tertinggal.
+
+    Note: apabila anda membuat suatu posisi atau ukuran 0, jangan tulis px atau pt atau em. Karena segala sesuatu yang 0 tidak ada artinya dengan satuan. 0px = 0pt.
+    0cm = 0km.
+*/
+.child{
+    background-color: #c0392b;
+    color:white;
+    width:70px;
+    height: 70px;
+    position: absolute;
+    bottom:0;
+    right:0;
+}

@@ -1,0 +1,71 @@
+Ambigu name dari dua tabel yang berbeda yang memiliki nama kolom yang sama
+solusinya membuat sebuah alias tabel
+
+urutan filterasi eksekusi
+1. from - Join
+2. Where
+2.Group By
+3.Having
+4. Select
+5. order by
+
+setelah terselect atau melalui proses filtrasi baru di ururtkan denga order by
+
+
+WHERE sebuah filtrasi dengan cara pengkondisian yang berdasarkan nilai dari sebuah kolom pada tabel
+
+operator pada Where =,!=/<>, <=,>= BETWEEN, NOT BETWEEN note : gunakan operator sesuai dengan tipe data dari sebuah kolom
+
+pengkodisian lebih dari 1 menggunakan AND OR
+AND = semua harus Benar
+OR = Salah satu benar maka akan di anggap benar
+
+pengkodisian itu beracuan pada kondisi 1 dan 2, apabila lebih dari 2 kondisi maka hasil kondisi sebelumnya akan menjadi kondisi selanjutnya misal kon 1 sama 2, hasil kon 1&2 sama 3
+Filtrasi where dapat dilakukan dengan lebih dari 1 kolom
+
+TIPE IN ADALAH LIST berapa pun jumlah isinya
+
+-dalam in bisa melakukan select-
+
+jenis value
+
+skalar value = 1 baris 1 kolom
+
+list value = 1 kolom banyak baris
+
+Table Value  = Bisa sklar bisa list
+
+kalo dah data itu brati antara list dan table ,kalo single select baru sklar
+sama kyk skill single target dan skill AOE di ML
+
+perintah LIKE ini semacam pencarian dengan String '% data %'
+
+format date yyyy-mm-dd - format time HH:MM:SS
+
+date ini dapat menggunakan operator pengkondisian harus pake string dan format yang tepat
+
+Summary Record - SUM AVG COUNT MIN MAX
+
+----------------------------
+AGGREGATE FUNCTION
+SUM = menjumhlahkan isi kolom berdasarkan jumlah data pda kolom
+COUNT = menghitung banyak data pada sebuah tabel namun tidak menghitung data yang bersifat NULL
+AVG = rata-rata dari sebuah kolom pada tabel (data yang dapat dioperasikan hnya numerik)
+MIN = nilai terendah untuk karakter//string dia yang di ambil abjad ter kecil 
+MAX =  Nilai tertinggi pada bilangan numerik dan string
+-----------------------------------------------------
+-kolom group by ini harus sesuai dengan kolom yang di select berapa pun jumlah yang diselect harus di ikutin juga jika dua di select maka dua di gorup by 
+
+-Order by = ASCENDING dan DESCENDING (abjad dan numerik)
+
+jangan malas kontol
+
+- Having 
+penguunan agregate function tidak dapat digunakan pada where cara untuk menggunkannya yaitu dengan cara memanfaatkan sintaks having 
+
+employe terbanyak dan di kota apa
+
+gabungan kota dengan jumlah kustomer 3 terbanyak dengan 1 supllier terbanyak
+
+
+

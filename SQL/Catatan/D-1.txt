@@ -1,0 +1,34 @@
+database merupakan sebuah penyimpanan data yang dapat diolah untuk menampilkan sebuah informasi yang informatif
+
+informatif berarti sesuai dengan permintaan 
+
+
+windows authentication - sebuah server bersifat lokal yang dapat diakses hanya dari komputer sendiri
+
+sql server authetication - sebuah metode untuk mengakses server luar
+
+
+
+database - 
+
+sebuah string dapat ditambahkan ( dapat melakukan operasi penjumlahan dengan operator (+)) yang mana data tersebut akan lengket dalam artian data tersebut akan menyatu tidak memiiliki sebuah spasi, asli penjumlahan dengan syarat kedua penjumlahan tersebut adalah sebuah string.
+
+function warna pink harus memiliki () 
+CONCAT adalah sebuah fungsi yang digunakan untuk menggabungkan sebuah data bertipe data String
+
+alias dapat digunakan pada kolom dengan tipe data string
+
+Pelajaran hari ini :
+- belajar melakukan select pada kolom tabel, setiap tabel memiliki 1 buah kolom atau lebih
+- kolom disini dapat merepresentasikan sebuah attribut atau karakteristik dari sebuah tabel
+sedangkan tabel dapat merepresntasikan sebuah objek di dunia nyata atau biasa disebut entitas pada ERD
+- segala hal dapat dimanipulasi pada querry 
+
+-------------------------------------------------
+SELECT = perintah digunakan untuk memiliih hal yang akan dimanipulasi sebuah kolom-kolom dalam sebuah querry untuk ditampilkan
+FROM = sintaks untuk menunjuk tabel yang akan dipilih
+ALIAS/AS = dapat mengganti nama sebuah kolom atau memebuat sebuah objek pada sebuah tabel yang dapat digunakan pada sebuah kolom(objek disini seperti label pada sebuah barang sebagai penanda kalo itu milikinya)
+
+CONCAT = sebuah fungsi yang digunakan untuk menggabungkan bebrapa kolom menjadi satu
+(CONCAT(kolom,kolom)) DAN concat juga dapat dilakukan dengan cara operasi string
+

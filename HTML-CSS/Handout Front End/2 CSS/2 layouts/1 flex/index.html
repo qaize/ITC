@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      color: #fff;
+      font-size: 72px;
+      text-align: center;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+
+      /*main axis */
+      justify-content: center;
+      /*cross axis*/
+      align-items: center;
+      gap: 20px;
+
+      height: 200px;
+
+      background-color: #eee;
+    }
+
+    .item {
+      width: 100px;
+    }
+
+    .box--1 {
+      order: 3;
+      align-self: stretch;
+      background-color: #f00;
+    }
+
+    .box--2 {
+      order: 1;
+      align-self: flex-start;
+      background-color: #0f0;
+    }
+
+    .box--3 {
+      order: 4;
+      align-self: flex-end;
+      background-color: #00f;
+    }
+
+    .box--4 {
+      order: 2;
+      align-self: center;
+      background-color: #f0f;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <div class="item box--1">1</div>
+    <div class="item box--2">2</div>
+    <div class="item box--3">3</div>
+    <div class="item box--4">4</div>
+  </div>
+</body>
+
+</html>

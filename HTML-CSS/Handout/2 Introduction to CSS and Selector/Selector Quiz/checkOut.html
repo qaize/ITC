@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jagonya Tukang. Jasa perawatan rumah, servis ac, cuci ac, isi freon, perbaikan atap rumah bocor, perbaikan listrik, perbaikan saluran air mampet, pasang keramik">
+    <meta name="author" content="Boby Widjaja">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+    <title>Jagonya Tukang - Perawatan Rumah: AC, Atap Bocor, Listrik, Pipa Air</title>
+    <link rel="stylesheet" type="text/css" href="Content/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Content/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="Content/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="Content/site.css" />
+    <script src="Scripts/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="Scripts/jssor.slider-22.1.9.mini.js" type="text/javascript"></script>
+    <script src="Scripts/site.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <!--17. Checkout Container-->
+    <div class="global-checkout-container">
+        <div class="checkout-container">
+            <h1>CHECKOUT</h1>
+            <ul class="tab-head">
+                <li><a id="tab1-head" class="selected" href="javascript:;"><span>1</span>Informasi Pelanggan</a></li>
+                <li><a id="tab2-head" href="javascript:;"><span>2</span>Alamat Pengerjaan</a></li>
+                <li><a id="tab3-head" href="javascript:;"><span>3</span>Metode Pembayaran</a></li>
+            </ul>
+            <div id="tab1-container" class="tab-body selected">
+                <div class="other-account">
+                    <h2>Informasi Pelanggan</h2>
+                    <a href="javascript:;" class="facebook-button"><i class="fa fa-facebook" aria-hidden="true"></i><span>Sign-in with Facebook</span></a>
+                    <a href="javascript:;" class="gmail-button"><i class="fontello-icon icon-google"></i><span>Sign-in with Gmail</span></a>
+                </div>
+                <div class="checkout-login-container">
+                    <div class="stereo-radio radio-on">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="radio" name="access-way" value="login" checked>
+                        <label>Masuk ke akun Anda</label>
+                    </div>
+                    <div id="login-form-body">
+                        <div class="text-field">
+                            <label>Email</label>
+                            <input type="text" class="stereo-textbox" placeholder="Masukan email" />
+                        </div>
+                        <div class="text-field">
+                            <label>Kata Sandi</label>
+                            <input type="text" class="stereo-textbox" placeholder="Masukan email" />
+                        </div>
+                        <a href="javascript:;" class="remember-password">Lupa kata sandi?</a>
+                        <input class="login-button stereo-button" type="submit" value="Masuk" />
+                    </div>
+                </div>
+                <div class="checkout-signup-container">
+                    <div class="stereo-radio radio-off">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="radio" name="access-way" value="register">
+                        <label>Buat akun baru</label>
+                    </div>
+                    <div id="register-form-body">
+                        <div class="row-group">
+                            <div class="text-field twin-col">
+                                <label>Nama Depan <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" />
+                            </div>
+                            <div class="text-field twin-col">
+                                <label>Nama Belakang</label>
+                                <input class="stereo-textbox" type="text" />
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field full-col">
+                                <label>Email <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" />
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field twin-col">
+                                <label>Kata Sandi <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="password" />
+                            </div>
+                            <div class="text-field twin-col">
+                                <label>Masukkan Ulang Kata Sandi <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="password" />
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field full-col">
+                                <label>Alamat <span class="required">*</span></label>
+                                <textarea class="stereo-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field triple-col">
+                                <label>Kota <span class="required">*</span></label>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Kota</option>
+                                        <option value="jakarta">Jakarta</option>
+                                        <option value="surabaya">Surabaya</option>
+                                        <option value="bandung">Bandung</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="text-field triple-col">
+                                <label>Kelurahan <span class="required">*</span></label>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Kelurahan</option>
+                                        <option value="jakarta">Duri Kepa</option>
+                                        <option value="surabaya">Gambir</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="text-field triple-col">
+                                <label>Kecamatan <span class="required">*</span></label>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Kecamatan</option>
+                                        <option value="jakarta">Kebon Jeruk</option>
+                                        <option value="surabaya">Kebon Melati</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field triple-col">
+                                <label>Nama Daerah <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" placeholder="Contoh: Pondok Indah" />
+                            </div>
+                            <div class="text-field triple-col">
+                                <label>Kode Pos <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" />
+                            </div>
+                            <div class="text-field triple-col">
+                                <label>Jenis Kelamin <span class="required">*</span></label>
+                                <div class="classic-radio">
+                                    <input id="signup-male" type="radio" name="gender" value="male" checked>
+                                    <label class="dot-point" for="signup-male"></label>
+                                    <label>Laki-laki</label>
+                                </div>
+                                <div class="classic-radio">
+                                    <input id="signup-female" type="radio" name="gender" value="female">
+                                    <label class="dot-point" for="signup-female"></label>
+                                    <label>Perempuan</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field twin-col">
+                                <label>Nomor Telepon <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" placeholder="021-xxxxxxx" />
+                            </div>
+                            <div class="text-field twin-col">
+                                <label>Nomor HP <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" placeholder="081x-xxxx-xxx" />
+                            </div>
+                        </div>
+                        <input class="sign-up stereo-button" type="submit" value="Lanjutkan" />
+                    </div>
+                </div>
+                <div class="quick-checkout">
+                    <div class="stereo-checkbox radio-off">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="checkbox" name="quick-checkout" value="register">
+                        <label>Simpan data saya untuk mempercepat checkout</label>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2-container" class="tab-body">
+                <div class="existing-location-container">
+                    <h2>Lokasi Pengerjaan</h2>
+                    <div class="stereo-radio radio-on">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="radio" name="location-service" value="existing" checked>
+                        <label>Sama dengan Alamat Pemesan</label>
+                    </div>
+                    <div class="existing-address">
+                        <span class="name">Emily Hakim</span>
+                        <span>Jalan Setiabudi No.66</span>
+                        <span>Gambir - Gambir</span>
+                        <span>Kota Jakarta Pusat, DKI Jakarta</span>
+                        <span>Daerah Petojo, 10122</span>
+                        <span>(021)7865283</span>
+                        <span>+62 817 6699 456</span>
+                    </div>
+                </div>
+                <div class="new-location-container">
+                    <div class="stereo-radio radio-off">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="radio" name="location-service" value="new">
+                        <label>Gunakan alamat pengerjaan yang berbeda</label>
+                    </div>
+                    <div class="new-location-form">
+                        <div class="row-group">
+                            <div class="text-field full-col">
+                                <label>Alamat <span class="required">*</span></label>
+                                <textarea class="stereo-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field triple-col">
+                                <label>Kota <span class="required">*</span></label>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Kota</option>
+                                        <option value="jakarta">Jakarta</option>
+                                        <option value="surabaya">Surabaya</option>
+                                        <option value="bandung">Bandung</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="text-field triple-col">
+                                <label>Kelurahan <span class="required">*</span></label>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Kelurahan</option>
+                                        <option value="jakarta">Duri Kepa</option>
+                                        <option value="surabaya">Gambir</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="text-field triple-col">
+                                <label>Kecamatan <span class="required">*</span></label>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Kecamatan</option>
+                                        <option value="jakarta">Kebon Jeruk</option>
+                                        <option value="surabaya">Kebon Melati</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field twin-col">
+                                <label>Nama Daerah <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" placeholder="Contoh: Pondok Indah" />
+                            </div>
+                            <div class="text-field twin-col">
+                                <label>Kode Pos <span class="required">*</span></label>
+                                <input class="stereo-textbox" type="text" />
+                            </div>
+                        </div>
+                        <div class="row-group">
+                            <div class="text-field full-col">
+                                <label>Catatan <span class="optional">(optional)</span></label>
+                                <textarea class="stereo-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transportation-fee-container">
+                    <div class="stereo-checkbox checked">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="checkbox" name="quick-checkout" value="register">
+                        <label>Biaya Transportasi</label>
+                    </div>
+                    <span class="price">IDR 10.000</span>
+                </div>
+            </div>
+            <div id="tab3-container" class="tab-body">
+                <h2>Metode Pembayaran</h2>
+                <span class="highlight">Semua transaksi aman dan terenkripsi</span>
+                <div class="global-form-container global-payment-container">
+                    <div class="direct-payment-container">
+                        <div class="stereo-radio radio-on">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-circle-o" aria-hidden="true"></i>
+                            <input type="radio" name="payment-method" value="direct" checked>
+                            <label>Pembayaran di tempat</label>
+                        </div>
+                        <div class="direct-payment-form">
+                            <div class="classic-radio">
+                                <input id="tunai" type="radio" name="direct-payment-method" value="tunai" checked>
+                                <label class="dot-point" for="tunai"></label>
+                                <label>Tunai</label>
+                            </div>
+                            <div class="classic-radio">
+                                <input id="kartu-kredit" type="radio" name="direct-payment-method" value="kartu-kredit">
+                                <label class="dot-point" for="kartu-kredit"></label>
+                                <label>Kartu Debit/Kredit</label>
+                            </div>
+                            <div class="opsi-pembayaran-container">
+                                <span>Semua Visa dan Mastercard</span>
+                                <div class="stereo-dropdown">
+                                    <select>
+                                        <option disabled selected>Pilih Opsi Pembayaran</option>
+                                        <option value="opsi1">Opsi 1</option>
+                                        <option value="opsi2">Opsi 2</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                                <img src="Images/cimb-niaga.png" alt="cimb-niaga"/>
+                                <img src="Images/bca.png" alt="bca" />
+                                <img src="Images/mega.png" alt="mega" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transfer-container">
+                        <div class="stereo-radio radio-off">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-circle-o" aria-hidden="true"></i>
+                            <input type="radio" name="payment-method" value="direct">
+                            <label>Transfer</label>
+                        </div>
+                        <span>Batas waktu pembayaran 24 jam</span>
+                    </div>
+                    <div class="internet-container">
+                        <div class="stereo-radio radio-off">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-circle-o" aria-hidden="true"></i>
+                            <input type="radio" name="payment-method" value="direct">
+                            <label>Internet Banking</label>
+                        </div>
+                        <span>BCA KlikPay, CIMB Clicks, KlikBCA</span>
+                    </div>
+                </div>
+                <div class="newsletter-container">
+                    <div class="stereo-checkbox unchecked">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                        <i class="fa fa-circle-o" aria-hidden="true"></i>
+                        <input type="checkbox" name="newsletter" value="register">
+                        <label>Berlangganan newsletter kami</label>
+                    </div>
+                </div>
+            </div>
+            <div class="action-container">
+                <a href="javascript:;"><i class="fa fa-angle-left" aria-hidden="true"></i> Kembali ke Keranjang</a>
+                <button class="stereo-button">Lanjutkan</button>
+            </div>
+        </div>
+        <div class="cart-summary-container">
+            <div class="logo"><a href="home.html"><img src="Images/logo.png" /></a></div>
+            <div class="item-container">
+                <div class="item">
+                    <img src="Images/Product/air-conditioner.jpg" />
+                    <span class="total-number">2</span>
+                    <div class="details">
+                        <span class="name">Cuci AC</span>
+                        <span class="unit">s/d 2 pk (per unit)</span>
+                    </div>
+                    <span class="price">IDR 70.000</span>
+                </div>
+                <div class="item">
+                    <img src="Images/Product/air-conditioner.jpg" />
+                    <span class="total-number">1</span>
+                    <div class="details">
+                        <span class="name">Perbaiki AC</span>
+                        <span class="unit">s/d 2 pk (per unit)</span>
+                    </div>
+                    <span class="price">IDR 70.000</span>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="promo-code">
+                    <input type="text" class="stereo-textbox" placeholder="Masukan Kode Promo" />
+                    <input type="submit" class="stereo-button" value="Apply" />
+                </div>
+                <div class="calculation">
+                    <div>
+                        <span>Subtotal</span>
+                        <span>IDR 140.000</span>
+                    </div>
+                    <div>
+                        <span>Transportasi</span>
+                        <span>IDR 10.000</span>
+                    </div>
+                </div>
+                <div class="total">
+                    <span>Total</span>
+                    <span>IDR <span class="upsize">150.000</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

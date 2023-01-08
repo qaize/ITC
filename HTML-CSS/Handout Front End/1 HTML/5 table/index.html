@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    td {
+      padding: 10px;
+    }
+
+    thead td {
+      text-align: center;
+    }
+
+    tfoot td {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- tabel memiliki special display, dapat di inspect element dan perhatikan displaynya -->
+  <!-- maka, elemen untuk <table>, <th> / <tr>, dan <td> bukan hanya semantik -->
+  <!-- elemen <thead>, <tbody> dan <tfoot> semantik untuk head body dan footer -->
+
+  <table>
+
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Birth Date</td>
+        <td colspan="2">
+          Action
+        </td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Boby Widjaja</td>
+        <td>2000-01-27</td>
+        <td>
+          <a href=""><button>Edit</button></a>
+        </td>
+        <td>
+          <a href=""><button>Delete</button></a>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Vina Septiani</td>
+        <td>2000-06-20</td>
+        <td>
+          <a href=""><button>Edit</button></a>
+        </td>
+        <td>
+          <a href=""><button>Delete</button></a>
+        </td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="5">Kumpulan data</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+</body>
+
+</html>

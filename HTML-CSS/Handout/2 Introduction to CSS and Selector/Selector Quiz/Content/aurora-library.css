@@ -1,0 +1,153 @@
+﻿/*
+    Color variables.
+    From: https://flatuicolors.com/
+*/
+/*
+    Font Face
+
+    Font Format:
+    eot: For IE older than version 9
+    ttf: normal format, but it is make it downloadable (don't use this if you want to protect the font copyright)
+    woff: similar with ttf with piracy protection
+    svg: for iOS in iPhone and iPad with iOS older than version 5
+*/
+@font-face {
+  font-family: RemachineScript;
+  src: url(../Fonts/RemachineScript/RemachineScript_Personal_Use.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-Italic.ttf) format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-ThinItalic.ttf) format("truetype");
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../Fonts/Roboto/Roboto-MediumItalic.ttf) format("truetype");
+  font-weight: bolder;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url(../Fonts/RobotoBlack/Roboto-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: RobotoBlack;
+  src: url(../Fonts/RobotoBlack/Roboto-BlackItalic.ttf) format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../Fonts/RobotoCondensed/RobotoCondensed-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../Fonts/RobotoCondensed/RobotoCondensed-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../Fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf) format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../Fonts/RobotoCondensed/RobotoCondensed-Italic.ttf) format("truetype");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../Fonts/RobotoCondensed/RobotoCondensed-Light.ttf) format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../Fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf) format("truetype");
+  font-weight: lighter;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: RobotoSlab;
+  src: url(../Fonts/RobotoSlab/RobotoSlab-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: RobotoSlab;
+  src: url(../Fonts/RobotoSlab/RobotoSlab-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: RobotoSlab;
+  src: url(../Fonts/RobotoSlab/RobotoSlab-Light.ttf) format("truetype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Rochester;
+  src: url(../Fonts/Rochester/Rochester-Regular.otf) format("opentype");
+}
+
+/*
+    Font variables
+    Make sure all font variables is registerd in font-face declaration to utilize this library.
+*/
+/*Font standard size*/
+/*Border radius*/
+/*Basic shape*/
+/*Others*/
+/*Responsive media query*/
+/*Scroll bars*/
+/*Rotation*/
+/*Skew Y*/
+/*Gradient*/
+
+/*# sourceMappingURL=aurora-library.css.map */

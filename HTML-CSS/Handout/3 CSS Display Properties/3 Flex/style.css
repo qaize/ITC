@@ -1,0 +1,247 @@
+.flex-container{
+    display: flex;
+    background-color: #bdc3c7;
+}
+.flex-container .flex-item:nth-child(1){
+    background-color:#c0392b;
+}
+.flex-container .flex-item:nth-child(2){
+    background-color: #f1c40f;
+}
+.flex-container .flex-item:nth-child(3){
+    background-color: #27ae60;
+}
+.flex-container .flex-item:nth-child(4){
+    background-color: #3498db;
+}
+.description{
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+/* 
+    Display flex akan merubah display mode, 2 bagian, containernya dan anaknya.
+    containernya adalah bagian yang diberik display: flex.
+
+    Container dari flex-box disebut juga flex container.
+    Anaknya disebut juga flex item.
+*/
+
+/*
+    Berikut ini adalah properties-properties yang required untuk flex container.
+*/
+.row-reverse{
+    /*flex-direction menentukan ke arah mana content di urutkan.*/
+    flex-direction: row-reverse;
+}
+.column{
+    flex-direction: column;
+}
+.adjusting-size{
+    width: 1000px;
+}
+
+.item-size .flex-item:nth-child(1){
+    width:500px;
+}
+.item-size .flex-item:nth-child(2){
+    width:150px;
+}
+.item-size .flex-item:nth-child(3){
+    width:150px;
+}
+.item-size .flex-item:nth-child(4){
+    width:150px;
+}
+
+.item-size-comparison .flex-item:nth-child(1){
+    width:5000px;
+}
+.item-size-comparison .flex-item:nth-child(2){
+    width:1000px;
+}
+.item-size-comparison .flex-item:nth-child(3){
+    width:1000px;
+}
+.item-size-comparison .flex-item:nth-child(4){
+    width:1000px;
+}
+
+.wrapping{
+    /*
+        flex-wrap membuat flex-item memiliki kemampuan auto new line seperti component inline pada umumnya. Sehingga
+        bisa otomatis ke baris baru.
+    */
+    flex-wrap: wrap;
+}
+.wrapping .flex-item:nth-child(1){
+    width: 500px;
+}
+.wrapping .flex-item:nth-child(2){
+    width: 450px;
+}
+.wrapping .flex-item:nth-child(3){
+    width: 1000px;
+}
+.wrapping .flex-item:nth-child(4){
+    width: 600px;
+}
+
+.justify-content .flex-item:nth-child(1){
+    width: 400px;    
+}
+.justify-content .flex-item:nth-child(2){
+    width: 400px;    
+}
+.justify-content .flex-item:nth-child(3){
+    width: 400px;    
+}
+
+.flex-start{
+    /*Flex start membuat semua komponen flex item rata kiri apabila tidak full menempati containernya.*/
+    justify-content: flex-start
+}
+.flex-end{
+    /*Flex end sebaliknya dari flex-start membuat semua komponen flex item rata kanan.*/
+    justify-content: flex-end;
+}
+.center{
+    /*Center digunakan untuk membuat component flex-item berkumpul ke tengah.*/
+    justify-content: center;
+}
+.space-between{
+    /*Space between digunakan untuk membuat sesama flex-item akan menjauhi item lainnya sejauh yang mereka bisa.
+        Sehingga gap antar item akan maximal.*/
+    justify-content: space-between;
+}
+.space-around{
+    /*Space around digunakan untuk membuat sesama flex-item akan menjauhi item lain dan batas container sejauh yang mereka bisa.
+        Bisa dilihat di contoh, antara item juga membuat jarak dengan pinggiran container/ border container.*/
+    justify-content: space-around;
+}
+.space-evenly{
+    /*Space evenly akan memastikan seluruh jarak yang dihasilkan antara item dengan item dan antara item dengan border sama persis.*/
+    justify-content: space-evenly;
+}
+
+/*Align items digunakan untuk alignment secara vertical. Bisa dibilang ini adalah vertical-align milik display flex.*/
+.align-items{
+    height: 500px;
+}
+.align-start{
+    align-items:flex-start;
+}
+.align-end{
+    align-items:flex-end;
+}
+.align-center{
+    align-items:center;
+}
+
+/*Align content sama seperti justify content, tetapi bedanya justify content bekerja secara horizontal.*/
+.align-content{
+    flex-wrap: wrap;
+    height:800px;
+}
+.align-content .flex-item:nth-child(1){
+    width: 500px;
+}
+.align-content .flex-item:nth-child(2){
+    width: 450px;
+}
+.align-content .flex-item:nth-child(3){
+    width: 1000px;
+}
+.align-content .flex-item:nth-child(4){
+    width: 600px;
+}
+.content-flex-start{
+    align-content: flex-start;
+}
+.content-flex-end{
+    align-content: flex-end;
+}
+.content-center{
+    align-content: center;
+}
+.content-stretch{
+    align-content: stretch;
+}
+.content-space-between{
+    align-content: space-between;
+}
+.content-space-around{
+    align-content: space-around;
+}
+
+/*Order adalah salah satu property untuk flex-item, dimana kita bisa mengubah urutan dari content sesuai dengan kemauan kita.
+        Kemampuan ini cukup bagus supaya kita bisa dengan mudah mengubah urutan content saat mobile-reponsive.*/
+.order-one{
+    order: 1;
+}
+.order-two{
+    order: 2;
+}
+.order-three{
+    order: 3;
+}
+.order-four{
+    order: 4;
+}
+
+/*Align self adalah align items yang digunakan tetapi ketimbang mengatur seluruf flex-item, align self mengatur setiap item yang
+  ada di dalam setiap individu.*/
+.align-self-container{
+    height: 400px;
+}
+.align-self-start{
+    align-self: flex-start;
+}
+.align-self-end{
+    align-self: flex-end;
+}
+.align-self-center{
+    align-self: center;
+}
+.align-self-stretch{
+    align-self: stretch;
+}
+
+/*Flex grow adalah kemampuan setiap flex item untuk grow atau berkembang apabila diperlukan. Value dari flex grow adalah integer, yang menentukan 
+    besarnya grow ukuran width, apabila ada potensi untuk grow.
+
+    flex grow by default bernilai 0*/
+.grow-double{
+    width:100px;
+    flex-grow: 2;
+}
+.grow{
+    width:100px;   
+    flex-grow:1;
+}
+
+/*Flex shrink adalah kebalikan dari flex grow, yaitu kemampua setiap flex item untuk menciut. Value dari flex shrink adalah integer.
+
+    flex shrink secara default bernilai 1*/
+.shrink-double{
+    flex-shrink: 2;
+    width:500px;
+}
+.shrink{
+    flex-shrink: 1;
+    width:1000px;
+}
+
+/*Flex basis adalah property yang mengatur ukuran default dari element sebelum sisa ruang di-distribusi, value dari flex basis-one
+    adalah metric panjang.
+    
+    flex basis by default bernilai auto.*/
+.basis-one{
+    flex-basis: 1000px;
+}
+.basis-two{
+    flex-basis: 2000px;
+}
+.basis-three{
+    flex-basis: 3000px;
+}

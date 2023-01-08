@@ -1,0 +1,66 @@
+/* tag selector */
+h1 {
+  font-size: 48px;
+}
+
+/* id selector */
+#my-id {
+  color: blue;
+  background-color: aquamarine;
+}
+/* class selector */
+.my-class {
+  color: green;
+  background-color: azure;
+}
+/* grouping selector */
+h1,
+h2 {
+  font-size: 36px;
+  color: white;
+  background: black;
+}
+
+section {
+  background-color: yellow;
+}
+
+/* COMBINATORS */
+
+/* descendant selector */
+section p {
+  background: blue;
+  color: white;
+}
+
+/* child selector */
+section > ol {
+  color: red;
+}
+
+/* Pseudo class */
+
+/* LVHA */
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  color: blueviolet;
+}
+
+a:hover {
+  background-color: black;
+  color: white;
+}
+
+a:active {
+  background-color: red;
+}
+
+/* Pseudo Elements */
+a::before {
+  content: "CLICK HERE: ";
+}
+
+/* more about selectors : https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */

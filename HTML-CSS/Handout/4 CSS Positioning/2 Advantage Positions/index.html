@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Keunggulan Relative, Multiple Movement</h1>
+    <p>
+        Salah satu keunggulan dari menggunakan relative adalah kita bisa memanfaatkannya untuk menggerakan atau memindahkan sekelompok elements
+        sekaligus tanpa merubah jajarannya. Apabila kita coba mempraktekannya pada absolute, maka hasilnya akan bertumpuk-tumpuk, ini semua diakibatkan
+        absolute tidak membuat posisi dari lokasi dia yang pertama.
+    </p>
+    <div class="multiple-movement">
+        <div class="relative-component">Relative Component</div>
+        <div class="relative-component">Relative Component</div>
+        <div class="relative-component">Relative Component</div>
+    </div>
+    <div class="multiple-movement">
+        <div class="absolute-component">Absolutely!</div>
+        <div class="absolute-component">Same Position</div>
+        <div class="absolute-component">On Top of Layer</div>
+    </div>    
+
+    <h1>Keunggulan Relative, Child Management</h1>
+    <p>
+        Kita bisa memanfaatkan relative apabila kita ingin merubah posisi-posisi komponent child di dalam parent tanpa ingin mengubah posisi parentnya sama sekali.
+        Kita tidak bisa mencapai ini apabila menggunakan position static, karena position static dari parent tidak terlihat.
+        Kita juga tidak bisa menggunakan position absolute karena posisi parentnya akan tidak dianggap dan parentnya bisa bertumpuk-tumpuk dengan element lain.
+    </p>
+    <div class="child-management">
+        <div class="parent">
+            <div id="first-child" class="child">Child</div>
+        </div>
+        <div class="parent">
+            <div id="second-child" class="child">Child</div>
+        </div>   
+        <div class="parent">
+            <div id="third-child" class="child">Child</div>
+        </div>             
+    </div>
+
+    <h1>Keunggulan Absolute, Tanpa Trace Akhir</h1>
+    <p>
+        Ini adalah salah satu keunggulan dari absolute, kita bisa melakukan pengaturan posisi beberapa element yang berada di paling bawah,
+        tanpa khawatir harus meninggalkan extra gap. Perhatikan contoh dibawah ini dengan menggunakan absolute dan relative.
+    </p>
+    <p>
+        Container di bawah ini memiliki tinggi maxmimal, sehingga apabila ada komponent lebih di bawahnya, scroll bar akan aktif.
+    </p>
+    <div class="repositioning-component repositioning-absolute">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <p>
+        Di bawah ini contoh dari relative, container akan mengeluarkan scroll bar karena ada component tak terlihat di bagian bawah.
+    </p>
+    <div class="repositioning-component repositioning-relative">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

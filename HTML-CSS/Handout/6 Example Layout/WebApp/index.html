@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="Styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="Styles/all.css">
+    <link rel="stylesheet" type="text/css" href="Styles/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="side-menu">
+            <div class="user">
+                <img src="Images/photo1.jpg">
+                <span class="username">Michael Shennigan</span>
+                <span class="status" data-status="online">Online</span>
+            </div>
+            <nav>
+                <div class="menu-item">
+                    <a href="javascript:;">
+                        <i class="fas fa-book"></i>
+                        <span>courses</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="javascript:;">
+                        <i class="fas fa-id-badge"></i>
+                        <span>badge overview</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="javascript:;">
+                        <i class="fas fa-trophy"></i>
+                        <span>challenges</span>                        
+                    </a>
+                </div>       
+                <div class="menu-item">
+                    <a href="javascript:;">
+                        <i class="fas fa-question-circle"></i>
+                        <span>help</span>
+                    </a>
+                </div>
+                <div class="menu-item">
+                    <a href="javascript:;">
+                        <i class="fas fa-cog"></i>
+                        <span>settings</span>
+                    </a>
+                </div>                                                         
+            </nav>
+            <ul class="friends">
+                <li data-status="online">
+                    <div class="frame">
+                        <img src="Images/photo2.jpg">
+                    </div>                    
+                    <span>Lionel Richie</span>
+                </li>
+                <li data-status="online">
+                    <div class="frame">
+                        <img src="Images/photo3.jpg">
+                    </div>   
+                    <span>Michelle Joan</span>
+                </li>
+                <li data-status="offline">
+                    <div class="frame">
+                        <img src="Images/photo4.jpg">
+                    </div> 
+                    <span>Sandra Morian</span>
+                </li>
+                <li data-status="busy">
+                    <div class="frame">
+                        <img src="Images/photo5.jpg">
+                    </div>
+                    <span>Lily Hughes</span>
+                </li>                         
+            </ul>
+        </div>
+        <div class="author">
+            <h1>webapps</h1>
+            <p>Membuat template web application sendiri tanpa menggunakan framework</p>
+            <span>By Boby Widjaja</span>
+        </div>
+        <div class="side-content">
+            <a href="javascript:;" class="chapter">
+                <div class="chapter-number">
+                    <span>1</span>
+                </div>
+                <div class="name-description">
+                    <h3>Introduction to HTML</h3>
+                    <p>
+                        Memperkenalkan apa itu html, struktur dasar html dan tag-tag yang umumnya digunakan dalam pembuatan web User Interface.
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:;" class="chapter">
+                <div class="chapter-number">
+                    <span>2</span>
+                </div>
+                <div class="name-description">
+                    <h3>CSS and Selector</h3>
+                    <p>
+                        Memperkenalkan css untuk pertamakalinya dan bagaimana css external bisa menggunakan selector untuk melakukan styling terhadap html.
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:;" class="chapter">
+                <div class="chapter-number">
+                    <span>3</span>
+                </div>
+                <div class="name-description">
+                    <h3>CSS Display Property</h3>
+                    <p>
+                        Memperkenalkan property paling penting dalam css, yaitu display property dan bagaimana properties lain kebergantungan dengan display.
+                    </p>
+                </div>
+            </a>
+            <a href="javascript:;" class="chapter">
+                <div class="chapter-number">
+                    <span>4</span>
+                </div>
+                <div class="name-description">
+                    <h3>CSS Positioning</h3>
+                    <p>
+                        Belajar cara memposisikan setiap element yang muncul di UI agar berada di posisi sesuai dengan yang diinginkan.
+                    </p>
+                </div>
+            </a>        
+            <a href="javascript:;" class="chapter">
+                <div class="chapter-number">
+                    <span>5</span>
+                </div>
+                <div class="name-description">
+                    <h3>HTML and CSS Form</h3>
+                    <p>
+                        belajar cara membuat user interface untuk form input dan element-elementnya.
+                    </p>
+                </div>
+            </a>                                           
+        </div>
+        <div class="top-menu">
+            <form name="search-form">
+                <input type="text" name="search-topic" placeholder="Search by topic">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <div class="communication">
+                <div class="notifications">
+                    <i class="far fa-bell"></i>
+                    <span>Notifications</span>
+                </div>
+                <div class="messages">
+                    <i class="far fa-envelope"></i>
+                    <span>Messages</span>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <h1>Common Template</h1>
+            <p>Template yang umum untuk web application.</p>
+            <a href="javascript:;">Read Handout and Tutorial</a>
+            <ul>
+                <li class="selected">Handout</li>
+                <li>Example</li>
+                <li>Exam</li>
+            </ul>
+        </div>
+        <div class="body">
+            <div class="body-container">
+                <form name="classic-form">
+                    <div class="rows">
+                        <label for="first-name">First Name</label>
+                        <input type="text" name="first-name" id="first-name">
+                    </div>
+                    <div class="rows">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" name="last-name" id="last-name">
+                    </div>                
+                    <div class="rows">                   
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male"></label>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="female">
+                        <label for="female"></label> 
+                        <label for="female">Female</label>                    
+                    </div>  
+                    <div class="rows">                   
+                        <input type="checkbox" name="identitas" id="ktp" value="ktp">
+                        <label for="ktp"></label>
+                        <label for="ktp">Kartu Tanda Penduduk</label>
+
+                        <input type="checkbox" name="identitas" id="kk" value="kk">
+                        <label for="kk"></label>     
+                        <label for="kk">Kartu Keluarga</label>     
+
+                        <input type="checkbox" name="identitas" id="npwp" value="npwp">
+                        <label for="npwp"></label>   
+                        <label for="npwp">Nomor Pokok Wajib Pajak</label>                                   
+                    </div>
+                    <div class="rows">                   
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description"></textarea>                              
+                    </div>                
+                    <div class="button-rows">
+                        <button type="submit">Submit</button>
+                        <a href="javascript:;">Cancel</a>
+                    </div>
+                </form>
+                <div class="grid-container">
+                    <div class="table-header">
+                        <span>Nama</span>
+                        <span>Tanggal Lahir</span>
+                        <span>Jenis kelamin</span>
+                        <span>Hire Date</span>
+                        <span>Department</span>
+                        <span>Job Description</span>
+                    </div>
+                    <div class="table-body">
+                        <div class="row">
+                            <span>Ben Afflect</span>
+                            <span>12 May 1988</span>
+                            <span>Male</span>
+                            <span>1 May 2019</span>
+                            <span>Information Technology</span>
+                            <span>Bertanggung jawab mendevelop sistem teknologi informasi, memaintain dan mengoperasikan seluruh teknologi informasi milik perusahaan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Arthur Lemmington Furlon</span>
+                            <span>12 Agustus 1988</span>
+                            <span>Male</span>
+                            <span>1 Agustus 2019</span>
+                            <span>Finance</span>
+                            <span>Bertanggung jawab terhadap seluruh perhitungan dan pendataan keuangan perusahaan.</span>
+                        </div>      
+                        <div class="row">
+                            <span>Felicia Lee</span>
+                            <span>12 June 1988</span>
+                            <span>Female</span>
+                            <span>2 December 2019</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Jessica Alberta</span>
+                            <span>12 February 1986</span>
+                            <span>Female</span>
+                            <span>2 March 2017</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Bagus Wijaya</span>
+                            <span>12 April 1988</span>
+                            <span>Male</span>
+                            <span>1 May 2019</span>
+                            <span>Information Technology</span>
+                            <span>Bertanggung jawab mendevelop sistem teknologi informasi, memaintain dan mengoperasikan seluruh teknologi informasi milik perusahaan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Charles Darwin</span>
+                            <span>12 Agustus 1990</span>
+                            <span>Male</span>
+                            <span>1 Agustus 2019</span>
+                            <span>Finance</span>
+                            <span>Bertanggung jawab terhadap seluruh perhitungan dan pendataan keuangan perusahaan.</span>
+                        </div>      
+                        <div class="row">
+                            <span>Tamara Farhan</span>
+                            <span>12 April 1985</span>
+                            <span>Female</span>
+                            <span>2 November 2019</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Sisilia Agustian</span>
+                            <span>12 Agustus 1988</span>
+                            <span>Female</span>
+                            <span>2 December 2019</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>                     
+                        <div class="row">
+                            <span>Harry Truman</span>
+                            <span>12 May 1988</span>
+                            <span>Male</span>
+                            <span>1 May 2019</span>
+                            <span>Information Technology</span>
+                            <span>Bertanggung jawab mendevelop sistem teknologi informasi, memaintain dan mengoperasikan seluruh teknologi informasi milik perusahaan.</span>
+                        </div>
+                        <div class="row">
+                            <span>George Harrison</span>
+                            <span>12 Agustus 1988</span>
+                            <span>Male</span>
+                            <span>1 Agustus 2019</span>
+                            <span>Finance</span>
+                            <span>Bertanggung jawab terhadap seluruh perhitungan dan pendataan keuangan perusahaan.</span>
+                        </div>      
+                        <div class="row">
+                            <span>Sandra Mansyuri</span>
+                            <span>12 June 1988</span>
+                            <span>Female</span>
+                            <span>2 December 2019</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Silvana Blackhammer</span>
+                            <span>12 February 1986</span>
+                            <span>Female</span>
+                            <span>2 March 2017</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Satria Husana</span>
+                            <span>12 April 1988</span>
+                            <span>Male</span>
+                            <span>1 May 2019</span>
+                            <span>Information Technology</span>
+                            <span>Bertanggung jawab mendevelop sistem teknologi informasi, memaintain dan mengoperasikan seluruh teknologi informasi milik perusahaan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Rizal Harmoko</span>
+                            <span>12 Agustus 1990</span>
+                            <span>Male</span>
+                            <span>1 Agustus 2019</span>
+                            <span>Finance</span>
+                            <span>Bertanggung jawab terhadap seluruh perhitungan dan pendataan keuangan perusahaan.</span>
+                        </div>      
+                        <div class="row">
+                            <span>Betty Ikhsan</span>
+                            <span>12 April 1985</span>
+                            <span>Female</span>
+                            <span>2 November 2019</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>
+                        <div class="row">
+                            <span>Merry Sasongko</span>
+                            <span>12 Agustus 1988</span>
+                            <span>Female</span>
+                            <span>2 December 2019</span>
+                            <span>Human Resources Management</span>
+                            <span>Bertanggung jawab terhadap seluruh management karyawan, pendataan karyawan, dan mengurus hak-hak dan kewajiban karyawan.</span>
+                        </div>                         
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+</body>
+</html>

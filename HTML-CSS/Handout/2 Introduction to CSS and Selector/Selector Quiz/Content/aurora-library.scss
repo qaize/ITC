@@ -1,0 +1,450 @@
+﻿/*
+    Color variables.
+    From: https://flatuicolors.com/
+*/
+//body
+$admiral:#1c5784;
+$admiral-trans:rgba(28,87,132,0.8);
+//testimoni
+$cerulean:#2b83ba;
+$cerulean-trans:rgba(43,131,186,0.8);
+//top-registery
+$coal:#404041;
+$coal-trans:rgba(64,64,65,0.8);
+//sosmed
+$dark-platinum:#5b5b5b;
+$dark-platinum-trans:rgba(91,91,91,0.8);
+//sidenav title
+$dark-steel:#878787;
+$dark-steel-trans:rgba(135,135,135,0.5);
+//sidenav text
+$cloud:#c6c8ca;
+//details
+$cannary:#f7c23c;
+$cannary-trans:rgba(247,194,60,0.8);
+//sosmed
+$facebook:#3b5999;
+$facebook-shade:#243863;
+$gmail:#f3553c;
+$gmail-shade:#a82619;
+//sub-nav
+$nickle:#f4c865;
+$sky:#559cc8;
+/*
+    Font Face
+
+    Font Format:
+    eot: For IE older than version 9
+    ttf: normal format, but it is make it downloadable (don't use this if you want to protect the font copyright)
+    woff: similar with ttf with piracy protection
+    svg: for iOS in iPhone and iPad with iOS older than version 5
+*/
+@font-face 
+{
+    font-family: RemachineScript;
+    src:url(../Fonts/RemachineScript/RemachineScript_Personal_Use.ttf) format('truetype');
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight:bold;
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-BoldItalic.ttf) format('truetype');
+    font-weight:bold;
+    font-style:italic;
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-Italic.ttf) format('truetype');
+    font-style:italic;
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-Thin.ttf) format('truetype');
+    font-weight:lighter;
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-ThinItalic.ttf) format('truetype');
+    font-weight:lighter;
+    font-style:italic;
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+    font-weight:bolder;
+}
+@font-face 
+{
+    font-family: Roboto;
+    src:url(../Fonts/Roboto/Roboto-MediumItalic.ttf) format('truetype');
+    font-weight:bolder;
+    font-style:italic;
+}
+@font-face 
+{
+    font-family: RobotoBlack;
+    src:url(../Fonts/RobotoBlack/Roboto-Black.ttf) format('truetype');
+}
+@font-face 
+{
+    font-family: RobotoBlack;
+    src:url(../Fonts/RobotoBlack/Roboto-BlackItalic.ttf) format('truetype');
+    font-style:italic;
+}
+
+@font-face 
+{
+    font-family: RobotoCondensed;
+    src:url(../Fonts/RobotoCondensed/RobotoCondensed-Regular.ttf) format('truetype');
+}
+@font-face 
+{
+    font-family: RobotoCondensed;
+    src:url(../Fonts/RobotoCondensed/RobotoCondensed-Bold.ttf) format('truetype');
+    font-weight:bold;
+}
+@font-face 
+{
+    font-family: RobotoCondensed;
+    src:url(../Fonts/RobotoCondensed/RobotoCondensed-BoldItalic.ttf) format('truetype');
+    font-weight:bold;
+    font-style:italic;
+}
+@font-face 
+{
+    font-family: RobotoCondensed;
+    src:url(../Fonts/RobotoCondensed/RobotoCondensed-Italic.ttf) format('truetype');
+    font-style:italic;
+}
+@font-face 
+{
+    font-family: RobotoCondensed;
+    src:url(../Fonts/RobotoCondensed/RobotoCondensed-Light.ttf) format('truetype');
+    font-weight:lighter;
+}
+@font-face 
+{
+    font-family: RobotoCondensed;
+    src:url(../Fonts/RobotoCondensed/RobotoCondensed-LightItalic.ttf) format('truetype');
+    font-weight:lighter;
+    font-style:italic;
+}
+
+@font-face 
+{
+    font-family: RobotoSlab;
+    src:url(../Fonts/RobotoSlab/RobotoSlab-Regular.ttf) format('truetype');
+}
+@font-face 
+{
+    font-family: RobotoSlab;
+    src:url(../Fonts/RobotoSlab/RobotoSlab-Bold.ttf) format('truetype');
+    font-weight:bold;
+}
+@font-face 
+{
+    font-family: RobotoSlab;
+    src:url(../Fonts/RobotoSlab/RobotoSlab-Light.ttf) format('truetype');
+    font-weight:lighter;
+}
+
+@font-face 
+{
+    font-family: Rochester;
+    src:url(../Fonts/Rochester/Rochester-Regular.otf) format("opentype");
+}
+
+/*
+    Font variables
+    Make sure all font variables is registerd in font-face declaration to utilize this library.
+*/
+$remachine-script: RemachineScript, Helvetica, Verdana, Sans-Serif;
+$roboto: Roboto, Helvetica, Verdana, Sans-Serif;
+$roboto-black: RobotoBlack, Helvetica, Verdana, Sans-Serif;
+$roboto-condensed: RobotoCondensed, Helvetica, Verdana, Sans-Serif;
+$roboto-slab: RobotoSlab, Helvetica, Verdana, Sans-Serif;
+$rochester: Rochester, Helvetica, Verdana, Sans-Serif;
+
+/*Font standard size*/
+$font-size-small:12px;
+$font-size-normal:14px;
+$font-size-medium:16px;
+$font-size-big:18px;
+$font-size-jumbo:20px;
+
+/*Border radius*/
+@mixin border-radius($radius)
+{
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+}
+@mixin border-top-left-radius($radius)
+{
+    -webkit-border-top-left-radius:$radius;
+    -moz-border-radius-topleft:$radius;
+    -ms-border-top-left-radius:$radius;
+    border-top-left-radius:$radius;
+}
+@mixin border-top-right-radius($radius)
+{
+    -webkit-border-top-right-radius:$radius;
+    -moz-border-radius-topright:$radius;
+    -ms-border-top-right-radius:$radius;
+    border-top-right-radius:$radius;
+}
+@mixin border-bottom-left-radius($radius)
+{
+    -webkit-border-bottom-left-radius:$radius;
+    -moz-border-radius-bottomleft:$radius;
+    -ms-border-bottom-left-radius:$radius;
+    border-bottom-left-radius:$radius;
+}
+@mixin border-bottom-right-radius($radius)
+{
+    -webkit-border-bottom-right-radius:$radius;
+    -moz-border-radius-bottomright:$radius;
+    -ms-border-bottom-right-radius:$radius;
+    border-bottom-right-radius:$radius;
+}
+/*Basic shape*/
+@mixin circle($diameter)
+{
+    width:$diameter;
+    height:$diameter;
+    @include border-radius($diameter/2);
+}
+@mixin square($width)
+{
+    width:$width;
+    height:$width;
+}
+@mixin rounded-square($width, $border-radius)
+{
+    @include square($width);
+    @include border-radius($border-radius);
+}
+@mixin triangle($width, $height, $direction, $color)
+{
+    width: 0;
+    height: 0;
+
+    @if $direction == up
+    {
+	    border-left: $height solid transparent;
+	    border-right: $height solid transparent;
+	    border-bottom: $width solid $color;
+    }
+    @elseif $direction == left
+    {
+	    border-top: $height solid transparent;
+	    border-right: $width solid $color;
+	    border-bottom: $height solid transparent;
+    }
+    @elseif $direction == right
+    {
+	    border-top: $height solid transparent;
+	    border-left: $width solid $color;
+	    border-bottom: $height solid transparent;
+    }
+    @elseif $direction == down
+    {
+        border-left: $height solid transparent;
+        border-right: $height solid transparent;
+        border-top: $width solid $color;
+    }
+}
+@mixin hexagon($width, $color)
+{
+    background-color:$color;
+    width: $width;
+    height: $width * 0.6;
+    position:absolute;
+    display:inline-block;
+    margin-top: ($width * 0.6) / 2;
+    margin-bottom: ($width * 0.6) / 2;
+
+    &:before
+    {
+	    content: "";
+	    position: absolute;
+        top: -($width * 0.6 / 2);
+	    border-left: ($width / 2) solid transparent;
+	    border-right: ($width / 2) solid transparent;
+	    border-bottom: ($width * 0.6)/2 solid $color;
+    }
+
+    &:after
+    {
+	    content: "";
+	    position: absolute;
+	    bottom: -($width * 0.6 / 2);
+	    border-left: ($width / 2) solid transparent;
+	    border-right: ($width / 2) solid transparent;
+	    border-top: ($width * 0.6)/2 solid $color;
+    }
+}
+/*Others*/
+@mixin center-block
+{
+    display:block;
+    margin: 0 auto 0 auto;
+}
+/*Responsive media query*/
+@mixin responsive-to($media-name)
+{
+    @if $media-name == monitor21{
+        @media only screen and (max-width:1920px)
+        {@content;}
+    }
+    @else if $media-name == monitor20{
+        @media only screen and (max-width:1600px)
+        {@content;}
+    }
+    @else if $media-name == notebook14{
+        @media only screen and (max-width:1366px)
+        {@content;}
+    }
+    @else if $media-name == ipadprolandscape{
+        @media only screen and (max-width:1366px)  
+        {@content;}
+    }
+    @else if $media-name == tablet8-10landscape{
+        @media only screen and (max-width:1280px)
+        {@content;}
+    }
+    @else if $media-name == ipadproportrait{
+        @media only screen and (max-width:1024px)  
+        {@content;}
+    }
+    @else if $media-name == ipadlandscape{
+        @media only screen and (max-width:1024px)  
+        {@content;}
+    }
+    @else if $media-name == tablet8-10portrait{
+        @media only screen and (max-width:800px)  
+        {@content;}
+    }
+    @else if $media-name == ipadportrait{
+        @media only screen and (max-width:768px)  
+        {@content;}
+    }
+    @else if $media-name == iphone6-7pluslandscape{
+        @media only screen and (max-width:736px)  
+        {@content;}
+    }
+    @else if $media-name == iphone6-7landscape{
+        @media only screen and (max-width:667px)  
+        {@content;}
+    }
+    @else if $media-name == androidphonelandscape{
+        @media only screen and (max-width:640px)  
+        {@content;}
+    }
+    @else if $media-name == iphone5landscape{
+        @media only screen and (max-width:568px)  
+        {@content;}
+    }
+    @else if $media-name == iphone3-4landscape{
+        @media only screen and (max-width:480px)  
+        {@content;}
+    }
+    @else if $media-name == iphone6-7plusportrait{
+        @media only screen and (max-width:414px)  
+        {@content;}
+    }
+    @else if $media-name == iphone6-7portrait{
+        @media only screen and (max-width:375px)  
+        {@content;}
+    }
+    @else if $media-name == androidphoneportrait{
+        @media only screen and (max-width:360px)  
+        {@content;}
+    }
+    @else if $media-name == iphone3-5portrait{
+        @media only screen and (max-width:320px)  
+        {@content;}
+    }
+}
+/*Scroll bars*/
+@mixin disable-scrollbar
+{
+  ::-webkit-scrollbar {
+      display:none;
+  }
+}
+/*Rotation*/
+@mixin rotate-2d($degree)
+{
+    transform:rotate($degree);
+    -ms-transform:rotate($degree);
+    -webkit-transform:rotate($degree);
+}
+@mixin rotate-3d($degreeX, $degreeY, $degreeZ)
+{
+    transform:rotateX($degreeX);
+    -ms-transform:rotateX($degreeX);
+    -webkit-transform:rotateX($degreeX);
+
+    transform:rotateY($degreeY);
+    -ms-transform:rotateY($degreeY);
+    -webkit-transform:rotateY($degreeY);
+
+    transform:rotateZ($degreeZ);
+    -ms-transform:rotateZ($degreeZ);
+    -webkit-transform:rotateZ($degreeZ);
+}
+/*Skew Y*/
+@mixin skewY($degree)
+{
+    transform: skewY($degree);
+    -ms-transform: skewY($degree);
+    -webkit-transform: skewY($degree);
+}
+
+/*Gradient*/
+@mixin gradient-vertical($top-color, $bottom-color)
+{
+    background: $top-color;
+    background: -webkit-linear-gradient($top-color, $bottom-color);
+    background: -o-linear-gradient($top-color, $bottom-color);
+    background: -moz-linear-gradient($top-color, $bottom-color);
+    background: linear-gradient($top-color, $bottom-color);
+}
+@mixin gradient-horizontal($left-color, $right-color)
+{
+    background: $left-color;
+    background: -webkit-linear-gradient(left, $left-color, $right-color);
+    background: -o-linear-gradient(right, $left-color, $right-color);
+    background: -moz-linear-gradient(right, $left-color, $right-color);
+    background: linear-gradient(to right, $left-color, $right-color);
+}
+@mixin gradient-diagonal($topleft-color, $bottomright-color)
+{
+  background: $topleft-color;
+  background: -webkit-linear-gradient(left top, $topleft-color, $bottomright-color);
+  background: -o-linear-gradient(bottom right, $topleft-color, $bottomright-color);
+  background: -moz-linear-gradient(bottom right, $topleft-color, $bottomright-color);
+  background: linear-gradient(to bottom right, $topleft-color, $bottomright-color);
+}
+
+@mixin word-break($attribute)
+{
+    word-break:$attribute;
+    -ms-word-break:$attribute;
+}

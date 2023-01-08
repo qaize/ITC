@@ -1,0 +1,40 @@
+﻿div.gallery-global-container+ div.sosmed-container + div.footer-container  div.sitemap-container div.guide  span{
+color:blue;
+}
+
+
+div.sosmed-container + div.footer-container  div.sitemap-container div.guide  span{
+color:red;
+}
+
+div.footer-container div.sitemap-container div.guide  span{
+color:blue;
+}
+
+.footer-container div.sitemap-container div.guide  span{
+color:red;
+}
+
+div.sitemap-container div.guide  span{
+color:blue;
+}
+
+.sitemap-container div.guide  span{
+color:red;
+}
+
+div.guide  span{
+color:blue;
+}
+
+.guide  span{
+color:red;
+}
+
+div  span{
+color:blue;
+}
+
+span {
+color:red;
+}

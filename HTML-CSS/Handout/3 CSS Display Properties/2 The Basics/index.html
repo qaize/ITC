@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!--
+        Diberikan 3 container hiding experiment ini untuk melakukan test menghilangkan tampilan dengan berbagai cara.
+        Sering kali kita ada kebutuhan untuk menghilangkan dan memunculkan suatu komponent di dalam UI.
+        Beginilah beberapa attempt yang benar dan yang salah.
+    -->  
+    <div class="hiding-experiment">
+        <h3>Menggunakan warna untuk menyembunyikan object.</h3>
+        <span>NINJA</span>
+        <span class="kamuflase">NINJA</span>
+        <span>NINJA</span>
+    </div>
+    <div class="hiding-experiment">
+        <h3>Menggunakan visibility hidden untuk menyembunyikan object.</h3>
+        <span>NINJA</span>
+        <span class="invisible">NINJA</span>
+        <span>NINJA</span>
+        <span class="invisible-hover">NINJA</span>
+        <span>NINJA</span>
+    </div>    
+    <div class="hiding-experiment">
+        <h3>Menggunakan display none untuk menyembunyikan object.</h3>
+        <span>NINJA</span>
+        <span class="vanish">NINJA</span>
+        <span>NINJA</span>
+    </div>
+
+    <div class="box">A Box</div>
+    <div class="box">A Box</div>
+    <div class="box">A Box</div>
+    <div class="line">A Text</div>    
+    <div class="line">A Text</div>    
+    <div class="line">A Text</div>    
+
+    <div class="box with-size">A Box</div>    
+    <div class="line with-size">A Text</div>  
+
+    <div class="inline-box with-size">Serial Box</div>
+    <div class="inline-box with-size">Serial Box</div>
+    <div class="inline-box with-size">Serial Box</div>
+
+    <h3>Gap pada inline disebabkan oleh spasi, karena di dalam formatted html 1 enter akan dihitung sebagai 1 spasi</h3>
+    <div class="line">A Text</div><div class="line">A Text</div><div class="line">A Text</div>  
+    <!--tanpa adanya spasi atau enter inline element di atas tidak menghasilkan gap.-->      
+
+    <h3>Begitu juga dengan yang inline-block</h3>
+    <div class="inline-box with-size">Serial Box</div><div class="inline-box with-size">Serial Box</div><div class="inline-box with-size">Serial Box</div>
+
+    <h3>Terkadang dilakukan trick dengan menggunakan comment, lihatlah codenya</h3>
+    <div class="inline-box with-size">Serial Box</div><!--
+    --><div class="inline-box with-size">Serial Box</div><!--
+    --><div class="inline-box with-size">Serial Box</div>
+    <!--ini adalah cara lucu untuk mengakali gap, tanpa menggunakan CSS, nanti saya akan tunjukan beberapa cara yang lebih baik daripada ini.-->
+
+    <div class="inline-experiment">
+        <h3>Apa yang terjadi pada benda inline yang tidak memiliki tinggi yang sama?</h3>
+        <div>
+            <span>PERTAMA</span>
+            <span>KEDUA</span>
+            <span>KETIGA</span>           
+        </div>
+    </div>
+
+    <div class="inline-experiment rata-atas">
+        <h3>Apa yang terjadi pada benda inline yang tidak memiliki tinggi yang sama?</h3>
+        <div>
+            <span>PERTAMA</span>
+            <span>KEDUA</span>
+            <span>KETIGA</span>           
+        </div>
+    </div>
+    
+    <div class="inline-experiment rata-tengah">
+        <h3>Apa yang terjadi pada benda inline yang tidak memiliki tinggi yang sama?</h3>
+        <div>
+            <span>PERTAMA</span>
+            <span>KEDUA</span>
+            <span>KETIGA</span>           
+        </div>
+    </div>   
+
+    <div class="line-height">
+        <h3>Cara mengetur tinggi dari sebuah inline text</h3>
+        <div class="background">
+            <span>
+                Mengatur tinggi dari sebuah text. Cobalah perhatikan, kalau warna cyannya tidak pertambah, tapi backgroundnya bertambah tinggi.
+                Sekarang cobalah mengecilkan browser sampai kalimat ini menjadi 2 line atau lebih
+            </span>
+        </div>      
+    </div>
+
+    <div class="box-model">
+        <h3>Berikut ini adalah demo merubah link menjadi sebuah button dengan menggunakan box model.</h3>
+        <div>
+            <a href="javascript:;">Button 1</a>
+            <a href="javascript:;">Button 2</a>
+        </div>
+    </div>
+
+    <div class="box-model for-inline">
+        <h3>Apa yang terjadi apabila margin dan padding diaplikasikan pada inline</h3>
+        <div>
+            <span>Hello World</span>
+        </div>
+        <div>
+            <span>Lorem ipsum</span>
+        </div>
+    </div>
+
+    <div class="box-sizing">
+        <h3>Pada display yang bersifat box seperti block dan inline-block, kita bisa menggunakan box-sizing untuk menentukan ukuran total box</h3>
+        <div class="content-box"></div>
+        <div class="border-box"></div>
+    </div>
+
+    <div class="level-one">
+        Level One
+        <div class="level-two">
+            Level Two
+            <div class="level-three">
+                Level Three
+                <p>Which one affecting the child.</p>
+                <p>Which one affecting the child.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

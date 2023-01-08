@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/4 Data Structure and Collection/1 Array/1 Array.iml" filepath="$PROJECT_DIR$/4 Data Structure and Collection/1 Array/1 Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3 Functions/1 Function And Features/1 Function And Features.iml" filepath="$PROJECT_DIR$/3 Functions/1 Function And Features/1 Function And Features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1 Data Type and Operator/1 IntroductionToVariable/1 IntroductionToVariable.iml" filepath="$PROJECT_DIR$/1 Data Type and Operator/1 IntroductionToVariable/1 IntroductionToVariable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/1 Object And Class/1 Object And Class.iml" filepath="$PROJECT_DIR$/5 OOP/1 Object And Class/1 Object And Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2 Logical Statement/1 Selection Statement/1 Selection Statement.iml" filepath="$PROJECT_DIR$/2 Logical Statement/1 Selection Statement/1 Selection Statement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/3 Functions/2 Function Overloading/2 Function Overloading.iml" filepath="$PROJECT_DIR$/3 Functions/2 Function Overloading/2 Function Overloading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2 Logical Statement/2 Iteration Statement/2 Iteration Statement.iml" filepath="$PROJECT_DIR$/2 Logical Statement/2 Iteration Statement/2 Iteration Statement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4 Data Structure and Collection/2 List/2 List.iml" filepath="$PROJECT_DIR$/4 Data Structure and Collection/2 List/2 List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1 Data Type and Operator/2 Scope/2 Scope.iml" filepath="$PROJECT_DIR$/1 Data Type and Operator/2 Scope/2 Scope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/2 Value vs Reference/2 Value vs Reference.iml" filepath="$PROJECT_DIR$/5 OOP/2 Value vs Reference/2 Value vs Reference.iml" />
+      <module fileurl="file://$PROJECT_DIR$/4 Data Structure and Collection/3 HashMap/3 HashMap.iml" filepath="$PROJECT_DIR$/4 Data Structure and Collection/3 HashMap/3 HashMap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2 Logical Statement/3 Jump Statement/3 Jump Statement.iml" filepath="$PROJECT_DIR$/2 Logical Statement/3 Jump Statement/3 Jump Statement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1 Data Type and Operator/3 Parse/3 Parse.iml" filepath="$PROJECT_DIR$/1 Data Type and Operator/3 Parse/3 Parse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/3 Static/3 Static.iml" filepath="$PROJECT_DIR$/5 OOP/3 Static/3 Static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/4 Encapsulation/4 Encapsulation.iml" filepath="$PROJECT_DIR$/5 OOP/4 Encapsulation/4 Encapsulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2 Logical Statement/4 Exception Handling/4 Exception Handling.iml" filepath="$PROJECT_DIR$/2 Logical Statement/4 Exception Handling/4 Exception Handling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1 Data Type and Operator/4 StringManipulation/4 StringManipulation.iml" filepath="$PROJECT_DIR$/1 Data Type and Operator/4 StringManipulation/4 StringManipulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1 Data Type and Operator/5 Big Decimal/5 Big Decimal.iml" filepath="$PROJECT_DIR$/1 Data Type and Operator/5 Big Decimal/5 Big Decimal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/5 Enumeration/5 Enumeration.iml" filepath="$PROJECT_DIR$/5 OOP/5 Enumeration/5 Enumeration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1 Data Type and Operator/6 DateTimeManipulation/6 DateTimeManipulation.iml" filepath="$PROJECT_DIR$/1 Data Type and Operator/6 DateTimeManipulation/6 DateTimeManipulation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/6 Inheritance/6 Inheritance.iml" filepath="$PROJECT_DIR$/5 OOP/6 Inheritance/6 Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/5 OOP/7 Interface And Abstract Class/7 Interface And Abstract Class.iml" filepath="$PROJECT_DIR$/5 OOP/7 Interface And Abstract Class/7 Interface And Abstract Class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HAND OUT.iml" filepath="$PROJECT_DIR$/.idea/HAND OUT.iml" />
+    </modules>
+  </component>
+</project>

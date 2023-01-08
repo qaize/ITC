@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ini adalah description mengenai website ini.">
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+</head>
+<body>
+    <!--Testing Common HTML Element-->
+
+    <span>Ini span element pertama.</span>
+    <span>Ini span element kedua.</span>
+    <p>
+        Ini adalah paragraph pertama.
+        Ini adalah baris baru
+        saya coba spasi yang panjang                        bla bla bla.
+            sekarang saya tabbing.
+    </p>
+    <p>Ini adalah paragraph kedua.</p>
+
+    <h1>Contoh header 1</h1>
+    <h2>Contoh header 2</h2>
+    <h3>Contoh header 3</h3>
+    <h4>Contoh header 4</h4>
+    <h5>Contoh header 5</h5>
+    <h6>Contoh header 6</h6>
+
+    <div>
+        Ini adalah div.
+        <span>Span 1 di dalam div</span>
+        <span>Span 2 di dalam div</span>
+        <p>Paragraph 1 di dalam div.</p>
+        <p>Paragraph 2 di dalam div.</p>
+    </div>
+
+    <p>
+        Ini adalah contoh paragraph dengan breakline. <br />
+        Kalimat ini akan turun ke bawah.
+    </p>
+
+    <!--source images pada html ini adalah relative path, yang artinya path yang posisinya bergantung dari letak file html ini.-->
+    <img src="Images/html5.jpg" alt="html 5 logo" />
+
+    <!--
+        Jangan pernah menggunakan absolute path seperti pada contoh di bawah ini, karena lokasi nya bisa berbeda di setiap komputer.    
+        <img src="C:\Users\Boby\Desktop\HTML-CSS Training Program\New Handout\1 Introduction to HTML\5 Example of Common HTML\Images" alt="html 5 logo">
+    -->
+
+    <!--
+        Apabila file Images berada di luar folder Html ini, gunakan .. pada relative path untuk up dan keluar dari satu folder.
+        <img src="../Images/html5.jpg" alt="html 5 logo" />
+    -->
+
+    <hr />
+
+    <ul>
+        <li>Unordered list 1</li>
+        <li>Unordered list 2</li>
+        <li>Unordered list 3</li>
+    </ul>
+
+    <ol>
+        <li>Ordered list 1</li>
+        <li>Ordered list 2</li>
+        <li>Ordered list 3</li>
+    </ol>
+
+    <pre>Di sini terdapat spasi panjang                                                ini bisa dilakukan karena
+seluruh text di sini tidak di format seperti yang lainnya.
+        Tabbing pun bisa dilakukan di sini.
+    </pre>
+
+    <a href="https://www.google.co.id/">Hyperlink yang menunjuk ke Google</a> <br />
+    <a href="https://www.google.co.id/" target="_blank">Membuka tab baru ke Google</a> <br />
+    <a href="#target">Anchor Link menuju ke target</a> <br />
+    <a href="Images/Sample.pdf" download>Download link</a>
+
+    <!--
+        Banyak developer yang menggunakan empty anchor untuk membuat link yang tidak pergi kemana pun, ini salah karena empty anchor akan bersifat page top.
+        Empty link seharusnya ditulis dengan empty javascript:; agar tidak membuat suatu link membuat halaman pergi ke page top.
+    -->
+    <a href="#">Empty Anchor</a>
+    <a href="javascript:;">Empty Link</a>
+
+    <hr />
+
+    <table border="1">
+        <caption>Table Caption</caption>
+        <thead>
+            <tr>
+                <th>Table Header 1</th>
+                <th>Table Header 2</th>
+                <th>Table Header 3</th>
+                <th>Table Header 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Table Body 1</td>
+                <td>Table Body 2</td>
+                <td>Table Body 3</td>
+                <td>Table Body 4</td>
+            </tr>
+            <tr>
+                <td>Table Body 1</td>
+                <td>Table Body 2</td>
+                <td>Table Body 3</td>
+                <td>Table Body 4</td>
+            </tr>
+            <tr>
+                <td colspan="2">Table Body 1</td>
+                <td>Table Body 2</td>
+                <td>Table Body 3</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Table Body 1</td>
+                <td>Table Body 2</td>
+                <td>Table Body 3</td>
+                <td>Table Body 4</td>
+            </tr>
+            <tr>
+                <td>Table Body 2</td>
+                <td>Table Body 3</td>
+                <td>Table Body 4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Table Foot</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p id="target">THE TARGET!</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+    <p>Not the target</p>
+</body>
+</html>

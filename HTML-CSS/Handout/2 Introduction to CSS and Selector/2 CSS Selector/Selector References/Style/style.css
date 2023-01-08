@@ -1,0 +1,19 @@
+table{
+	width:100%;
+	margin-bottom:25px;
+}
+td{
+	border: solid 1px black;
+	padding: 5px;
+}
+th{
+	background-color:black;
+	color:white;
+	padding:6px;
+}
+.fa-times-circle{
+	color:red;
+}
+.fa-check-circle{
+	color:green;
+}

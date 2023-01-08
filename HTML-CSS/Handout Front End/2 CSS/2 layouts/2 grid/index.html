@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+	  box-sizing: border-box;
+    }
+
+    .grid-container {
+      background-color: #444;
+      display: grid;
+      width: 500px;
+      margin: 0 auto;
+
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 100px 100px 50px;
+
+      column-gap: 20px;
+      row-gap: 10px;
+
+      justify-content: center;
+      /* align-items: stretch; */
+    }
+
+    .grid-container>div:nth-child(odd) {
+      color: white;
+    }
+
+    .el--1 {
+      background-color: black;
+
+      grid-column: 1/ 2;
+      grid-row: 1/-1;
+    }
+
+    .el--2 {
+      background-color: aquamarine;
+    }
+
+    .el--3 {
+      background-color: blue;
+    }
+
+    .el--4 {
+      background-color: yellowgreen;
+    }
+
+    .el--5 {
+      background-color: brown;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .el--6 {
+      background-color: chocolate;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="item el--1">1</div>
+    <div class="item el--2">2</div>
+    <div class="item el--3">3</div>
+    <div class="item el--4">4</div>
+    <div class="item el--5">5</div>
+    <div class="item el--6">6</div>
+  </div>
+</body>
+
+</html>

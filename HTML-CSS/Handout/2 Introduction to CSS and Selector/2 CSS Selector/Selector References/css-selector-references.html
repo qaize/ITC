@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Selector References</title>
+<link rel="stylesheet" href="Style/font-awesome.css">
+<link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <table class="au-tut-css-selector-table">
+        <thead>
+            <tr>
+                <th colspan="5">Basic Selector</th>
+            </tr>
+            <tr>
+                <th>Syntax</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CSS Version</th>
+                <th>Specificity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>elementname</td>
+                <td>Element Selector</td>
+                <td>
+                    Selector ini adalah selector paling sederhana, dimana digunakan untuk memilih langsung seluruh
+                    html element/ tag yang akan di style, contohnya seperti div, p, span, dan lain-lain.
+                </td>
+                <td>1</td>
+                <td>0,0,1</td>
+            </tr>
+            <tr>
+                <td>.class-name</td>
+                <td>Class Selector</td>
+                <td>Selector ini digunakan untuk memilih seluruh element dengan nama class yang ditentukan.</td>
+                <td>1</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>#id-name</td>
+                <td>ID Selector</td>
+                <td>
+                    Selector ini digunakan untuk memiliki satu element dengan nama id yang ditentukan.
+                    Walaupun memungkinkan untuk memilih banyak, tetapi sesuai dengan ketentuan html validation, id tetap
+                    bersifat unik.
+                </td>
+                <td>1</td>
+                <td>1,0,0</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>Select All</td>
+                <td>
+                    Selector ini digunakan untuk memilih seluruh element yang ada pada html document. Kurang lebih sifatnya
+                    sama seperti pada sql query bahwa * (asterisk) artinya seluruhnya.
+                </td>
+                <td>2</td>
+                <td>0,0,0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Seluruh tags yang valid sampai 2017</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table class="au-tut-css-selector-table">
+        <thead>
+            <tr>
+                <th colspan="5">Complex Selector</th>
+            </tr>
+            <tr>
+                <th>Syntax</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CSS Version</th>
+                <th>Specificity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>elementname1, elementname2</td>
+                <td>And Selector</td>
+                <td>
+                    Selector ini adalah selector yang digunakan untuk memilih dua element atau lebih dengan menggunakan
+                    koma sebagai combinatornya.
+                </td>
+                <td>1</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>containerelement selectedelement</td>
+                <td>Descendant Selector</td>
+                <td>
+                    Selector ini adalah selector yang digunakan untuk memilih beberapa element dimana element tersebut merupakan
+                    keturunan dari node-node di depannya, ditandai dengan menggunakan spasi sebagai combinatornya.
+                </td>
+                <td>1</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <td>parentelement > selectedelement</td>
+                <td>Children Selector</td>
+                <td>
+                    Selector ini adalah selector yang digunakan untuk memilih beberapa element dimana element tersebut merupakan
+                    anak dari node di depannya, ditandai dengan menggunakan > sebagai combinatornya.
+                </td>
+                <td>1</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <td>previouselement + selectelement</td>
+                <td>Next Selector</td>
+                <td>
+                    Selector ini adalah selector yang digunakan untuk memilih satu element dimana element tersebut merupakan
+                    element yang posisinya tepat setelah previous element.
+                </td>
+                <td>1</td>
+                <td>+</td>
+            </tr>
+            <tr>
+                <td>previouselement ~ selectelement</td>
+                <td>Preceded Selector</td>
+                <td>
+                    Selector ini adalah selector yang digunakan untuk memilih beberapa element dimana element tersebut merupakan
+                    element yang posisinya terjadi setelah previous element, baik tepat setelah maupun tidak (masih dalam level
+                    yang sama.)
+                </td>
+                <td>1</td>
+                <td>+</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Seluruh tags yang valid sampai 2017</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table class="au-tut-css-selector-table">
+        <thead>
+            <tr>
+                <th colspan="5">Attribute Selector</th>
+            </tr>
+            <tr>
+                <th>Syntax</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CSS Version</th>
+                <th>Specificity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>[attribute]</td>
+                <td>Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dengan men-spesifikasi nama attribute.
+                </td>
+                <td>2</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>[attribute=value] / [attribute="value"]</td>
+                <td>Single Value Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dengan men-spesifikasi isi single value
+                    dari attributenya.
+                </td>
+                <td>2</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>[attribute~=value] / [attribute~="value"]</td>
+                <td>Alternate Value Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dengan men-spesifikasi isi salah satu value dari
+                    attributenya apabila attribute memiliki lebih dari satu value.
+                </td>
+                <td>2</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>[attribute|=value] / [attribute|="value"]</td>
+                <td>Hyphenated Value Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dimana naming convention dari html attribute tersebut
+                    menggunakan - (hyphen) sebagai pemisah satu value attributenya.
+                </td>
+                <td>2</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>[attribute^=value] / [attribute^="value"]</td>
+                <td>Initial Value Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dimana value dari attributenya dimulai dengan kata
+                    yang ditentukan.
+                </td>
+                <td>3</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>[attribute$=value] / [attribute$="value"]</td>
+                <td>Last Value Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dimana value dari attributenya diakhiri dengan kata
+                    yang ditentukan.
+                </td>
+                <td>3</td>
+                <td>0,1,0</td>
+            </tr>
+            <tr>
+                <td>[attribute*=value] / [attribute*="value"]</td>
+                <td>Substring Value Attribute Selector</td>
+                <td>
+                    Selector ini digunakan untuk memilih html element dimana value dari attributenya mengandung substring yang
+                    ditentukan.
+                </td>
+                <td>3</td>
+                <td>0,1,0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Seluruh tags yang valid sampai 2017</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table class="au-tut-css-selector-table">
+        <thead>
+            <tr>
+                <th colspan="5">Pseudo-classes</th>
+            </tr>
+            <tr>
+                <th>Syntax</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CSS Version</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>:active</td>
+                <td>Active Link</td>
+                <td>Digunakan untuk styling link pada saat event click pada link tersebut.</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>:checked</td>
+                <td>Checked Option</td>
+                <td>Digunakan untuk styling pada saat radio button, checkbox dan option pada drop-down terpilih.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:disabled</td>
+                <td>Disabled Form Elements</td>
+                <td>Digunakan untuk styling suatu form element pada saat keadaanya dalam kondisi disable.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:empty</td>
+                <td>Empty Tag</td>
+                <td>
+                    Digunakan untuk styling suatu DOM pada saat kondisi tagnya tidak memiliki content atau tidak
+                    memiliki child.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:enabled</td>
+                <td>Enabled Form Elements</td>
+                <td>Digunakan untuk styling suatu form element pada saat keadaanya dalam kondisi enabled.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:first-child</td>
+                <td>First Child</td>
+                <td>
+                    Digunakan untuk seleksi dan styling suatu element pertama yang berada di dalam sebuah parent
+                    node.
+                </td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>:first-of-type</td>
+                <td>First of Type</td>
+                <td>
+                    Digunakan untuk seleksi dan styling suatu element tertentu yang berada di paling awal di dalam
+                    sebuah parent node.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:focus</td>
+                <td>Focused Element</td>
+                <td>
+                    Digunakan untuk styling suatu element yang memiliki state focus, biasanya suatu form element yang
+                    membutuhkan keyboard input.
+                </td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>:hover</td>
+                <td>Hovered Element</td>
+                <td>Digunakan untuk styling suatu element dimana diatas element tersebut terdapat pointer mouse.</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>:in-range</td>
+                <td>In-range Numeric</td>
+                <td>
+                    Digunakan hanya untuk styling macam-macam input element yang memiliki range minimum dan maximum (attribute
+                    min dan max), dan kondisi styling memungkinkan saat nilai input berada di dalam minimum dan maximum.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:invalid</td>
+                <td>Invalid Input</td>
+                <td>
+                    Digunakan untuk styling input element dalam kondisi dimana input di-isi dengan input value invalid atau
+                    tidak sesuai dengan setting miliki elementnya. (Error validation).
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:lang(languagename)</td>
+                <td>Language Selection</td>
+                <td>
+                    Digunakan untuk styling seluruh html element dengan attribute lang yang sesuai dengan parameter
+                    dari pseudo-classes.
+                </td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>:last-child</td>
+                <td>Last Child</td>
+                <td>
+                    Digunakan untuk seleksi dan styling suatu element terakhir yang berada di dalam sebuah parent node.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:last-of-type</td>
+                <td>Last of Type</td>
+                <td>
+                    Digunakan untuk seleksi dan styling suatu element tertentu yang berada di paling akhir di dalam sebuah
+                    parent node.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:link</td>
+                <td>Unvisited Link</td>
+                <td>Digunakan untuk styling semua link element yang belum di kunjungi.</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>:not(selector)</td>
+                <td>Negating Selector</td>
+                <td>Digunakan untuk men-seleksi seluruh selector yang bukan merupakan selector yang berada di dalam parameter.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:nth-child(n)</td>
+                <td>Ascending Children Order</td>
+                <td>Digunakan untuk seleksi dan styling element ke (n) di dalam suatu parent node, dari urutan teratas ke bawah.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:nth-last-child(n)</td>
+                <td>Descending Children Order</td>
+                <td>Digunakan untuk seleksi dan styling element ke (n) di dalam suatu parent node, dari urutan terbawah ke atas.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:nth-last-of-type(n)</td>
+                <td>Descending Type Order</td>
+                <td>
+                    Digunakan untuk seleksi dan styling element dengan selected type ke (n) di dalam suatu parent node,
+                    dari urutan terbawah ke atas.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:nth-of-type(n)</td>
+                <td>Ascending Type Order</td>
+                <td>
+                    Digunakan untuk seleksi dan styling element dengan selected type ke (n) di dalam suatu parent node,
+                    dari urutan teratas ke bawah.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:only-of-type</td>
+                <td>Lonely Type</td>
+                <td>
+                    Digunakan untuk seleksi sebuah node, dimana node tersebut adalah satu-satunya tipe node di dalam
+                    sebuah parent node yang sama.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:only-child</td>
+                <td>Lonely Child</td>
+                <td>
+                    Digunakan untuk seleksi sebuah node, dimana node tersebut tidak memiliki sibling sama sekali di dalam
+                    satu parent node.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:optional</td>
+                <td>Optional Input</td>
+                <td>Digunakan untuk styling element form input yang memiliki attribute not required/ not compulsory.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:out-of-range</td>
+                <td>
+                    Out of Range Numeric
+                </td>
+                <td>
+                    Digunakan hanya untuk styling macam-macam input element yang memiliki range minimum dan maximum (attribute
+                    min dan max), dan kondisi styling memungkinkan saat nilai input berada di luar minimum dan maximum.
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:read-only</td>
+                <td>Read Only Input</td>
+                <td>Digunakan untuk styling element form input yang memiliki attribute read only.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:read-write</td>
+                <td>Editable Input</td>
+                <td>Digunakan untuk styling element form input yang memiliki attribute editable atau inputable.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:required</td>
+                <td>Required Input</td>
+                <td>Digunakan untuk styling element form input yang memiliki attribute required/ compulsory.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:root</td>
+                <td>Document Root</td>
+                <td>Digunakan untuk seleksi document root, dimana adalah html document tag.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:target</td>
+                <td>Target Anchor</td>
+                <td>Digunakan untuk styling target dari anchor link saat dalam keadaan aktif atau dipilih.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:valid</td>
+                <td>Valid Input</td>
+                <td>
+                    Digunakan untuk styling input element dalam kondisi dimana input di-isi dengan input value
+                    yang valid atau sesuai dengan setting miliki elementnya. (Error validation).
+                </td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>:visited</td>
+                <td>Visited Link</td>
+                <td>Digunakan untuk styling semua link element yang sudah di kunjungi.</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Seluruh tags yang valid sampai 2017</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table class="au-tut-css-selector-table">
+        <thead>
+            <tr>
+                <th colspan="5">Pseudo-elements</th>
+            </tr>
+            <tr>
+                <th>Syntax</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>CSS Version</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>::after</td>
+                <td>After Element</td>
+                <td>Menambahkan extra content setelah html element yang dipilih.</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>::before</td>
+                <td>Before Element</td>
+                <td>Menambahkan extra content sebelum html element yang dipilih.</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>::first-letter</td>
+                <td>First Letter</td>
+                <td>Digunakan untuk styling huruf pertama pada satu node yang dipilih.</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>::first-line</td>
+                <td>First Line</td>
+                <td>Digunakan untuk styling kalimat pertama pada satu node yang dipilih.</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>::selection</td>
+                <td>Selected Content</td>
+                <td>Digunakan untuk styling content di dalam sebuah tag yang di-selection by drag oleh user.</td>
+                <td>?</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">Seluruh tags yang valid sampai 2017</td>
+            </tr>
+        </tfoot>
+    </table>	
+</body>
+</html>

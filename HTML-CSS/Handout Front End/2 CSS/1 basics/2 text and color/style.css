@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+}
+
+section {
+  background-color: yellow;
+}
+
+h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+
+  background-color: red;
+  color: white;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+li {
+  font-style: italic;
+}

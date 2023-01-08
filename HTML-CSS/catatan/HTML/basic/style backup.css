@@ -1,0 +1,69 @@
+/* css ada 3 : 
+1.In line
+2.Internal di head
+3.extenal di file baru di link ke head
+
+
+priority: 
+1.id
+2.class
+3.global properties
+
+ref css : mozila basic selector
+
+*/
+
+/* Properties */
+h1,
+h2 {
+  color: brown;
+}
+
+.solution-heading {
+  color: blue;
+}
+
+#solution {
+  background-color: yellowgreen;
+}
+
+.services {
+  background-color: tomato;
+}
+
+section {
+  background-color: yellow;
+}
+
+header {
+  background-color: violet;
+}
+
+/* semua section dibungkus header akan berubah */
+header section {
+  background-color: teal;
+}
+
+/* descendant */
+
+article p a {
+  color: blue;
+}
+
+/* child */
+article > a {
+  color: tomato;
+}
+
+/* ini kalo bagiannya dibawah */
+
+/* .bagian.bagian--1 {
+  background-color: bisque;
+} */
+
+.bagian {
+  background-color: cadetblue;
+}
+.bagian--1 {
+  background-color: chartreuse;
+}

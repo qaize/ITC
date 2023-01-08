@@ -1,0 +1,123 @@
+@media only screen and (max-width:800px){
+    .wrapper{
+        display:block;
+    }
+    .wrapper .container{
+        display:grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+    }
+    .container .left-container{
+        background-color: #01a3a4;
+        border-radius: 0;
+        width: 100%;
+        padding-top:10px;
+        box-sizing: border-box;
+        display:block;
+    }
+    .left-container h2{
+        font-size: 16px;
+        margin-top:6px;
+        font-size: 14px;
+    }
+    .left-container .logo{
+        height:30px;
+    }
+    .left-container .welcome-note{
+        background-color: #273c75;
+        font-size: 14px;
+        margin-top: 21px;
+        margin-bottom: 0;
+        padding-top: 8px;
+        padding-bottom: 5px;
+    }
+    .container .left-container .description{
+        display:block;
+        background-color: #273c75;
+        padding-bottom: 8px;
+        font-size:11px;
+    }
+    .container .right-container{
+        width:100%;
+        border-radius:0;
+        background-color:transparent;
+        padding:0;
+    }
+    .right-container .register-link{
+        text-align: center;
+        background-color:black;
+        padding:5px;
+        margin-bottom: 20px;
+    }
+    .right-container .register-link a{
+        color:white;
+    }
+    .right-container .title{
+        color:white;
+        font-size: 18px;
+        margin-bottom:10px;
+    }
+    [name=login-form] .row-input{
+        margin-bottom: 8px;
+    }
+    .row-input i{
+        background-color:white;
+        border:none;
+    }
+    .row-input [type=text], .row-input [type=password]{
+        border:none;
+    }
+    .forget-password a{
+        color:white;
+    }
+    .show-password span{
+        color:white;
+    }
+    .or-with{
+        color:white;
+        border-bottom: solid 1px white;
+    }
+}
+@media only screen and (max-height:550px){
+    .left-container .welcome-note{
+        display:none;
+    }
+    .container .left-container .description{
+        display:none;
+    }
+    .wrapper .container{
+        grid-template-rows: 46px 1fr;
+    }
+    .right-container .title{
+        display:none;
+    }
+    .left-container .tag-line{
+        display:none;
+    }
+    .container .left-container{
+        padding:10px;
+    }
+    .container .left-container > div{
+        display:flex;
+    }
+    .left-container .logo{
+        height:25px;
+        padding-right: 10px;
+    }
+    .right-container .register-link{
+        margin-bottom:10px;
+    }
+    .forget-password, .show-password{
+        text-align: center;
+    }
+    .show-password{
+        margin-bottom:15px;
+    }
+    .or-with{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+    }
+}

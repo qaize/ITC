@@ -1,0 +1,96 @@
+h1, h2, h3, p{
+    padding-left: 15px;
+}
+
+.align-middle-block{
+    background-color: #d35400;
+    color:white;
+    width:500px;
+    margin:0 auto;
+    /*kita set margin top dan bottomnya 0, tetapi kanan dan kirinya auto, membuat element ini stay di tengah.*/
+}
+
+.inside-container{
+    background-color: #95a5a6;
+    width: 800px;
+    height:50px;
+}
+.align-middle-text-container{
+    background-color: #95a5a6;
+    width: 800px;
+    text-align: center; /*Ini adalah property yang membuat semua komponen text ke tengah.*/
+}
+.align-middle-text-container span{
+    background-color: #d35400;
+    color:white;
+}
+.align-middle-text-container div{
+    display: inline-block;
+    background-color: #8e44ad;
+    color:white;
+    width: 200px;
+    height:30px;
+}
+
+.align-middle-flex-container{
+    background-color: #95a5a6;
+    width: 800px;
+
+    /*display flex memberi jalan pintah untuk melakukan justification ke tengah*/
+    display:flex;
+    justify-content: center;
+}
+.align-middle-flex-container div{
+    background-color: #8e44ad;
+    color:white;    
+}
+
+.vertical-align-block{
+    background-color: #d35400;
+    color:white;
+    width: 300px;
+    height: 30px;
+
+    margin: auto 0; /*Ini tidak berfungsi, auto hanya bekerja untuk kanan dan kiri.*/
+}
+.vertical-flex-container{
+    /*Sekali lagi kita akan memanfaatkan flex untuk membuat element secara vertical stay di tengah.*/
+    display: flex;
+    align-content: center;
+}
+.vertical-text > span{
+    background-color: #8e44ad;
+    color:white;
+}
+.vertical-text{
+    line-height: 50px; 
+    /*Mengapa line-height: 50px? Itu karena tinggi .inside-container juga 50px.*/
+}
+.buttons-container{
+    border:solid black 2px;
+    padding:12px;
+}
+.buttons-container a,
+.buttons-container button{
+    /*Ini adalah beberapa kombinasi properties yang membuat button dan link akan sama secara identik.*/
+    color:white;
+
+    display: inline-block; /*Ini akan membuat link menjadi inline-block sama seperti button.*/
+    /*Karena telah dibuat sebagai inline-block, kita bisa berikan width dan height untuk link.*/
+    width:150px;
+    height: 30px;
+    
+    border:none; /*menghapus default border yang ada di button.*/
+    text-decoration: none; /*Menghilangkan underline pada link*/
+    border-radius: 6px; /*Membuat kedua element memiliki corner yang tumpul.*/
+
+    vertical-align: middle; /*Ini hanya digunakan agar button berada sejajar, bukan untuk membuat textnya ke tengah.*/
+    text-align: center; /*ini membuat text di tengah secara horizontal.*/
+    line-height: 30px; /*line height disesuaikan dengan height dari button, maka text akan ditengah secara vertical.*/
+}
+.buttons-container button{
+    background-color:#16a085;
+}
+.buttons-container a{
+    background-color:#e74c3c;
+}

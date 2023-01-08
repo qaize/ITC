@@ -1,0 +1,781 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jagonya Tukang. Jasa perawatan rumah, servis ac, cuci ac, isi freon, perbaikan atap rumah bocor, perbaikan listrik, perbaikan saluran air mampet, pasang keramik">
+    <meta name="author" content="Boby Widjaja">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+    <title>Jagonya Tukang - Perawatan Rumah: AC, Atap Bocor, Listrik, Pipa Air</title>
+    <link rel="stylesheet" type="text/css" href="Content/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="Content/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="Content/fontello.css" />
+    <link rel="stylesheet" type="text/css" href="Content/site.css" />
+    <script src="Scripts/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="Scripts/jssor.slider-22.1.9.mini.js" type="text/javascript"></script>
+    <script src="Scripts/site.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--0. Modal & Form Layer (Template)-->
+    <div class="modal-layer"></div>
+    <div class="full-access-body">
+        <div class="access-container">
+            <div class="head-container">
+                <span id="access-title">LOGIN</span>
+                <i id="close-access" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="container">
+                <div class="sosmed-api-container">
+                    <a href="javascript:;" class="facebook-button"><i class="fa fa-facebook" aria-hidden="true"></i><span>Sign-in with Facebook</span></a>
+                    <a href="javascript:;" class="gmail-button"><i class="fontello-icon icon-google"></i><span>Sign-in with Gmail</span></a>
+                </div>
+                <form>
+                    <div class="login-container">
+                        <div class="stereo-radio radio-off">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-circle-o" aria-hidden="true"></i>
+                            <input type="radio" name="access-way" value="login">
+                            <label>Masuk ke akun Anda</label>
+                        </div>
+                        <div id="login-form-body">
+                            <div class="text-field">
+                                <label>Email</label>
+                                <input type="text" class="stereo-textbox" placeholder="Masukan email" />
+                            </div>
+                            <div class="text-field">
+                                <label>Kata Sandi</label>
+                                <input type="text" class="stereo-textbox" placeholder="Masukan email" />
+                            </div>
+                            <input class="login-button stereo-button" type="submit" value="Masuk" />
+                            <a href="javascript:;" class="remember-password">Lupa kata sandi?</a>
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <div class="signup-container">
+                        <div class="stereo-radio radio-off">
+                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-circle-o" aria-hidden="true"></i>
+                            <input type="radio" name="access-way" value="register">
+                            <label>Buat akun baru</label>
+                        </div>
+                        <div id="register-form-body">
+                            <div class="row-group">
+                                <div class="text-field twin-col">
+                                    <label>Nama Depan <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="text" />
+                                </div>
+                                <div class="text-field twin-col">
+                                    <label>Nama Belakang</label>
+                                    <input class="stereo-textbox" type="text" />
+                                </div>
+                            </div>
+                            <div class="row-group">
+                                <div class="text-field full-col">
+                                    <label>Email <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="text" />
+                                </div>
+                            </div>
+                            <div class="row-group">
+                                <div class="text-field twin-col">
+                                    <label>Kata Sandi <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="password" />
+                                </div>
+                                <div class="text-field twin-col">
+                                    <label>Masukkan Ulang Kata Sandi <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="password" />
+                                </div>
+                            </div>
+                            <div class="row-group">
+                                <div class="text-field full-col">
+                                    <label>Alamat <span class="required">*</span></label>
+                                    <textarea class="stereo-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="row-group">
+                                <div class="text-field triple-col">
+                                    <label>Kota <span class="required">*</span></label>
+                                    <div class="stereo-dropdown">
+                                        <select>
+                                            <option disabled selected>Pilih Kota</option>
+                                            <option value="jakarta">Jakarta</option>
+                                            <option value="surabaya">Surabaya</option>
+                                            <option value="bandung">Bandung</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="text-field triple-col">
+                                    <label>Kelurahan <span class="required">*</span></label>
+                                    <div class="stereo-dropdown">
+                                        <select>
+                                            <option disabled selected>Pilih Kelurahan</option>
+                                            <option value="jakarta">Duri Kepa</option>
+                                            <option value="surabaya">Gambir</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="text-field triple-col">
+                                    <label>Kecamatan <span class="required">*</span></label>
+                                    <div class="stereo-dropdown">
+                                        <select>
+                                            <option disabled selected>Pilih Kecamatan</option>
+                                            <option value="jakarta">Kebon Jeruk</option>
+                                            <option value="surabaya">Kebon Melati</option>
+                                        </select>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-group">
+                                <div class="text-field triple-col">
+                                    <label>Nama Daerah <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="text" placeholder="Contoh: Pondok Indah" />
+                                </div>
+                                <div class="text-field triple-col">
+                                    <label>Kode Pos <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="text" />
+                                </div>
+                                <div class="text-field triple-col">
+                                    <label>Jenis Kelamin <span class="required">*</span></label>
+                                    <div class="classic-radio">
+                                        <input id="signup-male" type="radio" name="gender" value="male" checked>
+                                        <label class="dot-point" for="signup-male"></label>
+                                        <label>Laki-laki</label>
+                                    </div>
+                                    <div class="classic-radio">
+                                        <input id="signup-female" type="radio" name="gender" value="female">
+                                        <label class="dot-point" for="signup-female"></label>
+                                        <label>Perempuan</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row-group">
+                                <div class="text-field twin-col">
+                                    <label>Nomor Telepon <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="text" placeholder="021-xxxxxxx" />
+                                </div>
+                                <div class="text-field twin-col">
+                                    <label>Nomor HP <span class="required">*</span></label>
+                                    <input class="stereo-textbox" type="text" placeholder="081x-xxxx-xxx" />
+                                </div>
+                            </div>
+                            <input class="sign-up stereo-button" type="submit" value="Masuk" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a id="open-question" href="javascript:;" class="question-button"><img src="Images/question.png" alt="question" /></a>
+    <div class="question-container">
+        <a id="close-question-button" href="javascript:;"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+        <span class="question">Halo! Punya pertanyaan?</span>
+        <span class="description">Silahkan isi pertanyaan/keluhan Anda di bawah ini.</span>
+        <form>
+            <input id="name" class="stereo-textbox" type="text" placeholder="Nama" />
+            <input id="email" class="stereo-textbox" type="text" placeholder="Email" />
+            <textarea id="question-complain" class="stereo-textarea" placeholder="pertanyaan/keluhan"></textarea>
+            <input id="submit-question" class="stereo-button" type="submit" value="Kirim" />
+        </form>
+    </div>
+    <!--1. Registeration Container (Template)-->
+    <div id="top-page" class="registeration-container">
+        <a id="login-dialog-button" href="javascript:;">Halo! Masuk ke akunmu?</a><a id="register-dialog-button" href="javascript:;">Baru? Daftar disini!</a>
+    </div>
+    <!--2. Title Bar (Template)-->
+    <div class="title-bar">
+        <div class="logo-container">
+            <a href="home.html"><img src="Images/logo.png" alt="Jagonya Tukang" /></a>
+            <span>HANDAL & TERPERCAYA</span>
+        </div>
+        <div class="right-container">
+            <div class="search-cart">
+                <form>
+                    <input type="text" placeholder="Cari..." /><button class="search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+                <a href="checkout.html" class="shopping-cart">
+                    <img src="Images/shopping-cart.png" alt="Shopping Cart" />
+                    <div class="total-cart">2</div><!--Total Cart di sini-->
+                </a>
+            </div>
+            <div class="contact-container">
+                <div>
+                    <img src="Images/yellow-phone.png" alt="Phone" />
+                    <span>021-57931331</span>
+                </div>
+                <div>
+                    <img src="Images/yellow-wa.png" alt="Whatsapp" />
+                    <span>08112018810</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--3. Navigation Container (Template)-->
+    <div id="mobile-nav" class="mobile-navigation-container">
+        <a href="javascript:;"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    </div>
+    <div class="navigation-container">
+        <div class="left">
+            <div id="services-nav" class="nav-lvl1 selected-navigation">
+                Services <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <ul class="nav-lvl2">
+                    <li class="selected-navigation">
+                        Home Service <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div class="nav-lvl3">
+                            <div class="row">
+                                <a id="ac-menu" href="listIndex.html"><img src="Images/ac.png" alt="AC" /><span>AC</span></a>
+                                <a id="sipil-menu" href="javascript:;"><img src="Images/sipil.png" alt="Sipil" /><span>SIPIL</span></a>
+                                <a id="saluranair-menu" href="javascript:;"><img src="Images/saluran-air.png" alt="Saluran Air/ Plumbing" /><span>SALURAN AIR/ PLUMBING</span></a>
+                                <a id="listrik-menu" href="javascript:;"><img src="Images/listrik.png" alt="Listrik" /><span>LISTRIK</span></a>
+                            </div>
+                            <div class="row">
+                                <a id="homeappliances-menu" href="javascript:;"><img src="Images/home-appliances.png" alt="Home Appliances" /><span>HOME APPLIANCES</span></a>
+                                <a id="cleaningservice-menu" href="javascript:;"><img src="Images/cleaning-service.png" alt="Cleaning Service" /><span>CLEANING SERVICE</span></a>
+                                <a id="taman-menu" href="javascript:;"><img src="Images/taman.png" alt="Taman" /><span>TAMAN</span></a>
+                                <a id="kolam-menu" href="javascript:;"><img src="Images/kolam.png" alt="Kolam" /><span>KOLAM</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Corporate Service<i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div class="nav-lvl3">
+                            <div class="row">
+                                <a id="me-menu" href="javascript:;"><img src="Images/me-maintenance.png" alt="Mechanical & Electrical Maintenance" /><span>MECHANICAL & ELECTRICAL MAINTENANCE</span></a>
+                                <a id="cleaningservice2-menu" href="javascript:;"><img src="Images/cleaning-service2.png" alt="Cleaning Service" /><span>CLEANING SERVICE</span></a>
+                                <a id="rennovation-menu" href="javascript:;"><img src="Images/renovation.png" alt="Renovation" /><span>RENOVATION</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Home Improvement <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div class="nav-lvl3">
+                            <div class="row">
+                                <a id="rennovation2-menu" href="javascript:;"><img src="Images/renovation.png" alt="Renovation" /><span>RENOVATION</span></a>
+                                <a id="smarthome-menu" href="javascript:;"><img src="Images/smart-home.png" alt="Smart Home" /><span>SMART HOME</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Interior Design <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div class="nav-lvl3">
+                            <div class="row">
+                                <a id="designservices-menu" href="javascript:;"><img src="Images/design-services.png" alt="Design Services" /><span>DESIGN SERVICES</span></a>
+                                <a id="furniture-menu" href="javascript:;"><img src="Images/furniture.png" alt="Furniture" /><span>FURNITURE</span></a>
+                                <a id="homedecor-menu" href="javascript:;"><img src="Images/home-decor.png" alt="Home Decor" /><span>HOME DECOR</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        Autocare <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        <div class="nav-lvl3">
+                            <div class="row">
+                                <a id="autodetailing-menu" href="javascript:;"><img src="Images/auto-detailing.png" alt="Auto Detailing" /><span>AUTO DETAILING</span></a>
+                                <a id="paintprotection-menu" href="javascript:;"><img src="Images/paint-protection.png" alt="Paint Protection" /><span>PAINT PROTECTION</span></a>
+                                <a id="autoaccessories-menu" href="javascript:;"><img src="Images/auto-accessories.png" alt="Auto Accessories" /><span>AUTO ACCESSORIES</span></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="shop-nav" class="nav-lvl1">
+                Shop <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <ul class="nav-lvl2">
+                    <li>
+                        Building Materials
+                        <ul class="nav-lvl3">
+                            <li><a href="javascript:">Flooring</a></li>
+                            <li><a href="javascript:">Paint</a></li>
+                            <li><a href="javascript:">Masonry</a></li>
+                            <li><a href="javascript:">Plumbing</a></li>
+                            <li><a href="javascript:">Roofing</a></li>
+                            <li><a href="javascript:">Windows/Doors</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Home Appliances
+                        <ul class="nav-lvl3">
+                            <li><a href="javascript:">Heating, Ventilation, AC (HVAC)</a></li>
+                            <li><a href="javascript:">Home Automation</a></li>
+                            <li><a href="javascript:">Kitchen</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Furniture & Decorations
+                        <ul class="nav-lvl3">
+                            <li><a href="javascript:">Indoor Decoration</a></li>
+                            <li><a href="javascript:">Chairs</a></li>
+                            <li><a href="javascript:">Tables</a></li>
+                            <li><a href="javascript:">Cabinets</a></li>
+                            <li><a href="javascript:">Lighting</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Cleaning
+                        <ul class="nav-lvl3">
+                            <li><a href="javascript:">Chemical</a></li>
+                            <li><a href="javascript:">Equipment</a></li>
+                            <li><a href="javascript:">Odor Control</a></li>
+                            <li><a href="javascript:">Auto Detailing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div id="rekan-nav" class="nav-lvl1">
+                <a href="rekanJT.html">Rekan JT</a>
+            </div>
+            <div id="event-promo-nav" class="nav-lvl1">
+                Event & Promo <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <ul class="nav-lvl2">
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="promotions.html">Promotions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div id="faq-nav" class="nav-lvl1">
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div id="tips-nav" class="nav-lvl1">
+                <a href="tips.html">Tips</a>
+            </div>
+        </div>
+    </div>
+    <!--15. List Index-->
+    <div class="list-global-container">
+        <div class="trail-container">
+            <ul>
+                <li><a href="javascript:;">Home</a></li>
+                <li><a href="javascript:;">Home Service</a></li>
+                <li><a class="selected" href="javascript:;">AC</a></li>
+            </ul>
+            <h2>AC</h2>
+        </div>
+        <div class="list-index-container">
+            <div class="navigation">
+                <div class="sorting">
+                    <span>Diurutkan berdasarkan: </span>
+                    <div class="stereo-dropdown">
+                        <select>
+                            <option>Tanggal, terkini ke terlama</option>
+                            <option>Tanggal, terlama ke terkini</option>
+                        </select>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <span>Halaman</span>
+                    <ul>
+                        <li><a class="selected" href="javascript:">1</a></li>
+                        <li><a href="javascript:">2</a></li>
+                        <li><a href="javascript:">3</a></li>
+                        <li><a href="javascript:">4</a></li>
+                        <li><a href="javascript:">5</a></li>
+                    </ul>
+                    <a class="prev-page" href="javascript:;"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                    <a class="next-page" href="javascript:;"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="list-index-body">
+                <div id="index-mobile-menu">
+                    <a href="javascript:;"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                </div>
+                <div class="accordion-container">
+                    <div class="level1-complete">
+                        <span class="header">Paket Lengkap <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Paket Lengkap 1</a>
+                            <a href="javascript:;">Paket Lengkap 2</a>
+                            <a href="javascript:;">Paket Lengkap 3</a>
+                            <a href="javascript:;">Paket Lengkap 4</a>
+                            <a href="javascript:;">Paket Lengkap 5</a>
+                            <a href="javascript:;">Paket Lengkap 6</a>
+                            <a href="javascript:;">Paket Lengkap 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">AC <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Cuci AC</a>
+                            <a href="javascript:;">Perbaikan AC</a>
+                            <a href="javascript:;">Pasang Unit AC</a>
+                            <a href="javascript:;">Bongkar Unit AC</a>
+                            <a href="javascript:;">Penggantian (Bongkar Pasang) Unit AC</a>
+                            <a href="javascript:;">Tambah/Isi Gas Freon</a>
+                            <a href="javascript:;">Inspeksi Unit AC</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Sipil <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Sipil 1</a>
+                            <a href="javascript:;">Sipil 2</a>
+                            <a href="javascript:;">Sipil 3</a>
+                            <a href="javascript:;">Sipil 4</a>
+                            <a href="javascript:;">Sipil 5</a>
+                            <a href="javascript:;">Sipil 6</a>
+                            <a href="javascript:;">Sipil 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Saluran Air/Plumbing <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Saluran Air 1</a>
+                            <a href="javascript:;">Saluran Air 2</a>
+                            <a href="javascript:;">Saluran Air 3</a>
+                            <a href="javascript:;">Saluran Air 4</a>
+                            <a href="javascript:;">Saluran Air 5</a>
+                            <a href="javascript:;">Saluran Air 6</a>
+                            <a href="javascript:;">Saluran Air 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Listrik <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Listrik 1</a>
+                            <a href="javascript:;">Listrik 2</a>
+                            <a href="javascript:;">Listrik 3</a>
+                            <a href="javascript:;">Listrik 4</a>
+                            <a href="javascript:;">Listrik 5</a>
+                            <a href="javascript:;">Listrik 6</a>
+                            <a href="javascript:;">Listrik 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Home Appliances <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Home Appliances 1</a>
+                            <a href="javascript:;">Home Appliances 2</a>
+                            <a href="javascript:;">Home Appliances 3</a>
+                            <a href="javascript:;">Home Appliances 4</a>
+                            <a href="javascript:;">Home Appliances 5</a>
+                            <a href="javascript:;">Home Appliances 6</a>
+                            <a href="javascript:;">Home Appliances 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Cleaning Service <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Cleaning Service 1</a>
+                            <a href="javascript:;">Cleaning Service 2</a>
+                            <a href="javascript:;">Cleaning Service 3</a>
+                            <a href="javascript:;">Cleaning Service 4</a>
+                            <a href="javascript:;">Cleaning Service 5</a>
+                            <a href="javascript:;">Cleaning Service 6</a>
+                            <a href="javascript:;">Cleaning Service 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Taman <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Taman 1</a>
+                            <a href="javascript:;">Taman 2</a>
+                            <a href="javascript:;">Taman 3</a>
+                            <a href="javascript:;">Taman 4</a>
+                            <a href="javascript:;">Taman 5</a>
+                            <a href="javascript:;">Taman 6</a>
+                            <a href="javascript:;">Taman 7</a>
+                        </div>
+                    </div>
+                    <div class="level1">
+                        <span class="header">Kolam <i class="fa fa-plus" aria-hidden="true"></i><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <div class="level2">
+                            <a href="javascript:;">Kolam 1</a>
+                            <a href="javascript:;">Kolam 2</a>
+                            <a href="javascript:;">Kolam 3</a>
+                            <a href="javascript:;">Kolam 4</a>
+                            <a href="javascript:;">Kolam 5</a>
+                            <a href="javascript:;">Kolam 6</a>
+                            <a href="javascript:;">Kolam 7</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-index-content">
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                    <div class="thumbnail-container">
+                        <a class="details-thumbnail" href="javascript:;">
+                            <img src="Images/product/air-conditioner.jpg" />
+                            <div class="item-container">
+                                <span class="name">Cuci AC</span>
+                                <span class="price-tag">IDR 60.000</span>
+                            </div>
+                        </a>
+                        <a href="javascript:;" class="add-cart"><img src="Images/shopping-cart-coal.png" alt="shopping cart" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="info-global-container">
+        <div class="item-info-window">
+            <div class="head-container">
+                <span id="info-title">INFO</span>
+                <i id="close-info" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="body-container">
+                <div class="image-container">
+                    <img class="display" src="Images/product/air-conditioner.jpg" />
+                    <div class="thumbnail">
+                        <img src="Images/product/air-conditioner.jpg" />
+                        <img src="Images/product/air-conditioner.jpg" />
+                    </div>
+                </div>
+                <div class="detail-container">
+                    <h2>Cuci AC</h2>
+                    <div class="price-block">IDR 70.000</div>
+                    <label>Kapasitas</label>
+                    <div class="stereo-dropdown">
+                        <select>
+                            <option value="2pk" selected>s/d 2 pk (per unit)</option>
+                            <option value="3pk">s/d 3 pk (per unit)</option>
+                        </select>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <button class="stereo-button">
+                        <img src="Images/shopping-cart-coal.png" />
+                        <span>Tambah ke keranjang</span>
+                    </button>
+                    <div class="keterangan">
+                        <p>
+                            Jagonya Tukang menyediakan jasa pembersihan berbagai tipe AC,
+                            dari split, window, dan cassette yang dikerjakan secara tuntas
+                            dan menyeluruh, melalui tahapan sebagai berikut;
+                        </p>
+                        <ul>
+                            <li>Membersihkan kipas unit <span class="italic">indoor & outdoor.</span></li>
+                            <li>Membersihkan <span class="italic">coil condenser</span> unit <span class="italic">indoor & outdoor.</span></li>
+                            <li>Memastikan kondisi kompresor di unit <span class="italic">outdoor.</span></li>
+                            <li>Memeriksa kondisi saluran pembuangan air kondensasi.</li>
+                        </ul>
+                        <p>Rincian biaya pencucian AC:</p>
+                        <ul>
+                            <li>Kapasitas sampai dengan 2 PK: <span class="highlight">IDR 70.000 / unit</span></li>
+                            <li>Kapasitas diatas 2 PK: <span class="highlight">IDR 50.000 / PK</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-global-container">
+        <div class="cart-window">
+            <div class="head-container">
+                <span id="cart-title">KERANJANG</span>
+                <i id="close-cart" class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="body-container">
+                <div class="top-part">
+                    <img src="Images/product/air-conditioner.jpg" />
+                    <div class="item">
+                        <span class="item-name">Cuci AC</span>
+                        <span class="description">s/d 2 pk (per unit)</span>
+                    </div>
+                    <div class="number-stereo">
+                        <button class="decrease"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                        <input type="text" value="1"/>
+                        <button class="increase"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="price">
+                        <label>IDR 70.0000</label>
+                        <a href="javascript:;"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="middle-part">
+                    <label class="date-schedule">Tanggal kunjungan yang diinginkan</label>
+                    <div class="stereo-dropdown">
+                        <select>
+                            <option disabled selected>dd/mm/yy</option>
+                        </select>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <p class="schedule-description">Untuk kunjungan di hari Sabtu dan Minggu atau hari libur harap lakukan konfirmasi 1 hari kerja sebelumnya.</p>
+                    <label class="property">Jenis Properti</label>
+                    <div class="property-type-field">
+                        <div class="stereo-dropdown">
+                            <select>
+                                <option disabled selected>Lainnya</option>
+                                <option value="air-conditioner">AC</option>
+                            </select>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                        <input class="stereo-textbox" type="text" placeholder="Silahkan isi jenis properti Anda" />
+                    </div>
+                    <div class="schedule-field">
+                        <label>Pilih waktu kunjungan</label>
+                        <span>*minimal 2 jam sebelum waktu pengerjaan</span>
+                        <div class="stereo-dropdown">
+                            <select>
+                                <option selected>09:00 WIB - 10:00 WIB</option>
+                                <option>10:00 WIB - 11:00 WIB</option>
+                            </select>
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <span class="call-center-operation">*Waktu operasional call center kami: Senin-Jumat pukul 08:30 - 17:30</span>
+                    <p class="konfirmasi">
+                        Kami akan segera menghubungi anda untuk mengkonfirmasi order yang telah dilakukan.
+                        Silahkan hubungi kami di waktu operasional jika ada perubahan jadwal waktu kunjungan.
+                    </p>
+                </div>
+                <div class="bottom-part">
+                    <div class="left">
+                        <label class="note">Catatan khusus untuk kami</label>
+                        <span>Silahkan masukan detil keluhan Anda pada kolom di bawah ini</span>
+                        <span>Contoh: AC kurang dingin</span>
+                        <textarea class="stereo-textarea"></textarea>
+                    </div>
+                    <div class="right">
+                        <div class="subtotal">
+                            <span class="label">Subtotal</span>
+                            <span class="price">IDR 70.000</span>
+                        </div>
+                        <div class="buttons">
+                            <button class="stereo-button update-cart">
+                                Update Keranjang
+                            </button>
+                            <button class="stereo-button checkout">
+                                <img src="Images/shopping-cart-coal.png" />Checkout
+                            </button>
+                        </div>
+                        <a href="javascript:;">Lanjut belanja</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--11. Sosmed Container (Template)-->
+    <div class="sosmed-container">
+        <a id="facebook" href="javascript:;"><img src="Images/facebook-logo.png" alt="facebook" /></a>
+        <a id="twitter" href="javascript:;"><img src="Images/twitter-logo.png" alt="twitter" /></a>
+        <a id="instagram" href="javascript:;"><img src="Images/instagram-logo.png" alt="instagram" /></a>
+    </div>
+    <!--12. Footer Container (Template)-->
+    <div class="footer-container">
+        <div class="sitemap-container">
+            <div class="guide">
+                <span>Daftar Sekarang untuk terus update!</span>
+                <img src="Images/arrow.png" alt="arrow" />
+            </div>
+            <div class="sitemap">
+                <h3>SERVICES</h3>
+                <a class="details" href="javascript:;">Home Service</a>
+                <a class="details" href="javascript:;">Corporate Service</a>
+                <a class="details" href="javascript:;">Home Improvement</a>
+                <a class="details" href="javascript:;">Interior Design</a>
+                <a class="details" href="javascript:;">Autocare</a>
+            </div>
+            <div class="sitemap">
+                <h3>SHOP</h3>
+                <a class="details" href="javascript:;">Building Materials</a>
+                <a class="details" href="javascript:;">Home Appliances</a>
+                <a class="details" href="javascript:;">Furniture & Decorations</a>
+                <a class="details" href="javascript:;">Cleaning</a>
+            </div>
+            <div class="sitemap">
+                <h3>INFORMATION</h3>
+                <a class="details" href="javascript:;">Building Materials</a>
+                <a class="details" href="javascript:;">Home Appliances</a>
+                <a class="details" href="javascript:;">Furniture & Decorations</a>
+                <a class="details" href="javascript:;">Cleaning</a>
+            </div>
+            <div class="sitemap">
+                <h3>CONTACT US</h3>
+                <span class="details">T 021-5793 1331</span>
+                <span class="details">HP/WA 0811 2018 810</span>
+                <span class="details">E halo@jagonyatukang.com</span>
+            </div>
+            <div class="sitemap">
+                <h3>NEWSLETTER</h3>
+                <p class="details">Daftarkan email Anda dan dapatkan update & penawaran menarik dari kami</p>
+                <input class="email-textbox" type="text" placeholder="Masukan alamat email" /><button class="email-button">Daftar!</button>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <span>Copyright &copy; 2016 Jagonya Tukang. All rights reserved</span>
+            <a href="#top-page"><i class="fa fa-angle-up" aria-hidden="true"></i>back to top</a>
+        </div>
+    </div>
+</body>
+</html>

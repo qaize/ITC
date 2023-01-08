@@ -1,0 +1,35 @@
+Untuk melihat hasil, download seluruh file di dalam folder Front-End ke local machine kalian.
+Lalu langsung buka file html dengan browser anda, karena front-end tidak membutuhkan web server atau database.
+
+Update Log:
+
+13/2/2017 - Halaman, Home dan Rekan JT
+Notes: 
+1. minor bugs di IE 11 untuk ukuran js slider, akan di fix nanti.
+2. belum responsive ke ukuran mobile.
+3. belum test dengan touch dan mobile device.
+4. tested in Chrome, FF, IE dan Opera untuk current version di PC.
+
+16/2/2017 - Halaman tips
+Notes: 
+1. adaptive in 1920px and 1600px (monitor 21 & 20 inch), responsive ke mobile akan dibuat nanti.
+
+22/2/2017 - Halaman list index
+Notes:
+1. Accordion sudah berfungsi, tapi saya belum buat untuk interaksi expand one only.
+2. adaptive in 1920px and 1600px (monitor 21 & 20 inch), responsive ke mobile akan dibuat nanti.
+
+23/2/2017 - Halaman FAQ
+1. adaptive in 1920px and 1600px (monitor 21 & 20 inch), responsive ke mobile akan dibuat nanti.
+
+1/3/2017 - Halaman Checkout, Checkout Confirmation, events, promotions, dan Gallery
+1. Masih ada beberapa bugs untuk check box di dalam checkout, nanti saya akan perbaiki lagi.
+2. Events, Promotions, dan Gallery sudah selesai, adaptive in 1920px and 1600px (monitor 21 & 20 inch), responsive ke mobile akan dibuat nanti.
+
+5/3/2017 - Fix Bugs di halaman CheckOut dan Chart Pop up
+1. Sekarang number stepper di halaman chart pop up berfungsi
+2. Sekarang seluruh check box dan radio button di halaman checkout berfungsi.
+
+7/3/2017 - Semua halaman selesai dengan responsive sampai ke viewport 320px (portrait view dari iphone 3, 3gs, 4, 4s, 5, 5s)
+1. Semua support IE 11, Chrome versi terbaru atau sekitarnya, Opera versi terbaru, Fire Fox versi terbaru.
+2. Tidak support Safari versi 5 atau yang previous version (windows only), current version di OSX only sudah sampai versi 11 (untested, but should be fine).

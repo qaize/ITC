@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Default ORDER</h1>
+    <p>Secara default beginilah urutannya berdasarkan urutan element di tulis dan juga hierarchy nya.</p>
+    <div class="container">
+        <div class="one">
+            NODE 1, urutan 1
+            <div class="two">
+                NODE 1.1, urutan 2
+                <div class="three">
+                    Node 1.1.1, urutan 3
+                </div>
+            </div>
+            <div class="four">
+                NODE 1.2, urutan 4
+            </div>
+        </div>
+        <div class="five">
+            NODE 2, urutan 5
+            <div class="six">
+                NODE 2.1, urutan 6
+            </div>
+        </div>
+    </div>
+
+    <h1>Di influence oleh position property</h1>
+    <p>Node 1.2 berada di group tersendiri, dibawa ke lapisan teratas dari semua element yang tidak memiliki posisi.</p>
+    <div class="container positioning">
+        <div class="one">
+            NODE 1, urutan 1
+            <div class="two">
+                NODE 1.1, urutan 2
+                <div class="three">
+                    Node 1.1.1, urutan 3
+                </div>
+            </div>
+            <div class="four">
+                NODE 1.2, urutan 4.
+                Saat diberi position relative, urutan nya berubah menjadi teratas.
+            </div>
+        </div>
+        <div class="five">
+            NODE 2, urutan 5
+            <div class="six">
+                NODE 2.1, urutan 6
+            </div>
+        </div>
+    </div>
+
+    <p>
+        Apabila node lain, misalnya Node 2.1 diberikan posisinya, maka Node ini akan menjadi satu kelompok dengan Node 1.2, tapi yang mana yang paling atas,
+        Kembali di tentukan oleh Node dan hierarchy yang ada pada html.
+    </p>
+    <div class="container positioning">
+        <div class="one">
+            NODE 1, urutan 1
+            <div class="two">
+                NODE 1.1, urutan 2
+                <div class="three">
+                    Node 1.1.1, urutan 3
+                </div>
+            </div>
+            <div class="four">
+                NODE 1.2, urutan POSITION 1
+            </div>
+        </div>
+        <div class="five">
+            NODE 2, urutan 5
+            <div class="six-relative">
+                NODE 2.1, urutan POSITION 2
+                Node ini akan kembali menjadi teratas dan mendahului NODE 1.2.
+                Baik NODE 1.2 dan 2.1 berada di level lain ketimbang seluruh element dengan position static.
+            </div>
+        </div>
+    </div>    
+
+    <h1>Dengan Z-INDEX</h1>
+
+    <p>Masih menggunakan code HTML & CSS yang paling awal, kali ini NODE 1.2 diberikan z-index: 1, maka node ini akan diberikan group dan layer baru yang bahkan
+        lebih tinggi dan terpisah dari node yang memiliki position biasa, contohnya NODE 2.1.
+    </p>
+    <div class="container positioning z-index">
+        <div class="one">
+            NODE 1, urutan 1
+            <div class="two">
+                NODE 1.1, urutan 2
+                <div class="three">
+                    Node 1.1.1, urutan 3
+                </div>
+            </div>
+            <div class="four plus-one">
+                NODE 1.2
+                Z-index +1
+            </div>
+        </div>
+        <div class="five">
+            NODE 2, urutan 5
+            <div class="six-relative">
+                NODE 2.1
+            </div>
+        </div>
+    </div>    
+
+    <p>Kita juga bisa menciptakan layer paling bawah bahkan lebih dalam dari group element yang tidak diberikan position.
+        Untuk melakukan itu kita akan memberi z-index dengan nilai negatif, contohnya seperti -1.
+    </p>
+    <div class="container positioning z-index">
+        <div class="one">
+            NODE 1, urutan 1
+            <div class="two">
+                NODE 1.1, urutan 2
+                <div class="three">
+                    Node 1.1.1, urutan 3
+                </div>
+            </div>
+            <div class="four minus-one">
+                NODE 1.2
+                Z-index -1
+            </div>
+        </div>
+        <div class="five">
+            NODE 2, urutan 5
+            <div class="six-relative">
+                NODE 2.1
+            </div>
+        </div>
+    </div>     
+
+    <p>Sama halnya dengan element yang diberikan position, apabila ada lebih dari satu element yang berada pada group z-index yang sama, 
+        maka element dan hierarchynya yang menentukan urutannya. (Note!: Technically position tanpa z-index adalah position dengan z-index:0)
+    </p>
+
+    <div class="container positioning z-index">
+        <div class="one">
+            NODE 1, urutan 1
+            <div class="two">
+                NODE 1.1, urutan 2
+                <div class="three">
+                    Node 1.1.1, urutan 3
+                </div>
+            </div>
+            <div class="four plus-one">
+                NODE 1.2
+                Z-index +1
+            </div>
+        </div>
+        <div class="five">
+            NODE 2, urutan 5
+            <div class="six-relative another-plus-one">
+                NODE 2.1
+                Z-index +1
+            </div>
+        </div>
+    </div>
+
+    <p>Diberikan contoh element seperti dibawah ini. Bisa dilihat bahwa 5 adalah yang teratas. Element bertumpuk-tumpuk seperti tangga pyramid.</p>
+    <div class="z-index-experiment">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+        <div class="fifth">5</div>
+    </div>
+
+    <p>Membawa 2 kepada z-index 1 akan membawanya lebih tinggi dari seluruh element, jadi bukan hanya dinaikan 1 tahap.</p>
+    <div class="z-index-experiment another-layer">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+        <div class="fifth">5</div>
+    </div>
+
+    <p>Membawa node 4 ke z-index 2 membawanya ke lapisan group yang lebih tinggi lagi dari z-index 1.</p>
+    <div class="z-index-experiment second-layer">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+        <div class="fifth">5</div>
+    </div>
+
+    <p>Bisa dilihat 2 contoh dibawah ini, baik 2 maupun 5 memiliki anak element. Anak element akan ikut terbawa ke dalam satu kelompok z-index oleh orang tuanya.</p>
+    <div class="z-index-experiment bring-child-front">
+        <div class="first">1</div>
+        <div class="second">2
+            <div class="child-affected">child of 2</div>
+        </div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+        <div class="fifth">5</div>
+    </div>   
+    
+    <div class="z-index-experiment bring-child-back">
+        <div class="first">1</div>
+        <div class="second">2</div>
+        <div class="third">3</div>
+        <div class="fourth">4</div>
+        <div class="fifth">5
+            <div class="child-affected">child of 5</div>
+        </div>
+    </div>        
+
+    <p>Terkecuali apabila kita memberikan setiap child posisi dan z-index sendiri, kita bisa mebawanya keluar dari parentnya, tetapi bisa kalian lihat kalau size
+        dari anaknya masih persis seperti size dari parentnya, karena sebenarnya secara html mereka belum terpisahkan.
+    </p>
+    <div class="z-index-experiment children-vs-children">
+        <div class="first">1</div>
+        <div class="second">2
+            <div class="child-affected">child of 2</div>
+        </div>
+        <div class="third">3</div>
+        <div class="fourth">4
+                <div class="child-affected">child of 4</div>
+        </div>
+        <div class="fifth">5</div>
+    </div>   
+
+</body>
+</html>

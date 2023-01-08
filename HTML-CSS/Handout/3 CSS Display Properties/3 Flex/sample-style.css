@@ -1,0 +1,173 @@
+html,body{
+    width:100%;
+    height:100%;
+}
+
+.global-flex-wrapper{
+    display:flex;
+    min-height: 100%;
+}
+
+nav{
+    background-color: #3498db;
+    /*
+        flex adalah short hand daripada flex-grow, flex-shrink, dan flex-basis.
+        by default, flex grow akan bernilai 0 dan flex-shrink bernilai satu.
+
+        3 value ini secara berurutan adalah grow, shrink, basis.
+    */
+    flex: 0 0 200px;
+    text-align:center;
+}
+.global-content{
+    background-color: #bdc3c7;
+    /*Global content di sini diberik flex-grow, yang artinya apabila ada sisa ruang, dia akan menggunakannya semaximal mungkin.*/
+    flex-grow:1;
+}
+
+nav > img{
+    width:60px;
+    margin:15px 0;
+}
+nav > a{
+    display: block;
+    color:white;
+    text-decoration: none;
+    border-bottom: solid 1px white;
+    padding: 8px 0;
+}
+nav > a:first-of-type{
+    border-top: solid 1px white;
+}
+nav > a:hover{
+    background-color: #2980b9;
+}
+
+header{
+    display: flex;
+    /*Kita bisa memanfaatkan space-between secara kreatif untuk membuat tipikal top header dari sebuah aplikasi.*/
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    color:white;
+    padding: 10px 12px;
+}
+header > div > img{
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+header > div > span{
+    vertical-align: middle;
+}
+.content{
+    padding:12px;
+}
+.photo-row{
+    display:flex;
+    /*Kita bisa mengkombinasikan justify content dengan flex-wrap untuk membuat tile photo view seperti pada contoh.*/
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.photo-row div{
+    border:solid 2px white;
+    width: 450px;
+    height: 300px;
+    background-size:cover;
+    margin-bottom: 70px;
+}
+.photo-row div span{
+    display:block;
+    background-color: gray;
+    color:white;
+    text-align: center;
+    padding: 8px 0;
+}
+
+.photo-row div:nth-child(1){
+    background-image: url("photo1.jpg");
+}
+.photo-row div:nth-child(2){
+    background-image: url("photo2.jpg");
+}
+.photo-row div:nth-child(3){
+    background-image: url("photo3.jpg");
+}
+.photo-row div:nth-child(4){
+    background-image: url("photo4.jpg");
+}
+.photo-row div:nth-child(5){
+    background-image: url("photo5.jpg");
+}
+.photo-row div:nth-child(6){
+    background-image: url("photo6.jpg");
+}
+
+.flex-grid{
+    background-color: white;
+    border:solid black 1px;
+}
+.flex-grid .row{
+    display:flex;
+    border-top:solid black 1px;
+}
+.flex-grid .row:first-child{
+    border-top:none;
+    background-color: gray;
+    color:white;
+}
+.flex-grid .row span{
+    border-right: solid black 1px;
+    padding: 6px;
+    box-sizing: border-box;
+}
+.flex-grid .row span:last-child{
+    border-right: none;
+}
+
+/*
+    Ini adalah salah satu contoh kita menggunakan flex-basis, tidak menggunakan width.
+    Width akan memanjang keluar apabila di dalam container yang nilainya tidak fix, dalam hal ini width akan meluas sampai harus di scroll,
+    sedangkan flex-basis tetap bersifat flexible.
+
+    Dari experiment ini, kita bisa membuat table dengan flex.
+*/
+.flex-grid .row span:nth-child(1){
+    flex-basis: 200px;
+    min-width: 96px;
+}
+.flex-grid .row span:nth-child(2){
+    flex-basis: 125px; 
+    min-width: 66px;
+}
+.flex-grid .row span:nth-child(3){
+    flex-basis: 105px;
+    min-width: 69px;    
+}
+.flex-grid .row span:nth-child(4){
+    flex-basis: 132px; 
+    min-width: 79px;
+}
+.flex-grid .row span:nth-child(5){
+    flex-basis: 230px;  
+    min-width: 97px;
+}
+.flex-grid .row span:nth-child(6){
+    flex-basis: 950px;   
+}
+
+.normal-table{
+    background-color: white;
+    border-collapse: collapse;
+}
+.normal-table td, th{
+    border:solid 1px black;
+    padding: 6px;
+}
+.normal-table th{
+    color:white;
+    background-color: gray;
+    font-weight: normal;
+    text-align: left;
+}

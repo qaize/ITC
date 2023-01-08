@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- internal sebagai solusi untuk pemisahan antara styles yang ada dalam HTML,
+  namun jika ada halaman HTML lainnnya, dikarenakan CSS internal (di dalam html)
+  maka mustahil untuk digunakan lebih dari satu dokumen HTML. -->
+
+  <style>
+    /*semua yang ada di dalam elemen ini, akan menjadi CSS.. buktinya komen pun berbeda syntaxnya.*/
+
+    /* h1 dipilih untuk ditambahkan property css */
+    h1 {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+  <!-- intinya internal:
+      - segmentasi antar style css dan html
+      - tidak dapat digunakan di file html lainnya -->
+</head>
+
+<body>
+  <h1>Contoh internal css</h1>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>1. Horizontal Block Alignment</h1>
+    <p>Di bawah ini adalah contoh kalau kita mau membuat alignment terhadap satu block element.</p>
+    <div class="align-middle-block">BLOCK CONTENT</div>
+
+    <p>Pada saat di dalam sebuah container, akan di tengah sesuai dengan containernya.</p>
+    <div class="inside-container">
+        <div class="align-middle-block">BLOCK CONTENT</div>
+    </div>
+
+    <h1>2. Horizontal Text Alignment</h1>
+    <p>
+        Membuat sebuah text align ke tengah membutuh kan trick yang berbeda, tidak menggunakan margin auto.
+        Kita akan menggunakan satu property yang disebut dengan text-align.
+    </p>
+    <div class="align-middle-text-container">
+        This is a Text Content
+    </div>
+
+    <p>Inline dan inline block bersifat text, oleh karena itu akan terkena dampak dari text-align juga.</p>
+    <div class="align-middle-text-container">
+        <span>This is a Text Content</span>
+    </div>
+
+    <p>Ini contoh lain menggunakan inline-block</p>
+    <div class="align-middle-text-container">
+        <div>Inline block</div>
+    </div>    
+
+    <h1>3. Horizontal Alignment dengan Flexbox</h1>
+    <p>Cara lebih canggih untuk melakukan ini adalah dengan menggunakan display:flex</p>
+    <div class="align-middle-flex-container">
+        <div>Flex Item</div>
+    </div>
+
+    <h1>4. Vertical Block Alignment</h1>
+    <p>
+        Di bawah ini adalah contoh apabila kita mau melakukan alignment secara vertical dengan block. Kita tidak lagi bisa menggunakan
+        margin auto untuk vertical, vertical dan horizontal dalam CSS sifatnya sangat berbeda. Oleh karena itu kita akan memanfaat 
+        display flex dalam hal ini.
+    </p>
+    <div class="inside-container vertical-flex-container">
+        <div class="vertical-align-block">BLOCK CONTENT</div>
+    </div>
+
+    <h1>5. Vertical Text Alignment</h1>
+    <p>Untuk sebuah component inline, ada alternative lain untuk membuat vertical alingment, apabila text hanya terdiri dari satu bari.
+        Kisa bisa trick dengan menggunakan line-height dimana line-height harus setingging container.
+    </p>
+    <div class="inside-container vertical-text">
+        <span>This is a Text Content</span>
+    </div>
+
+    <p>Contoh lain text-alignment tanpa menggunakan extra element pada childnya.</p>
+    <div class="inside-container vertical-text">
+        This is a Text Content
+    </div>
+
+    <h1>6. Duplication of Link and Button</h1>
+    <p>
+        Sering kali kita ingin membuat 2 buah button di dalam sebuah halaman, yaitu submit dan cancel secara bersebelahan, dengan
+        design yang cukup identik.
+    </p>
+    <div class="buttons-container">  
+        <button>Submit</button>
+        <a href="javascript:;">Cancel</a>
+    </div>
+
+</body>
+</html>

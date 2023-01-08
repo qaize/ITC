@@ -1,0 +1,17 @@
+-setiap ada AGGREGATE FUNCTION(AF) pada select HARUS ADA GORUP BY 
+AF tidak dapat dimasukan kedalam where, having menjadi filter setelah data group by
+
+derived table bersiftat logical menjadi satu bagian dari sub querry
+hati-hati :
+- harus memiliki alias
+- setiap objek alias akan menggantikan kolom tersebut
+- dalam derived table tidak dapat menggunakan order by tanpa adanya offset/top
+
+
+pivot harus memiliki af
+
+total employee, 
+
+employeeName
+
+

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #eee;
+  height: 500px;
+  width: 500px;
+  margin: 100px auto;
+  padding: 10px;
+
+  position: relative;
+}
+.pos--1 {
+  background-color: yellow;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pos--2 {
+  background-color: blue;
+
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+
+.pos--3 {
+  background-color: blueviolet;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.pos--4 {
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

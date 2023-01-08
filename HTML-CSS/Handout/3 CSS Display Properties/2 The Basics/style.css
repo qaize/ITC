@@ -1,0 +1,190 @@
+.hiding-experiment{
+    border:1px solid black;
+    margin-bottom: 5px;
+    padding:5px;
+}
+.hiding-experiment h3{
+    margin:0 0 5px 0;
+}
+.hiding-experiment span{
+    background-color: black;
+    color:yellow;
+    padding:3px;
+}
+
+/*Ini adalah cara bodoh untuk menyembunyikan sesuatu di css.
+	Contohnya pada text dibawah ini, kalau di drag/ di seleksi, maka akan kelihatan text aslinya.*/
+.hiding-experiment .kamuflase{
+    background-color: white;
+    color:white;    
+}
+
+/*Ini tidak seperah contoh yang kamuflase, tetapi visibility hidden, sebenarnya masih menempati ruang.
+    Lihatlah contoh di tampilan browser, terlihat kalau kata NINJA yang kedua kosong dan meninggalkan gap atau ruang kosong.*/
+.hiding-experiment .invisible{
+    visibility: hidden;
+}
+/*Untuk lebih jelas kalian bisa ber-eksperiment dengan yang hover, sehingga bisa melihat sendiri hasilnya pada saat disembunyikan dan ditunjukan.*/
+.hiding-experiment .invisible-hover:hover{
+    visibility: hidden;
+}
+
+/*Display none sangat berbeda dengan visibility hidden, pada display none, object benar-benar tidak dirender, jadi bukan disembunyikan.
+    Oleh karena itu tidak tersisa satu gap pun dari hilangnya object, tetapi di HTML kalian tetap akan melihat contentnya di Inspect Element.
+
+    Jadi bisa diibaratkan display none membuat object menjadi seperti udara, tidak terlihat, tak tersentuh, tapi exist.*/
+.hiding-experiment .vanish{
+    display:none;
+}
+.box{
+    display: block;
+    border: solid 1px black;
+    background-color:lightgrey;
+}
+.line{
+    display:inline;
+    border: solid 1px black;
+    background-color:lightgrey;    
+}
+.with-size{
+    width:100px;
+    height:100px;
+}
+.inline-box{
+    display:inline-block;
+    border: solid 1px black;
+    background-color:lightgrey;        
+}
+/*Perbedaan tinggi pada component inline*/
+.inline-experiment > div{
+    border: solid 1px black;   
+}
+.inline-experiment span:nth-child(1){
+    font-size: 40px;
+}
+.inline-experiment span:nth-child(2){
+    font-size: 16px;
+}
+.inline-experiment span:nth-child(3){
+    font-size: 70px;
+}
+
+div.rata-atas span:nth-child(1),
+div.rata-atas span:nth-child(2),
+div.rata-atas span:nth-child(3){
+    vertical-align: top;
+}
+
+div.rata-tengah span:nth-child(1),
+div.rata-tengah span:nth-child(2),
+div.rata-tengah span:nth-child(3){
+    vertical-align: middle;
+}
+
+.line-height .background{
+    background-color: yellow;
+    border:solid 1px black;
+}
+
+/*Tinggi dari sebuah span tidak bertambah, tapi gap antara 2 line paragraphnya yang bertambah. Sama seperti margin paragraph dalam microsoft word.*/
+.line-height div span{
+    display:inline;
+    background-color:cyan;
+    line-height:60px;
+}
+
+.box-model > div{
+    background-color:cyan;    
+}
+
+.box-model a{
+    display:inline-block;
+    text-decoration: none;
+    color:white;
+    background-color: brown;
+
+    /*Border dan padding adalah bagian dari element itu sendiri, termasuk ke dalam content.*/
+    border: solid 5px black;
+    padding: 12px;
+    margin: 5px;
+
+    /*padding, margin dan border adalah sebagian jenis property di css yang bisa menggunakan multiple value dengan short-hand notation.
+
+        untuk set padding atau margin dengan ukuran yang berbeda-beda, kita bisa menggunakan:
+        padding: 15px 30px 45px 21px;
+        margin: 15px 30px 45px 21px;
+
+        itu artinya baik padding atau margin di atas memiliki:
+        atas: 15px, kanan: 30px, bawah: 45px, kiri: 21px;
+        atau
+        padding: 15px 30px;
+        margin: 15px 30px;
+        
+        itu artinya baik padding atau margin di atas memiliki:
+        atas & bawah: 15px, kiri & kanan: 30px;
+
+        atau alternative lain kita bisa gunakan:
+        padding-top: 15px;
+        padding-right: 30px;
+        padding-bottom: 45px;
+        padding-left: 21px;*/
+}
+
+.box-model a:hover{
+    background-color: blue;
+}
+
+.for-inline > div{
+    border:solid 1px black
+}
+
+.for-inline span{
+    text-decoration: none;
+    color:white;
+    background-color: brown;
+
+    /*Walaupun bisa diaplikasikan, penggunaan padding dan margin pada sebuah element inline */
+    border: solid 5px black;
+    padding: 12px;
+    margin: 15px;
+}
+
+.box-sizing > div{
+    display:block;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    background-color:orange;
+    margin-bottom:5px;
+}
+
+/*Walaupun menggunakan CSS yang sama seperti di atas, .content-box dan .border-box akan mendapat ukuran yang berbeda.
+    content-box akan mendapat ukuran = width/height + padding
+    border-box akan mendapat ukuran = width/height - padding*/
+.content-box{
+    box-sizing: content-box;
+}
+.border-box{
+    box-sizing: border-box;
+}
+.level-one,.level-two,.level-three{
+    border:solid 1px black;
+}
+
+/*Lihatlah hasil dan check di dalam inspect element*/
+.level-one{
+    /*ketahuilah kalau 4 properties di bawah ini akan affect bahkan ke level-two, level-three bahkan paragraph di dalamnya.*/
+    font-weight: bold;
+    font-style: italic;
+    color:purple;
+    font-size: 24px;
+    /*Sedangkan properties di bawah ini tidak di wariskan ke bawahnya.*/
+    display: inline-block;
+    background-color: yellow;
+    box-sizing: border-box;
+    padding: 8px;
+    height: 600px;
+
+    /*Properties CSS yang sifatnya memodifikasi text-content akan mempenetrasi sampai ke html element yang merupakan keturunannya atau nested
+        ke urutan terbawah.*/
+}

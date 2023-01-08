@@ -1,0 +1,13 @@
+/*
+    Selector ini juga bernilai specificity 10,
+    walaupun di eksekusi pada baris ke 5, styling ini akan diaplikasikan.
+
+    Karena selector .kedua dan [data-khusus=ketiga] di selectors.css yang dipanggil duluan di html,
+    maka second-selectors.css ini menang. walaupun .kedua dan [data-khusus=ketiga] jalan di baris 47 dan 55.
+
+    Note: Apakah ini membingungkan? Ya pastinya! Oleh sebab itu pastikan setiap selector yang anda buat memiliki beda specificity.
+    Sehingga kita tidak perlu pusing mempertimbangkan perbedaan linenya.
+*/
+.pertama{
+    color: orange;
+}

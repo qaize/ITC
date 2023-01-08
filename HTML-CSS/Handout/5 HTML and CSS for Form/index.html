@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>1. HTML Form</h1>
+    <p>
+        Form adalah sebuah html element yang digunakan khusus untuk mengirim http response dari client-side ke server-side
+        dalam bentuk data yang di-input oleh user dalam form-element lalu di submit.
+    </p>
+    <p>
+        Form element adalah semua element yang biasa kalian lihat di UI yang digunakan untuk meng-input data, seperti text box, drop-down,
+        radio button, check box dan lain sebagainya.
+    </p>
+    <p>
+        Seluruh form element ini bisa disubmit dan dikirim ke server melalui satu container form. Perhatikan code html
+        yang tertulis di balik container di bawah ini. Dibawah ini bisa dilihat bahwa terdapat 3 html attributes, yaitu: action, name dan target. 
+    </p>
+    <ol>
+        <li>
+            Action adalah sebuah internal link yang menjelaskan kemana form ini akan disubmit, dalam hal di bawah ini contohnya adalah menuju ke satu file php 
+            (walaupun tidak ada file tersebut). Tapi yang jelas bisa dikatakan kalau action attribute akan mengarahkan ke satu tempat di server-side yang siap menerima data 
+            dari form ini.
+        </li>
+        <li>
+            Setiap form atau form element biasanya memiliki attribute name, yang memudahkan javascript atau server-side untuk mengidentifikasi element mana yang
+            berhubungan dengan field yang dimaksudkan.
+        </li>
+        <li>
+            Target adalah redirect attribute, dimana menyatakan kemana halaman akan direquest atau dibawa setelah submission selesai. _self artinya 
+            bahwa halaman tidak akan pergi kemana pun. Apabila _blank artinya akan dibuka sebuah tab baru.
+        </li>
+    </ol>
+    <p>
+        Dan masih banyak lainnya, tetapi kita tidak akan terlalu dalam mempelajari ini dulu, karena saat ini kita fokus untuk belajar client-side
+        dan pembuatan web application UI. Lebihnya mengenai form akan dijelaskan di pelajaran server-side.
+    </p>
+
+    <form method="post" action="/action_page.php" name="form-test" target="_self">
+        <h2>1.1. Common Form Element</h2>
+        <p>
+            Berikut ini adalah beberapa contoh common element dan yang bisa dikatakan bekerja di semua browser, karena
+            tidak semua form element yang disediakan html jalan di semua macam dan versi browser. Terkadang javascript developer
+            harus secara manual membuatnya sendiri, atau biasanya para back-end developer men-download script yang sudah dibuatkan front-end developer
+            dari github dan lain sebagainya.
+        </p>
+
+        <h3>1.1.1. Text Box</h3>
+        <p>
+            Simplenya digunakan untuk membuat suatu media untuk meng-input plain text. Text box diciptakan dengan menggunakan input element.
+            Walaupun di kebanyakan browser anda bisa menyiptakan textbox tanpa menggunakan attribute type="text", tapi jangan pernah lakukan ini!
+            Karena di server-side ini bisa menjadi masalah pada browser dengan versi tertentu.
+        </p>
+        <div class="element-row">
+            <span>Nama Depan: </span>
+            <input class="classic-textbox" type="text" name="first-name" />
+        </div>
+        <p>
+            Kita bisa melakukan disable pada sebuah input, misalnya pada sebuah textbox. Ini artinya textbox tersebut tidak bisa di-input oleh user sama sekali.
+            Tidak bisa di-click sama sekali. Seandainya ada yang berhasil meng-input value lewat javascript sekalipun, value dari input ini tidak akan diterima
+            di server side sama sekali.
+        </p>
+        <div class="element-row">
+            <span>Promotion Code: </span>
+            <input class="classic-textbox" type="text" name="promo-code" disabled/>
+        </div>
+        <p>
+            Kita juga bisa memaksakan value sebuah input dengan attribute value. Value adalah isi dari form element tersebut yang akan di-input
+            ke dalam server-side nantinya.
+        </p>   
+        <p>
+            Dalam contoh di bawah ini, kita tidak menggunakan disabled tapi kita menggunakan readonly. Value dari readonly akan tetap di submit
+            ke dalam server-side, tetap bisa di click sampai focus tetapi tidak bisa diubah valuenya oleh user.
+        </p>    
+        <div class="element-row">
+            <span>ID Number: </span>
+            <input class="classic-textbox" type="text" name="promo-code" value="A344AC166" readonly/>
+        </div>
+
+        <h3>1.1.2. Label</h3>
+        <p>
+            Kalian akan sering melihat label tag pada form, lalu akan banyak pertanyaan, "Mengapa kita harus menggunakan label tag? Kenapa tidak menggunakan
+            plain span saja?". Label memiliki keistimewaan yang berbeda dengan span biasa, yaitu label memiliki attribute for.
+            For digunakan untuk meng-kaitkan label dengan input element form yang bersangkutan dengan menggunakan ID yang pas, sehingga kita bisa mengakses
+            atau bisa mem-fokus sebuah input hanya dengan meng-click labelnya. 
+        </p>
+        <p>
+            Note!: Mungkin sebagian dari kalian berpikir, untuk apa kemampuan label ini? Kemampuan label for biasanya digunakan untuk keperluan styling atau
+            design accessibility, dimana user tidak mampu click form element yang existing karena terlalu kecil atau alasan apapun. Nanti kita akan bahas lebih lanjut
+            pada form element lainnya.
+        </p>
+        <div class="element-row">
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" class="classic-textbox" type="text" name="surname"/>
+        </div>
+
+        <h3>1.1.3. Check Box</h3>
+        <p>
+            Kalian semua pasti sudah familiar dengan check box, check box adalah form element dimana input yang diterimanya
+            bisa lebih dari satu dalam bentuk collection. Walaupun pilihannya dalam bentuk choice, checkbox tetap menggunakan string value
+            dan tetap menggunakan input tag sama seperti pada textbox, hanya saja type attributenya checkbox.
+        </p>
+        <p>
+            Agar server-side tau kalau beberapa checkbox ini adalah satu kesatuan value, kalian bisa menuliskan nama yang sama untuk
+            setiap checkbox yang ada.
+        </p>
+        <div class="element-row">
+            <span>Kendaraan yang anda punya: </span>
+            <input id="sepeda" type="checkbox" name="vehicle" value="bike">
+            <label for="sepeda">Sepeda</label>
+            <input id="motor" type="checkbox" name="vehicle" value="motor-bike"> 
+            <label for="motor">Motor</label>
+            <input id="mobil" type="checkbox" name="vehicle" value="car">
+            <label for="mobil">Mobil</label>
+        </div>
+
+        <p>
+            Element pada component seperti checkbox tidak bisa kalian style dengan menggunakan CSS begitu saja, karena 
+            style yang di dapat berasal dari browser atau OS nya. Silahkan coba buka di browser atau di OS lain, bentuk kotak checkboxnya bisa berbeda. 
+        </p>
+        <p>
+            Tetapi ada cara untuk mengakalinya, kita bisa memanfaatkan checked pseudo class, + sibling selector dan kemampuan label untuk ini.
+            Silahkan check CSS yang dibuatkan untuk check box di bawah ini.
+        </p>
+        <div class="element-row">
+            <span>Kendaraan yang anda punya: </span>
+            <input id="bike" type="checkbox" name="kendaraan" value="bike">
+            <label class="check-replacement" for="bike"></label>
+            <label>Sepeda</label>
+
+            <input id="motor-bike" type="checkbox" name="kendaraan" value="motor-bike"> 
+            <label class="check-replacement" for="motor-bike"></label>
+            <label>Motor</label>
+
+            <input id="car" type="checkbox" name="kendaraan" value="car">
+            <label class="check-replacement" for="car"></label>
+            <label>Mobil</label>
+        </div>
+
+        <h3>1.1.4. Radio Buttons</h3>
+        <p>
+            Radio button juga sudah tidak asing lagi, kontra dengan checkbox dimana kita bisa memilih banyak value, radio button kita hanya diperbolehkan
+            memilih satu, seperti multiple choice. Kita menggunakan tag input yang sama tapi dengan type="radio".
+        </p>
+        <div class="element-row">
+            <span>Radio Button: </span>
+            <input id="laki-laki" type="radio" name="gender" value="male">
+            <label for="laki-laki">Male</label>
+            <input id="wanita" type="radio" name="gender" value="female">
+            <label for="wanita">Female</label>
+        </div>
+
+        <h3>1.1.5. Drop Down/ Select Option</h3>
+        <p>
+            Drop down/ Select option digunakan untuk membuat pilihan, dimana seluruh pilihannya
+            bisa berasal dari data di dalam database atau bisa juga dibuatkan oleh front-end developer.
+        </p>
+        <p>
+            Keuntungan daripada drop down daripada radio button adalah, kita bisa membuat pilihan drop down sebanyak yang kita mau
+            tanpa harus membuat UI menjadi kacau.
+        </p>
+        <p>
+            Bisa kalian perhatikan pada contoh code di bawah ini, drop down dibuat oleh 2 macam component html element, yaitu:
+            select dan option. Select digunakan sebagai alat input yang terhubung dengan server-side, sedangkan option digunakan untuk 
+            membuat satu-persatu pilihannya.
+        </p>
+        <p>
+            Attribute name di-implementasi pada select tag, dan value masing-masing diletakan pada setiap option tag. 
+        </p>
+        <div class="element-row">
+            <label for="pilih-mobil">Pilih Mobil:</label>
+            <select id="pilih-mobil" name="mobil">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+
+        <p>
+            Kita bisa juga menggunakan option group atau opt-group untuk mengelompokan option-option yang ada.
+            Kita bisa membuat default selected pilihan dengan menggunakan attribute selected.
+        </p>
+        <div class="element-row">
+            <label>Pilih Mobil:</label>
+            <select name="mobil">
+                <optgroup label="Swedish Cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab" selected>Saab</option>
+                </optgroup>
+                <optgroup label="German Cars">
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <h3>1.1.6. Text Area</h3>
+        <p>
+            Text area adalah sebuah textbox yang cocok untuk menampung text yang sangat panjang. By default text area memiliki kemampuan
+            untuk di resize ukurannya. Pada contoh di bawah ini, saya menggunakan css property resize untuk mematikan fungsi tersebut,
+            sehingga ukuran dari text area tidak bisa di drag dan di resize.
+        </p>
+        <p>
+            Text area berbeda dengan kebanyakan input element, text area tidak menggunakan input tag, coba check source code yang ada.
+        </p>
+        <div class="element-row">
+            <div>
+                <label for="description">Description:</label>
+            </div>
+            <textarea id="description" name="description">
+Keuntungan dari text area juga cocok untuk menampung text yang sifatnya panjang, misalnya data description, atau comment pada social media, atau tanya jawab yang ada pada forum.
+           
+Dan ketahuilah bahwa seluruh isi dari textarea sifatnya tidak diformat seperti pada tag preformatted.
+            </textarea>
+        </div>
+
+        <h3>1.1.7. Field Set dan Legend</h3>
+        <p>
+            Field Set dan Legend digunakan untuk membuat satu pengelompokan dengan judulnya. Fieldset tidak ada fungsinya dari sisi submission,
+            tapi sangat berguna sebagai element komunikasi, terutama apabila ada beberapa element yang sifatnya satu sama lain, misalnya ada 2 textbox nama pertama,
+            tapi yang pertama adalah nama pertama dari ibu, yang satunya lagi adalah nama pertama dari anak.
+        </p>
+        <div class="element-row">
+            <fieldset>
+                <legend>Personalia:</legend>
+                <div class="element-row">
+                    <label for="personalia-name">Name: </label>
+                    <input id="personalia-name" type="text" name="personalia-nama">
+                </div>
+                <div class="element-row">
+                    <label for="personalia-email">Email:</label>
+                    <input id="personalia-email" type="text" nama="personalia-email">
+                </div>
+            </fieldset>
+        </div>
+
+        <h2>1.2. Time Widget Element</h2>
+        <p>
+            Di sini kita akan memberikan contoh macam-macam input element yang digunakan untuk mengisi informasi mengenai waktu, 
+            misalnya tanggal berapa dan jam berapa. Tapi ingat, tidak semua input element di sini bekerja di semua browser terutama di setiap versinya.
+            Hati-hati dalam menggunakan time element ini, bila tidak yakin akan browser apa yang digunakan oleh user, lebih baik menggunakan 
+            form element yang sudah dibuatkan dalam javascript.
+        </p>
+        <p>
+            Note!: Walaupun seluruh element ini menerima input dalam format waktu, sebenarnya seluruh data yang masuk ke server-side itu dalam bentuk string.
+            Sehingga server-side tidak tahu dan tidak perduli apakah waktunya ini diketik manual di text box atau di isi oleh element waktu.
+        </p>
+
+        <h3>1.2.1. Date Picker</h3>
+        <P>
+            Digunakan untuk meng-input tanggal, bulan, tahun. Tidak semua browser mendukung input type ini. Berikut adalah
+            list browser beserta versionnya yang men-support date picker.
+        </P>
+        <ol>
+            <li>Google Chrome dengan versi 20.0 ke atas</li>
+            <li>Microsoft Edge dengan versi 12.0 ke atas</li>
+            <li>Mozilla Fire Fox dengan versi 57.0</li>
+            <li>Safari tidak support sama sekali</li>
+            <li>Opera dengan versi 10.1 ke atas</li>
+        </ol>
+        <div class="element-row">
+            <label for="birth-date">Birth Date: </label>
+            <input id="birth-date" type="date" name="birth-date">
+        </div>
+
+        <h3>1.2.2. Time Picker</h3>
+        <p>
+            Digunakan untuk meng-input jam dan menit. Tidak semua browser mendukung input type ini. Berikut adalah
+            list browser beserta versionnya yang men-support time picker.
+        </p>
+        <ol>
+            <li>Google Chrome dengan versi 20.0 ke atas</li>
+            <li>Microsoft Edge dengan versi 12.0 ke atas</li>
+            <li>Mozilla Fire Fox dengan versi 57.0</li>
+            <li>Safari tidak support sama sekali</li>
+            <li>Opera dengan versi 10.1 ke atas</li>
+        </ol>        
+        <div class="element-row">
+            <label for="start-hour">Start Hour: </label>
+            <input id="start-hour" type="time" name="start-hour">
+        </div>
+
+        <h3>1.2.3. Date & Time Picker</h3>
+        <p>
+            Merupakan gabungan dari date dan time picker. Tidak semua browser mendukung input type ini. Berikut adalah
+            list browser beserta versionnya yang men-support date time picker.
+        </p>
+        <ol>
+            <li>Google Chrome dengan versi 20.0 ke atas</li>
+            <li>Microsoft Edge dengan versi 13.0 ke atas</li>
+            <li>Mozilla Fire Fox tidak support sama sekali</li>
+            <li>Safari tidak support sama sekali</li>
+            <li>Opera dengan versi 10.1 ke atas</li>
+        </ol>        
+        <div class="element-row">
+            <label for="event">Event Date: </label>
+            <input id="event" type="datetime-local" name="event-date">
+        </div>
+
+        <h3>1.2.4. Week Picker</h3>
+        <p>
+            Digunakan untuk mengambil urutan minggu ke-x dalam satu tahun. Tidak semua browser mendukung input type ini. Berikut adalah
+            list browser beserta versionnya yang men-support week picker.
+        </p>
+        <ol>
+            <li>Google Chrome dengan versi 25.0 ke atas</li>
+            <li>Microsoft Edge dengan versi 12.0 ke atas</li>
+            <li>Mozilla Fire Fox tidak support sama sekali</li>
+            <li>Safari tidak support sama sekali</li>
+            <li>Opera dengan versi 10.1 ke atas</li>
+        </ol>       
+        <div class="element-row">
+            <label for="week-period">Week Period: </label>
+            <input id="week-period" type="week" name="year-week">
+        </div>
+
+        <h3>1.2.5. Month & Year Picker</h3>
+        <p>
+            Digunakan untuk mengambil periode bulan dan tahun. Tidak semua browser mendukung input type ini. Berikut adalah
+            list browser beserta versionnya yang men-support month and year picker.
+        </p>
+        <ol>
+            <li>Google Chrome dengan versi 25.0 ke atas</li>
+            <li>Microsoft Edge dengan versi 12.0 ke atas</li>
+            <li>Mozilla Fire Fox tidak support sama sekali</li>
+            <li>Safari tidak support sama sekali</li>
+            <li>Opera dengan versi 10.1 ke atas</li>
+        </ol>         
+        <div class="element-row">
+            <label for="effective-date">Effective Date: </label>
+            <input id="effective-date" type="month" name="month-year-picker">
+        </div>
+
+        <h2>1.3. Other Element</h2>
+
+        <h3>1.3.1. Color picker</h3>
+        <p>Color picker digunakan untuk mengambil warna dalam bentuk string hexacode. Color picker bekerja hampir di semua browser.</p>
+        <div class="element-row">
+            <label for="background-color">Background Color: </label>
+            <input id="background-color" type="color" name="favcolor">
+        </div>
+
+        <h3>1.3.2. File Uploader</h3>
+        <p>File Browser atau File Uploader digunakan untuk memilih file dari explorer lalu menguploadnya. File uploader bekerja di semua browser dengan versi berapa pun.</p>        
+        <div class="element-row">
+            <label for="browse-file">Browse File: </label>
+            <input id="browse-file" type="file" name="img">
+        </div>
+
+        <h3>1.3.3. Hidden Input</h3>
+        <p>
+            Di sini tidak akan terlihat apa pun, karena ini adalah hidden input. Hidden input basicly adalah sebuah textbox yang tidak kelihatan.
+            Gunanya adalah untuk menginput ulang informasi ke server, dimana user tidak perlu menginputnya sama sekali. Penggunaan hidden input nanti akan
+            dirasakan apabila sudah membuat full CRUD aplikasi.
+        </p>
+        <div class="element-row">
+            <input type="hidden" name="country" value="Norway">
+        </div>
+
+        <h3>1.3.4. Number Stepper</h3>
+        <p>
+            Number stepper digunakan untuk menginput bilangan bulat/ integer. Number stepper dilengkapi dengan attribute min dan max yang bisa digunakan
+            sebagai limit pembatas minimum dan maximum dari input.
+        </p>
+        <p>
+            Note: Kebanyakan browser bisa menggunakan number stepper keculai IE (Internet Explorer), hampir semua versinya tidak support input element ini.
+        </p>
+        <div class="element-row">
+            <label for="kuantitas">Quantity: </label>
+            <input id="kuantitas" type="number" name="quantity" min="1" max="5">
+        </div>
+
+        <h3>1.3.5. Password Input</h3>        
+        <p>
+            Password input digunakan sebagai textbox dengan feature yang mencesor inputan, seperti layaknya pada password input di log screen.
+            Semua browser bisa menerima inputan ini.
+        </p>
+        <div class="element-row">
+            <label for="kata-kunci">Password: </label>
+            <input id="kata-kunci" type="password" name="pwd">
+        </div>
+
+        <h3>1.3.6. Range Slider</h3>        
+        <p>
+            Range slider digunakan untuk mendapatkan bilangan integer dengan menggunak
+        </p>        
+        <ol>
+            <li>Google Chrome dengan versi 4.0 ke atas</li>
+            <li>Microsoft Edge dengan versi 10.0 ke atas</li>
+            <li>Mozilla Fire Fox dengan versi 23.0 ke atas</li>
+            <li>Safari dengan versi 3.1 ke atas</li>
+            <li>Opera dengan versi 10.1 ke atas</li>
+        </ol>             
+        <div class="element-row">
+            <label for="sound-volume">Volume: </label>
+            <input id="sound-volume" type="range" name="points" min="0" max="10">
+        </div>
+
+        <h2>1.4. Button Elements</h2>        
+        <p>
+            Satu element dari form lagi yang tidak kalah pentingnya adalah buttons atau tombol-tombol yang bisa kita gunakan untuk berbagai keperluan.
+            Dasarnya button dibedakan menjadi 3 macam, normal button, reset button dan submit button.
+        </p>
+        <p>
+            Secara tag, button bisa dibedakan menjadi 2 macam, membuat button dengan menggunakan input tag atau dengan button tag.
+            Disarankan untuk menggunakan button tag, karena lebih baru dan memiliki kelebihan untuk membuat open tag dan close tag.
+        </p>
+
+        <h3>1.4.1. Input Type Button</h3>
+        <p>
+            Berikut ini adalah cara membuat input type button, di sini jelas kita tidak bisa memasukan element apapun ke dalam
+            button ini karena input tag adalah tipe single tag. Caption pada button hanya bisa text yang di-isi dari value.
+            Button pada umumnya digunakan untuk mengaktifkan event-listener pada javascript.
+        </p>
+        <div class="element-row">
+            <input type="button" value="Normal Button">
+        </div>
+
+        <h3>1.4.2. Input Type Reset</h3>
+        <p>
+            Berikut ini adalah cara membuat input type reset, sama persis dengan input type button, hanya saja input type reset memiliki
+            kemampuan untuk menghapus seluruh value dari form element pada form yang bersangkutan. Silahkan di coba.
+        </p>        
+        <div class="element-row">
+            <input type="reset" value="Reset Button">
+        </div>
+
+        <h3>1.4.3. Input Type Submit</h3>
+        <p>
+            Berikut ini adalah cara membuat input type submit, sama persis dengan input type button dan type reset, hanya saja input type submit
+            memiliki kemampuan untuk mengirim seluruh nilai/value yang di input pada form ini ke server-side, agar nantinya akan diterima server-side language.
+        </p>
+        <div class="element-row">
+            <input type="submit" value="Submit Button">
+        </div>        
+
+        <h3>1.4.4. Button Type Button</h3> 
+        <p>
+            Button type button sama seperti input type button secara fungsinya, hanya saja button type button adalah html tag dengan open dan close tag,
+            itu artinya kita bisa masukan element tag apapun di dalamnya, termasuk sebuah paragraph, atau sebuah image.
+        </p>
+        <button type="button">
+            <P>Paragraph di dalam Button type button.</P>
+        </button>
+        <p>Mencoba dengan image:</p>
+        <button type="button">
+            <img src="button-image.png">
+        </button>
+
+        <h3>1.4.5. Button Type Reset</h3>
+        <p>
+            Button type reset sama persis dengan input type reset, hanya dengan open dan close button tag.
+        </p>
+        <button type="reset">
+            <img src="button-image.png">
+        </button>        
+
+        <h3>1.4.6. Button Type Submit</h3>
+        <p>
+            Button type submit sama persis dengan button type submit, hanya dengan open dan close button tag.
+        </p>
+        <button type="submit">
+            <img src="button-image.png">
+        </button>            
+    </form>    
+
+    <h1>2. HTML Validation</h1>
+    <p>
+        Pada bagian kedua ini kita akan melihat cara-cara melakukan validasi lewat html. Validasi dapat melalui bermacam-macam cara, tetapi 
+        pada web application semuanya bisa dibedakan menjadi 2 categori, yaitu client-side validation dan server-side validation.
+    </p>
+    <p>
+        Client-side validation dilakukan lewat HTML dan JS di browser kalian, sedangkan server-side validation dilakukan oleh programming language
+        yang di implement di server anda. Caranya pun berbeda-beda, tergantung pada framework yang kalian gunakan.
+    </p>
+    <p>
+        Pada contoh di bawah ini kita akan melakukan client-side validation dengan menggunakan HTML tanpa menggunakan framework atau library apapun.
+        Ini artinya kita akan mencoba validasi yang paling mendasar dan paling manual pada client-side.
+    </p>
+    <p>
+        Note: Style pada validation message berbeda untuk setiap browser atau setiap OS, HTML validation message tidak bisa kalian style dengan menggunakan
+        CSS karena itu semua sudah bagian dari system.
+    </p>
+    <form name="form-test" target="_self">
+        <h2>2.1. Required</h2>
+        <p>
+            Required adalah validasi dengan menggunakan attribute tanpa value "required". Validasi ini digunakan untuk mengharuskan
+            field ini di isi, tidak boleh kosong.
+        </p>
+        <p>
+            Note: Perhatikan, pada contoh ini ada 2 required input, tetapi apabila anda langsung click submit, maka validation messagenya,
+            hanya yang first name saja. Ini semua karena validation pada HTML jalannya satu persatu sequential sesuai urutan. Cobalah
+            isi yang first name tapi kosongkan birth city, maka birth city akan dikenakan validation message.
+        </p>
+        <div class="element-row">
+            <label for="v-first-name">First Name: </label>
+            <input id="v-first-name" type="text" required>
+        </div>
+        <div class="element-row">
+            <label for="v-birth-city">Birth City: </label>
+            <input id="v-birth-city" type="text" required>
+        </div>        
+        <h2>2.2. Maximum Length</h2>
+        <p>
+            Maximum length adalah batas sebuah textbox menyimpan sebuah character. Walaupun masuk pada section validation, sebenarnya maximum
+            length tidak termasuk validation karena tidak mengeluarkan validation message. Max length lebih ke arah error prevention.
+        </p>
+        <div class="element-row">
+            <label for="v-last-name">Last Name: </label>
+            <input id="v-last-name" type="text" maxlength=10>
+        </div>              
+        <h2>2.3. Pattern</h2>
+        <p>
+            Pattern yang dibentuk oleh pola RegEx atau Regular Expression. Pattern bisa dibuat dengan code-code regex.
+            Tetapi di pelajaran ini kita tidak akan membahas RegEx terlalu jauh. Saya hanya akan beberapa contohnya saja.
+        </p>
+        <div class="element-row">
+            <label for="v-length">String Length: </label>
+            <input id="v-length" pattern=".{3,10}" title="minimum 3 characters and maximum 10 characters">
+        </div>         
+        <div class="element-row">
+            <label for="v-text">Text: </label>
+            <input id="v-text" type="text" pattern="[a-zA-Z]*" title="Letters only, type a-z only">
+        </div>     
+        <div class="element-row">
+            <label for="v-digits">Numbers: </label>
+            <input id="v-digits" type="text" pattern="[0-9]*" title="Numbers only, type only from 0-9">
+        </div>        
+        <h2>2.4. Autocomplete</h2>
+        <p>
+            Autocomplete juga bukan merupakan validation, kita bisa menggunakan attribute autocomplete="off" untuk menghentikan
+            feature autocomplete dari browser dimana browser bisa mengingat text yang pernah kita submit.
+        </p>
+        <div class="element-row">
+            <label for="v-search">Search:</label>
+            <input id="v-search" type="text" autocomplete="off">            
+        </div>         
+
+        <h2>2.5. Combination</h2>
+        <p>
+            Seluruh feature bisa kita gunakan sekaligus dan kita kombinasikan.
+        </p>
+        <div class="element-row">
+            <label for="v-numbers">ID Number:</label>
+            <input id="v-numbers" type="text" required autocomplete="off" maxlength="15">
+        </div>  
+        <div class="element-row">
+            <button type="submit">Submit</button>
+        </div>        
+    </form>
+</body>
+</html>

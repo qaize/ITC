@@ -1,0 +1,34 @@
+/* seperti yang kita lihat dibawah, inline tidak dapat dipengaruhi oleh width, dan height, 
+sedangkan block dan inline-block bisa */
+
+.first-span {
+  width: 100px;
+  height: 200px;
+  background-color: beige;
+  /* span juga bisa di pengaruhi oleh padding dan margin, namun hanya kiri dan kanan  */
+  margin: 0 100px;
+}
+
+.second-span {
+  display: inline; /*ini adalah display default dari span*/
+  width: 100px;
+  height: 200px;
+  background-color: #444;
+  color: #fff;
+  padding: 0 50px;
+}
+
+div {
+  display: block; /*ini adalah display default dari div*/
+  background-color: #eee;
+  width: 100px;
+  height: 200px;
+}
+
+strong {
+  font-size: 18px;
+}
+
+img {
+  display: inline-block; /*ini adalah display default dari img*/
+}

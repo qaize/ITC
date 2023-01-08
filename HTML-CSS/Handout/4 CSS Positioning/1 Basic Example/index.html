@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>1. Basic Position Demo</h1>
+    <div class="experimenting-position">
+        <div class="static block">Block 1, I am Static</div>
+        <div class="block">Block 2</div>
+        <div class="relative block">Block 3, I am Relative</div>
+        <div class="block">Block 4</div>        
+        <div class="absolute block">Block 5, I am Absolute</div>
+        <div class="block">Block 6</div>
+        <div class="fixed block">Block 7, I am Fixed</div>
+        <div class="block">Block 8</div>
+    </div>
+    
+    <h1>2. Relation With Their Parents</h1>
+    <div class="parent-position">
+            <div class="static-parent block">
+                Static Parent
+                <div class="child">
+                    Absolute Child
+                </div>
+            </div>
+            <div class="relative-parent block">
+                Relative Parent
+                <div class="child">
+                    Absolute Child
+                </div>
+            </div>     
+            <div class="absolute-parent block">
+                Absolute Parent
+                <div class="child">
+                    Absolute Child
+                </div>
+            </div>
+            <div class="fixed-parent block">
+                Fixed Parent
+                <div class="child">
+                    Absolute Child
+                </div>
+            </div>
+    </div>
+</body>
+</html>

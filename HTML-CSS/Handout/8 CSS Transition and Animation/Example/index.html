@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Transition</h1>
+    <p>Transition adalah perubahan beberapa value dari css property dari satu state ke state lain, yang di trigger oleh satu event atau interaksi.</p>
+    <div class="single-transition"></div>
+
+    <p>Contoh di atas memperlihatkan kalau pada saat kita tidak hover, maka transisi tidak akan berlaku pada perubahannya ke asal.
+        Kita harus meng-aplikasikannya 2 arah, saat di hover dan saat kembali ke kondisi semula.
+    </p>
+    <div class="return-transition"></div>
+
+    <P>
+        Kita bisa melakukan transition lebih dari satu property sekaligus dengan waktu yang berbeda-beda.
+        (Note!: Perhatikan, pada saat halaman di render, warna pada block di bawah ini baru muncul. Itu adalah salah satu perbedaan dari transisi untuk warna.
+        Pada saat halaman di render pertamakali, transisi warna sudah dimulai.)
+    </P>
+    <div class="multiple-transition">Hello World</div>
+
+    <p>Beberapa hal property yang bisa dikombinasikan dengan transition adalah timing dan delay. Timing mengatur akselerasi (percepatan perubahan) dari transisi,
+        sedangkan delay adalah waktu tunggu sebelum transisi dilakukan.
+    </p>
+    <div class="timing-delay">
+        <div class="linear"></div>
+        <div class="ease-in"></div>
+        <div class="ease-out"></div>
+    </div>
+
+    <h2>Flip Card Experiment</h2>
+    <p>Padukan dengan CSS transform dan buatlah transisi kreatif, contohnya seperti membalik business card di bawah ini</p>
+    <div class="card-container">
+        <div class="card">
+            <img class="back" src="Image/back.jpg" alt="back-card">
+            <img class="front" src="Image/front.jpg" alt="front-card">
+        </div>
+    </div>
+
+    <h1>Animation</h1>
+    <p>Lain dengan transition, animation tidak hanya membuat perubahan dari satu state ke state lainnya yang harus di trigger oleh satu event atau interaksi.
+        Animasi adalah perubahan dari yang terdiri dari banyak state yang di sebut key frames (istilah pada animasi tradisional), dimana perubahan bisa terjadi dari
+        satu key frame ke key frame kedua, ketiga, dan lanjut terus sesuai dengan keinginan animatornya. Dan animasi pada css tidak perlu di trigger oleh satu event.
+    </p>
+
+    <p>Contoh 2 key frames animation. 2 key frames animation bisa menggunakan indikasi from dan to untuk mengidentifikasikannya.</p>
+    <div class="two-frames"></div>
+
+    <p>Contoh multiple key frames animation. Multiple key frame animation menggunakan percentages sebagai indikasi dari progress animasinya.</p>
+    <div class="multiple-frames"></div>
+
+    <p>Seperti pada transition, kita juga bisa mengatur delay dan timing</p>
+    <div class="animation-timing-delay"></div>
+
+    <p>Kita bisa mengatur jumlah iteration menjadi infinite. Ya, jadi animasi tidak akan berhenti pada halaman ini.</p>
+    <div class="forever"></div>
+
+    <p>Kita bisa membuat animasi memiliki jalan yang terbalik (reverse), sehingga animasi akan berjalan mundur. Atau kita juga bisa mengaturnya sebagai
+        alternate untuk membuatnya bulak-balik.
+    </p>
+    <h3>Reverse</h3>
+    <div class="reverse"></div>
+    <h3>Alternate</h3>
+    <div class="alternate"></div>
+    <h3>Alternate Reverse</h3>
+    <div class="alternate-reverse"></div>
+
+    <div>Fill mode adalah property yang mengatur dimana css property harus di aplikasikan pada saat animasi sedang tidak dijalankan.
+        Secara default, element akan menunjukan property pada selectornya sendiri saat tidak ada animasi, fill-mode bisa mengatur untuk membuat
+        salah satu key frame menjadi tempat pemberhentian dari animasi ketika animasi sedang tidak dijalankan (tidak akan ada pengaruh pada infinite animation).
+    </div>
+    <h3>Normal</h3>
+    <div class="normal"></div>
+    <h3>Forwards</h3>
+    <div class="forwards"></div>
+    <h3>Backwards</h3>
+    <div class="backwards"></div>
+    <h3>Both</h3>
+    <div class="both"></div>
+
+    <h2>Spinning Coin Experiment</h2>
+    <p>
+        Kita sudah pernah membuat experiment flip card dengan menggunakan transisi, sekarang kita akan membuat hal yang mirip dengan itu tetapi dengan menggunakan animasi.
+        Kita akan membuat sebuah koin berputar yang tidak pernah berhenti.
+    </p>
+    <div class="coin-container">
+        <div class="coin">
+            <img class="tail" src="Image/tail.png" alt="tail-coin">
+            <img class="head" src="Image/head.png" alt="head-coin">
+        </div>
+    </div>
+</body>
+</html>

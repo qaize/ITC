@@ -1,0 +1,366 @@
+/*Property dan attribute untuk semua contoh*/
+html,body{
+    width:100%;
+}
+.grid-container{
+    display:grid;
+    color:white;
+    background-color:lightgray;
+}
+.grid-container > .grid-item{
+    padding:5px;
+    overflow: hidden;
+}
+.grid-container > .grid-item:nth-child(1){
+    background-color: #c0392b;
+}
+.grid-container > .grid-item:nth-child(2){
+    background-color: #d35400;
+}
+.grid-container > .grid-item:nth-child(3){
+    background-color: #f39c12;
+}
+.grid-container > .grid-item:nth-child(4){
+    background-color: #f1c40f;
+}
+.grid-container > .grid-item:nth-child(5){
+    background-color: #27ae60;
+}
+.grid-container > .grid-item:nth-child(6){
+    background-color: #1abc9c;
+}
+.grid-container > .grid-item:nth-child(7){
+    background-color: #3498db;
+}
+.grid-container > .grid-item:nth-child(8){
+    background-color: #f368e0;
+}
+.grid-container > .grid-item:nth-child(9){
+    background-color: #8e44ad;
+}
+.grid-container > .grid-item:nth-child(10){
+    background-color: #5f27cd;
+}
+h1, h2, h3, p{
+    padding-left:15px;
+}
+.content{
+    color:#2980b9;
+}
+.item{
+    color:#27ae60;
+}
+.self{
+    color:#8e44ad;
+}
+/*Property dan attribute untuk semua berakhir di sini.*/
+
+.five-times-two{
+    grid-template-columns: 200px 300px auto 250px 120px;
+    /*Secara berurutan mengatur dari kiri ke kanan setiap width grid items yang ada di dalamnya.
+     Note: auto adalah otomatis mengatur ukurannya supaya bisa menempati ruang containernya.*/
+
+    grid-template-rows: 200px 200px;
+    /*Secara berurutan mengatur dari atas ke bawah setiap width grid items yang ada di dalamnya.
+        Note: pada rows, auto tidak akan berfungsi terkecuali container secara manual menyebutkan heightnya.
+    */
+}
+.two-times-five{
+    grid-template-columns: 40% 60%;
+    /*Kita juga bisa menggunakan persentase untuk ukuran ini.*/
+
+    grid-template-rows: 300px 250px 150px 230px 310px;
+}
+.repeating{
+    grid-template-columns: repeat(5, 100px); 
+    grid-template-rows: repeat(2, 100px);
+
+    /*fungsi repeat memiliki 2 parameters, (jumlah perulangan, ukuran)*/
+}
+.fractions{
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    /*Di sini halaman akan terbagi menjadi 5 bagian dengan perbandingan:
+        2 : 1 : 1 : 1 : 1
+    */
+
+    grid-template-rows: 1fr 1fr;
+    /*fraction pada rows hanya akan bekerja apabila container memiliki height atau tingginya diketahui.*/
+    height:800px;
+}
+.three-times{
+    grid-template-columns: 300px 400px 500px;
+    grid-template-rows:300px 300px 350px;
+}
+
+.grid-auto-flow{
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 200px 250px 250px;
+}
+.column-auto-flow{
+    grid-auto-flow: column;
+}
+.row-auto-flow{
+    grid-auto-flow: row;
+}
+
+.naming-lines{
+    grid-template-columns: [line1] 320px [line2] 340px [line3] auto [line4] 350px [line5] 230px [line6];
+    grid-template-rows: [row1] 250px [row2] 350px [row3];    
+    /*
+        Kita bisa memberi nama setiap lines baik di column maupun di rows dengan menggunakan square brackets [].
+        Lokasi dari line persisnya seperti lokasi di dalam grid, yaitu berada di antara cells.
+    */
+}
+.managing-items .cell-one{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:3;
+    /*
+        Kita bisa menggunakan integer number sebagai value dari ke-empat properties di atas.
+
+        Apabila nilainya 2, itu artinya lines ke 2 pada grid itu, itu artinya cell-one akan berada di lokasi dari garis column ke 2 sampai garis column ketiga,
+        dan juga berada di antara garis row ke 2 dan garis row ke 3. Atau bisa dibilang lokasinya ada di cell 2, 2.
+    */
+}
+.managing-items .cell-two{
+    grid-column-start: line1;
+    grid-column-end: line2;
+    grid-row-start: row1;
+    grid-row-end: row3;
+    /*
+        Masih ingat kalau kita memberi nama setiap lines? Kita bisa menggunakannya sebagai pengganti numeric integer yang kita isi ke properties-properties di atas.
+    */
+}
+.managing-items .cell-three{
+    grid-column-start: line2;
+    grid-column-end: span 2;
+    /*
+        Apabila kita tidak mau men-state dari awal sampe akhir, kita bisa menggunakan span yang artinya kita state awalan dari cellnya
+        tapi kita menstate length dari cellnya. Dalam hal ini kita ingin kalau cellnya mulai dari line2 dan panjangnya 2.
+    */
+}
+.managing-items .cell-four{
+    grid-column: line4 / line6;
+    grid-row: 1 / 3;
+    /*
+        grid-column memiliki value : <grid-column-start> / <grid-column-end>
+        grid-row memiliki value: <grid-row-start> / <grid-row-end>
+    */
+}
+
+.managing-areas .cell-one{
+    grid-area: row1 / line3 / row3 / line5;
+    /*grid-area menggabungkan 4 value dalam satu property: <grid-row-start> / <grid-column-start> / <grid-row-end> / <grid-column-end>*/
+}
+
+.grid-auto-columns{
+    grid-auto-columns: 300px;
+    grid-auto-rows:250px;
+
+    /* 
+        Dengan menggunakan grid-auto-columns dan grid-auto-rows, kita bisa minta system untuk membuat setiap cells
+        secara otomatis pada saat setiap item kita melakukan expansi.
+    */
+}
+.grid-auto-columns .cell-one{
+    grid-column: 1 / 2;
+}
+.grid-auto-columns .cell-two{
+    grid-column: 2 / 4;
+}
+.grid-auto-columns .cell-three{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+.grid-auto-columns .cell-four{
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+.grid-auto-columns .cell-five{
+    grid-column: 1 / 5;    
+}
+
+/*
+    Lihatlah pemakaian properties grid-area dibawah, inilah tujuan lain dari grid-area properties.
+    Grid-area bisa digunakan untuk defined atau memberi penamaan area, agar css tau kalau element ini merupakan bagian dari
+    area yang di definisikan.
+*/
+#container-area > div.header,
+#template-area > div.header{
+    background-color:#34495e;
+    grid-area: header;
+}
+#container-area > div.side-bar,
+#template-area > div.side-bar{
+    background-color:#3498db;
+    grid-area: side-bar;
+}
+#container-area > div.body,
+#template-area > div.body{
+    background-color:#95a5a6;
+    grid-area: body;
+}
+#container-area > div.footer,
+#template-area > div.footer{
+    background-color:#16a085;
+    grid-area:footer;
+}
+
+#container-area{
+    grid-template-columns: 180px 1fr 1fr;
+    grid-template-rows: 80px 350px 350px 70px;
+    grid-template-areas:
+        "header header header"
+        "side-bar body body"
+        "side-bar body body"
+        "footer footer footer";
+    
+    /*
+        Lihatlah contoh di atas, kita bisa membuat peta langsung untuk setiap defined area.
+        Dan diaplikasikan langsung secara literal.
+    */
+}
+
+#template-area{
+    grid-template:
+    [row-header-start]"header header header" 80px [row-header-end]
+    [row-body-start]"side-bar body body" 350px [row-body-end]
+    [row-body-start]"side-bar body body" 350px [row-body-end]
+    [row-foot-start]"footer footer footer" 70px [row-foot-end]
+    / 180px 1fr 1fr;
+
+    /*
+        Kita bisa menggunakan short-hand notation dari grid-template-areas dengan menggunakan property grid-template.
+        grid-template berisikan:
+            <grid-template-rows> dengan area template / <grid-template-columns>
+    */
+}
+
+.gap-line{
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;    
+
+    /* 
+        Ini berarti kita baru saja membuat gap 5px antara kanan dan kiri untuk setiap item, dan juga 25px untuk atas dan bawah setiap items
+
+        Selain itu kita juga bisa menggunakan short-hand notation dengan menggunakan grid-gap:
+        grid-gap: 25px 5px;
+
+        grid-gap ini akan menggantikan grid-column-gap dan grid-row gap di atas, dengan aturan:
+        grid-gap: <grid-row-gap> / <grid-column-gap>
+    */
+}
+.gap-line > .grid-item:nth-child(1){
+    grid-column: 1 / 3;
+    /*Code ini digunakan untuk membuktikan bahwa gap terjadi di antara item, bukan antar cell. Kalau terjadi di antara cell, itu berarti CELL 1 sudah terbelah menjadi 2.*/
+}
+
+.align-justify{
+    grid-template-columns: repeat(5, 300px [lines]); 
+    grid-template-rows: repeat(2, 200px [rows]);
+}
+
+/*Justify Content*/
+.justify-content-end{
+    justify-content: end;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-space-around{
+    justify-content:space-around;
+}
+.justify-content-space-between{
+    justify-content:space-between;
+}
+.justify-content-space-evenly{
+    justify-content:space-evenly;
+}
+
+/*Justify Item*/
+.justify-items-start{
+    justify-items: start;
+}
+.justify-items-end{
+    justify-items: end;
+}
+.justify-items-center{
+    justify-items: center;
+}
+
+/*
+    Justify Self adalah property milik grid item, yang fungsinya 
+    melakukan justify item secara individu ke setiap item.
+*/
+.justify-self > .grid-item:nth-child(1){
+    justify-self: start;
+}
+.justify-self > .grid-item:nth-child(2){
+    justify-self: end;
+}
+.justify-self > .grid-item:nth-child(3){
+    justify-self: center;
+}
+
+.align-content-end{
+    height: 700px;
+    align-content: end;
+}
+.align-content-center{
+    height: 700px;
+    align-content: center;
+}
+.align-content-space-around{
+    height: 700px;
+    align-content: space-around;   
+}
+.align-content-space-between{
+    height: 700px;
+    align-content: space-between;      
+}
+.align-content-space-evenly{
+    height: 700px;
+    align-content: space-evenly;      
+}
+
+.align-items-start{ 
+    align-items: start;
+}
+.align-items-end{ 
+    align-items: end;
+}
+.align-items-center{ 
+    align-items: center;
+}
+
+/*
+    Align Self adalah property milik grid item, yang fungsinya 
+    melakukan alignment item secara individu ke setiap item.
+*/
+.align-self > .grid-item:nth-child(1){
+    align-self: start;
+}
+.align-self > .grid-item:nth-child(2){
+    align-self: end;
+}
+.align-self > .grid-item:nth-child(3){
+    align-self: center;
+}
+
+/*
+    Kita bisa menggunakan shorthand place sebagai pengganti justify dan align.
+    Place adalah campuran dari justify dan align.
+    place-content: align-content + justify-content
+    place-item: align-item + justify-item
+    place-self: align-self + justify-self
+
+    place-items: <align-items> / <justify-items>
+    place-items: stretch stretch;
+
+    place-content: <align-content> / <justify-content>
+    place-content: stretch stretch;
+
+    place-self: <align-self> / <justify-self>
+    place-self: stretch stretch;
+*/

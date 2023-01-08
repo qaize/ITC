@@ -1,0 +1,275 @@
+/*Cara menulis comment pada CSS*/
+
+/*
+    Seperti pada contoh di bawah ini, span adalah element selector, yang artinya 
+    semua element span di select untuk diberi style dengan warna latar belakang cyan dan warna font-nya ungu.
+
+    Specificity(0,0,1) atau = 1
+*/
+span{
+    background-color:cyan;
+    color: purple;
+}
+
+/*
+    Seperti pada contoh di bawah ini, selector di bawah ini adalah gabungan dari element selector dan class selector.
+    span adalah element selector dan .general-word adalah class selector karena di tandai dengan titik.
+    Jadi style ini akan diaplikasikan pada seluruh span yang hanya memiliki class general-word
+
+    span [Specificity(0,0,1)] + .general-word [Specificity(0,1,0)]
+    hasilnya = Specificity(0,1,1) atau = 11
+*/
+span.general-word{
+    color:green; /*perhatikan kalau hanya font colornya yang di override, bukan background-colornya*/
+    /*override dari selector yang lebih kuat hanya menimpa apabila ada kesamaan property.*/
+}
+
+/*
+    Seperti pada contoh di bawah ini, selector di bawah ini adalah class selector, ditandai dengan titik.
+    Selector di bawah ini akan memberi style pada seluruh element html yang memiliki class general-word, tidak perduli element apa.
+
+    Specificity(0,1,0) atau = 10
+
+    Perhatikan contohnya, paragraph akan terkena style dengan font warna merah, tetapi untuk span dengan general word tidak.
+    Itu karena element span dengan general-word class di override oleh code di atas yang memiliki Specificity lebih besar, yaitu 11 dan yang di sini 10.
+
+    Note: di CSS seluruh override ditentukan oleh specificity, bukan berdasarkan urutan yang mana yang diberi lebih belakangan, terkecuali specificity-nya 
+    sama besar valuenya, baru urutan yang akan menentukan.
+*/
+.general-word{
+    color:red;
+}
+
+/*
+    Selector di bawah ini memiliki Specificity 10 sama dengan selector [data-khusus=ketiga dibawah].
+    Oleh karena itu [data-khusus=ketiga] akan menang dari yang kedua.
+*/
+.kedua{
+    color: hotpink;
+}
+
+/*
+    Selector dibawah ini adalah selector attribute, dimana memiliki specificity yang sama besar dengan 
+    class selector, yaitu 10.
+*/
+[data-khusus=ketiga]{
+    color:greenyellow;
+}
+
+/*
+    Cobalah uncomment css di bawah ini, maka style nya tidak akan bekerja, dikarenakan
+    penamaan dengan numeric di awal class.
+*/
+/*
+.12paragraph{
+    color:blue;
+}
+*/
+
+/*Ini tidak jadi masalah, karena numeric 45 di taruh di belakang nama.*/
+.paragraph45{
+    color:blue;
+}
+
+/*
+    Tapi terkadang beberapa framework tertentu suka memberi nama class secara otomatis dengan menggunakan 
+    number di depan kelas.
+    
+    Ada cara untuk menyelesaikan masalah ini, yaitu dengan attribute selector yang diberi tanda "" string quotation pada
+    valuenya, sehingga css selector tidak keliru menafsirkan angka tersebut sebagai sign.
+*/
+[class="12paragraph"]{
+    color:blue;
+}
+
+/*
+    Di sini kita menggunakan complex selector yaitu descendant selector.
+    Complex selector menggabungkan total semua specificity yang ada, dan memilih element pada urutan terakhir.
+    Dalam kasus ini span lah yang di select dan .sample-container sebagai keterangan.
+
+    Untuk kasus di bawah ini Specificitynya bernilai 11,
+    berasal dari class selector 10 + element selector 1
+*/
+.sample-container span{
+    color:white;
+    background-color: red;
+}
+
+/*
+    Selector di bawah ini memiliki specificity yang lebih tinggi, yaitu 12, karena kombinasi dari
+    div element selector = 1,
+    .sample-container = 10,
+    dan span element selector = 1.
+*/
+div.sample-container span{
+    background-color:black;
+}
+
+/*
+    Variasi lain dari pemakaian descendant selector.
+    Selector di bawah ini juga bernilai 11.
+*/
+div .sample-child{
+    background-color: green;
+    color:yellow;
+}
+
+/*Specificity di sini bernilai 12*/
+div span.sample-child{
+    color: lavender;
+}
+
+/*Total specificity dari selector di bawah ini adalah 22*/
+div.induk span.anak{
+    background-color: brown;
+    color: lightsalmon;
+}
+
+/*
+    ID akan memberikan specificity yang sangat besar, yaitu Specificity (1,0,0) atau = 100
+    Sampai-sampai selector div.induk span.anak di atas kalah besar specificitynya dengan 1 ID
+*/
+#unique-span{
+    color:lightskyblue;
+}
+
+/*
+    Berikut ini adalah contoh complex selector yang lainnya, menggunakan tanda +
+    dimana merupakan next selector, atau menunjuk ke element yang tepat berada satu setelahnya.
+*/
+.induk + div .next{
+    background-color: orange;
+    color: white;
+}
+
+/*
+    Kita akan mencoba menggunakan pseudo-class selector.
+    Psudo-class adalah selector yang bisa men-select html element dalam situasi dan kondisi tertentu.
+
+    Misalnya di bawah ini kita akan menggunakan :hover, berarti style tersebut hanya akan diaplikasikan
+    pada saat dalam keadaan di hover oleh mouse.
+*/
+.hovering{
+    background-color:gray;
+    color:white;
+}
+/*pseudo-class selector menambah 10 point untuk kondisi yang sesuai dengan penjelasan.*/
+.hovering:hover{
+    background-color:green;
+}
+
+/*
+    Contoh lain pseudo-class adalah kita bisa mengaplikasikannya pada kondisi lain di luar user interaction
+    Contohnya first-child, akan mengaplikasikannya pada element pertama sesuai kondisi selector sebelumnya.
+*/
+.parent-child p:first-child{
+    background-color:red;
+    color:white;
+}
+
+/*Untuk melakukan pada anak terakhir, kita bisa menggunakan last-child.*/
+.parent-child p:last-child{
+    background-color:orange;
+    color:white;    
+}
+
+/*Untuk memilih anak ke-x, kita bisa menggunakan nth-child(n).*/
+.parent-child p:nth-child(3){
+    background-color:green;
+    color:white;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+/*
+    Dibawah ini menggunakan contoh "and" selector.
+    Ini berarti ada lebih dari satu selector yang diaplikasikan dengan 
+    style yang sama.
+*/
+.table-parent th, 
+.table-parent td{
+    border:solid 1px black;
+    padding:4px;
+}
+
+/*nth-child bisa digunakan untuk genap (even) dan ganjil (odd)*/
+.table-parent tbody tr:nth-child(even){
+    background-color:gray;
+}
+.table-parent tbody tr:nth-child(odd){
+    background-color:lightskyblue;
+}
+
+.breadcrumb{
+    margin: 10px 0;
+}
+.breadcrumb span{
+    background-color:transparent;
+    color:black;
+}
+
+/*
+    Pseudo element digunakan untuk menambahkan element content, contohnya seperti ::after.
+    Dengan ini kita bisa membuat breadcrumb seperti yang ada pada e-commerce dengan mudah.
+*/
+.breadcrumb span::after{
+    content:' /';
+}
+/*
+    Kita bisa mengkominasikan pseudo element dan pseudo class bersamaan.
+    Sehingga element trakhir tidak ditambahkan ' /'.
+*/
+.breadcrumb span:last-child::after{
+    content: '';
+}
+
+/*================Menggunakan Single Name Component=========================*/
+.single-name h1{
+    text-transform:uppercase;
+    margin-bottom:0;
+    margin-top:30px;
+    font-size: 20px;
+    color:gray;
+}
+.single-name p{
+    margin-top:0;
+    margin-bottom: 5px;
+    color:blue;
+}
+.single-name td,
+.single-name th{
+    border: solid black 1px;
+    padding:5px;
+}
+.single-name th,
+.single-name tfoot td{
+    background-color: darkcyan;
+    color:white;
+}
+.single-name tbody td:last-child::before{
+    content: 'Rp.';
+}
+
+/*================Menggunakan Banyak Separate Parts=========================*/
+.title{
+    text-transform:uppercase;
+    margin-bottom:0;
+    margin-top:30px;
+    font-size: 20px;
+    color:gray;    
+}
+.description{
+    margin-top:0;
+    margin-bottom: 5px;
+    color:blue;    
+}
+.table-cell{
+    border: solid black 1px;
+    padding:5px;    
+}
+.strong-parts{
+    background-color: darkcyan;
+    color:white;    
+}

@@ -1,0 +1,47 @@
+COALESCE = memiliki parameter n dimana Data yang null tidak aka  di print atau di skip
+--------
+NULLIF apabbila suatu kolom memiliki data yang sama maka akan bernilai NULL
+----
+ISNULL merupaakn sebuah function yang memiliki dua paramaeter diaman parameter peratama merupakan kolom dan kedua adalah nilai yang digunakan untuk menimpa atau mereplace nilai null
+---
+EXIST memiliki keluaran true or false sehingga dapat digunakan sebagai pengkondisian
+---
+tipe data boolean di sql =  bit yaitu 0/1
+---
+IF ELSE pada sql apabila tidak menggunakan BEGIN END maka akan menggap satu line statment
+pada querry (harus menggunakan BEGIN END kalo bisa)
+
+-----
+untuk mengeluarkan isi detail kolom pada database yaitu
+
+select * from INFORMATION.SCHEMA
+-----
+
+PROCEDURE / PROC
+Penamaan procedure harus sesuai dengan nama isi 
+proc berisi serangkaian logika
+untuk menjalankan SP harus menggunakan exec
+SP juga memiliki parameter
+
+SP juga mempunya Output yang dapat dimasukan kedalam sebuah variable
+SP ini berisi serangkaian querry yang berisi function dan proses mainpulasi data dalam satu SP
+yang dapat dijalankan secara bersama-sama
+
+beda dengan function yang lebih menipulatif kearah tabel
+
+TUGAS = Buatlah SP transaksi pembelian 
+
+hasilnya ditaruh pada database maru [Market]
+ketentuan :
+Costumer,emplote, OrderDate(Now)
+
+proses insert master product yang sesuai terupdate ke database baru
+proses insert ke order dan order detail ke database baru
+
+- ProdId = 3, sebanyak 20
+- prodId 14, sebanyak 12
+3.prod ID = 19 sebanyak 111
+
+output total yang harus dibayar
+
+

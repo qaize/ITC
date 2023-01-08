@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Ini adalah description mengenai website ini."> 
+    <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+    <meta name="author" content="Boby Widjaja">
+    <title>Contoh HTML</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">    
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1>1. Grid Template Columns & Rows</h1>
+    <p>
+        Di sini kita akan mengenal 2 properties paling basic dari display grid, yaitu grid-template-columns dan grid-template-rows.
+        Kedua property ini merupakan property dari grid container, jadi diaplikasikannya pada containernya, bukan pada grid item.
+    </p>
+    <p>
+        Kegunaan dari kedua properties ini adalah untuk menciptakan grid-tracks yang sifatnya vertical dan horizontal.
+        Tracks yang vertical disebut juga dengan Columns, dan Tracks yang horizontal disebut juga dengan Rows.
+        Dengan kombinasi dari grid-template-columns dan grid-template-rows, kita bisa menciptakan petak-petak seperti pada milimeter-block
+        untuk menggambar sebuah blue-print.
+    </p>
+
+    <h2>1.1. Contoh basic membuat grids dengan ukuran 5 x 2</h2>
+    <p>
+        Di contoh ini  kita melihat contoh sederhana 5 x 2 dengan ukuran yang berbeda untuk setiap columns dan rows.
+        Seperti biasa kita bisa mengatur ukuran dengan menggunakan metric unit (px, em, pt, dan lain sebagainya).
+        Atau kita juga bisa menggunakan auto untuk secara otomatis menempati sisa ruang dari containernya.
+    </p>
+    <div class="grid-container five-times-two">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div>
+
+    <h2>1.2. Ini adalah contoh lain grid 2 x 5 dengan menggunakan percent.</h2>
+    <div class="grid-container two-times-five">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div> 
+    
+    <h2>1.3. Menggunakan repeat pada size</h2>
+    <p>
+        Repeat adalah fungsi yang digunakan pada grid-template-columns atau grid-template-rows apabila setiap ukurannya sama.
+        Daripada harus menulis berkali-kali, kita bisa menggunakan repeat untuk mempersingkat penulisan.
+    </p>
+    <div class="grid-container repeating">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div> 
+
+    <h2>1.4. Ukuran dengan menggunakan Fractions</h2>
+    <p>
+        Fractions adalah ukuran yang bisa digunakan, dimana pembuat grid tidak mau capek dalam membagi setiap grid menggunakan persentase.
+        Apabila kita menggunakan 1 fraction untuk 5 items, itu artinya satu bagian akan terbagi menjadi 5 bagian sama rata.
+        Apabila kita menggunakan 2 items, yaitu 1 fraction dan 2 fraction, maka item akan terbagi dua, dimana pembagiannya 1 banding 2.
+    </p>
+    <div class="grid-container fractions">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div>    
+
+    <h2>1.5. Template yang tidak sesuai dengan item</h2>
+    <p>
+        Contoh dibawah, kita akan menggunakan 10 items sama seperti contoh-contoh di atas.
+        Tapi kali ini, ketimbang menggunakan 5 x 2 atau 2 x 5, kita akan menggunakan 3 x 3 grid.
+        3 x 3 akan menghasilkan 9 cells, dimana akan ada 1 item yang kelebihan atau tidak mendapatkan cell.
+        Bisa dilihat hasilnya, item 10 tergeser ke bawah dan keluar dari cell yang sudah di atur. 
+        Width dari item 10 akan mengikuti yang atas, sedangkan heightnya akan menyesuaikan isinya.
+    </p>
+    <div class="grid-container three-times">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div>
+
+    <p>
+        Pada contoh dibawah ini, saya akan menunjukan kasus yang sebaliknya, yaitu dimana cells lebih banyak dari itemnya.
+    </p>
+    <div class="grid-container five-times-two">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>                     
+    </div>    
+
+    <h2>1.6. Grid Auto Flow</h2>
+    <p>
+        Kita bisa mengatur flow atau urutan pengisian item ke dalam cells sesuai yang kita hendaki. Kita bisa mengaturnya agar flownya
+        berjalan dari kiri ke kanan atau atas ke bawah.
+    </p>
+
+    <p>Apabila ingin mengatur dari atas ke bawah, maka grid-auto-flow kita harus bersifat column</p>
+    <div class="grid-container grid-auto-flow column-auto-flow">
+        <div class="grid-item cell-one">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item cell-two">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item cell-three">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item cell-four">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item cell-five">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>                        
+    </div>
+
+    <p>Apabila ingin mengatur dari kiri ke kanan, maka grid-auto-flow kita harus bersifat row</p>
+    <div class="grid-container grid-auto-flow row-auto-flow">
+        <div class="grid-item cell-one">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item cell-two">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item cell-three">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item cell-four">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item cell-five">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>                        
+    </div>
+
+    <h1>2. Micro Managing Grid Items</h1>
+    <p>
+        Di sini kita akan mengatur lokasi dan besar setiap grid item, serta memberi nama setiap lines yang ada di grid. 
+    </p>
+
+    <h2>2.1. Grid Column and Grid Row</h2>
+    <p>
+        Di sini kita akan menggunakan beberapa properties dan attribute untuk mengatur setiap grid-itemsnya.
+        Kita bisa menggunakan grid-column-start dan grid-column-end untuk menentukan sebuah item akan ditempatkan dari garis column mana ke mana.
+        Kita juga bisa menggunakan grid-row-start dan grid-row-end untuk menentukan sebuah item akan ditempatkan dari garis row mana ke mana.
+    </p>
+    <p>
+        Di lain sisi kita juga bisa menggunakan short-hand notation property untuk mempersingkatnya:
+        grid-column adalah gabungan dari grid-column-start dan grid-column-end.
+        grid-row adalah gabungan dari grid-row-start dan grid-row-end.
+    </p>
+    <div class="grid-container naming-lines managing-items">
+        <div class="grid-item cell-one">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item cell-two">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item cell-three">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item cell-four">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item cell-five">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item cell-six">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item cell-seven">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item cell-eight">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item cell-nine">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item cell-ten">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div>   
+
+    <h2>2.2. Grid Area</h2>
+    <p>
+        Untuk lebih mempersingkat lagi, kita bisa menggunakan properties grid-area dimana isinya adalah gabungan dari properties
+        grid-column dan grid-row. Note!: Tapi property grid-area bisa digunakan untuk tujuan lain yang nantinya kita akan bahas di section yang lain.
+    </p>
+    <div class="grid-container naming-lines managing-areas">
+        <div class="grid-item cell-one">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item cell-two">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item cell-three">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item cell-four">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item cell-five">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item cell-six">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item cell-seven">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item cell-eight">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item cell-nine">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item cell-ten">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div>   
+
+    <h2>2.3. Grid Auto Column & Row</h2>
+    <p>
+        Grid auto column & row adalah properti yang bisa dimanfaatkan sebagai alternative juga, apabila developer belum bisa planning hasil akhir design
+        atau masih brain-storming design yang hendaknya dibuat dia, sehingga designer atau front-end developer bisa mencoba-cobanya terlebih dahulu.
+        (bagus untuk prototyping)
+    </p>
+    <p>
+        grid-auto-column dan grid-auto row adalah membuat besaran satu cell dengan lebar dan tingginya, lalu seluruh cell akan digenerate secara otomatis 
+        dengan besar cell yang sama persis (jadi persis seperti milimeter block). Selanjutnya yang perlu dilakukan designer atau developer hanya
+        micro manage setiap grid-item.
+    </p>
+    <div class="grid-container grid-auto-columns">
+        <div class="grid-item cell-one">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item cell-two">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item cell-three">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item cell-four">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item cell-five">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>     
+    </div>    
+
+    <h2>3. Grid Template Areas</h2>
+    <p>
+        Grid Template Areas adalah cara alternative membuat sebuah grid dengan menggunakan template. Dengan menggunakan properties
+        grid-template-areas, kita mendefine sekumpulan cells atau sebuah cell dengan secara literal menulis gambar pemetaan template
+        dari grid kita.
+    </p>
+    <p>
+        Note!: contoh dibawah ini extreme pada code htmlnya, karena satu area memiliki banyak element.
+        Pembuatan area seperti dibawah ini hanyalah untuk contoh, sehingga kalian dapat memahami betul cara kerja grid-template-areas.
+        Bisa dilihat CELL 1 dan CELL 3 akan hilang karena ketimpa oleh CELL 5. Semua area hanya mendapatkan cell terakhirnya saja.
+        Semua item bisa saling menimpa pada satu cell secara bersamaan, ini tidak hanya pada areas, tapi pada penempatan grid-column dan grid-row juga.
+    </p>
+    <div id="container-area" class="grid-container">
+        <div class="grid-item header">CELL 1</div>
+        <div class="grid-item side-bar">CELL 2</div>
+        <div class="grid-item header">CELL 3</div>
+        <div class="grid-item side-bar">CELL 4</div>
+        <div class="grid-item header">CELL 5</div>
+        <div class="grid-item footer">CELL 6</div> 
+        <div class="grid-item footer">CELL 7</div>
+        <div class="grid-item footer">CELL 8</div>
+        <div class="grid-item body">CELL 9</div>
+        <div class="grid-item body">CELL 10</div>
+        <div class="grid-item body">CELL 11</div>
+        <div class="grid-item body">CELL 12</div>                                  
+    </div>
+
+    <p>
+        Contoh di bawah ini sama persis dengan yang sebelumnya, tetapi pada contoh ini ketimbang menggunakan grid-template-areas, kita menggunakan
+        grid-template, yaitu short-hand notationnya.
+    </p>
+    <div id="template-area" class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item side-bar">Side Bar</div>
+        <div class="grid-item footer">Footer</div> 
+        <div class="grid-item body">Body</div>                             
+    </div>
+
+    <h1>4. Gap, Justify Position, dan Align Position</h1>
+    <p>
+        Section kali ini akan membahas mengenai pembuatan jarak antar grid-item, sehingga kita tidak akan menggunakan margin untuk menciptakan gap.
+        sekaligus kita akan melihat bagaimana cara membuat horizontal justification dan vertical alignment antar item apabila adanya berbedaan size dan
+        gap di antara komponen-komponen itu.
+    </p>
+
+    <h2>4.1. Grid Gap</h2>
+    <p>
+        Grid Gap adalah properties yang digunakan untuk mengatur jarak/gap/margin antar item pada lines yang ada.
+    </p>
+    <div class="grid-container fractions gap-line">
+        <div class="grid-item">
+            CELL 1: A phone rings and text appears on the screen: "Call trans opt: received. 2-19-98 13:24:18 REC: Log>" As a conversation takes place between Trinity 
+            (Carrie-Anne Moss) and Cypher (Joe Pantoliano), two free humans, a table of random green numbers are being scanned and individual numbers selected, 
+            creating a series of digits not unlike an ordinary phone number, as if a code is being deciphered or a call is being traced.
+        </div>
+        <div class="grid-item">
+            CELL 2: Trinity discusses some unknown person. Cypher taunts Trinity, suggesting she enjoys watching him but they will have to kill him. 
+            Trinity counters that "Morpheus (Laurence Fishburne) says he may be 'the One'," just as the sound of a number being selected alerts 
+            Trinity that someone may be tracing their call. She ends the call.            
+        </div>
+        <div class="grid-item">
+            CELL 3: Armed policemen move down a darkened, decrepit hallway in the Heart O' the City Hotel, their flashlight beam bouncing just ahead of them. 
+            They come to room 303, kick down the door and find a woman dressed in black, facing away from them. It's Trinity. She brings her hands up from the 
+            laptop she's working on at their command.            
+        </div>
+        <div class="grid-item">
+            CELL 4: Outside the hotel a car drives up and three agents appear in neatly pressed black suits. They are Agent Smith (Hugo Weaving), 
+            Agent Brown (Paul Goddard), and Agent Jones (Robert Taylor). Agent Smith and the presiding police lieutenant argue. 
+            Agent Smith admonishes the policeman that they were given specific orders to contact the agents first, for their protection. 
+            The lieutenant dismisses this and says that they can handle "one little girl" and that he has two units that are bringing her down at that very moment. 
+            Agent Smith replies: "No, Lieutenant. Your men are already dead."
+        </div>
+        <div class="grid-item">
+            CELL 5: Inside, Trinity easily defeats the six policemen sent to apprehend her, using fighting and evasion techniques that seem to defy gravity. 
+            She calls Morpheus, letting him know that the line has been traced, though she doesn't know how. Morpheus informs her that she will have to 
+            "make it to another exit," and that Agents are heading toward her.            
+        </div>
+        <div class="grid-item">
+            CELL 6: A fierce rooftop chase ensues with Trinity and an Agent leaping impossibly from one building to the next, astonishing the policemen left behind. 
+            Trinity makes a daring leap across an alley and through a small window. She has momentarily lost her pursuers and makes it to a public phone booth 
+            on the street level. The phone begins to ring. As she approaches it a garbage truck, driven by Agent Smith, careens towards the phone booth. 
+            Trinity makes a desperate dash to the phone, picking it up just moments before the truck smashes the booth into a brick wall. The three Agents reunite 
+            at the front of the truck. There is no body in the wreckage. "She got out," one says. The other says, "The informant is real." "We have the name of 
+            their next target," says the other, "His name is Neo."            
+        </div> 
+        <div class="grid-item">
+            CELL 7: Thomas Anderson, aka "Neo" (Keanu Reeves), a hacker with thick black hair and a sallow appearance, is asleep at his monitor. 
+            Notices about a manhunt for a man named Morpheus scroll across his screen as he sleeps. Suddenly Neo's screen goes blank and a 
+            series of text messages appear: "Wake up, Neo." "The Matrix has you." "Follow the White Rabbit." Then, the text says "Knock, knock, 
+            Neo..." just as he reads it, a knock comes at the door of his apartment, 101. It's a group of ravers and Neo gives them a contraband disc 
+            he has secreted in a copy of "Simulacra and Simulation." The lead raver asks him to join them and Neo demurs until he sees the tattoo of a 
+            small white rabbit on the shoulder of a seductive girl in the group.            
+        </div>
+        <div class="grid-item">
+            CELL 8: At a rave bar Neo stands alone and aloof as the group he's with continue partying. Trinity approaches him and introduces herself. 
+            Neo recognizes her name; she was a famous hacker and had cracked the IRS database. She tells him that he is in great danger, that 
+            they are watching him and that she knows that he is searching for answers, particularly to the most important question of all: what is the Matrix? 
+            The pulsing music of the bar gives way to the repetitious blare of Neo's alarm clock; it's 9:18 and he's late for work.
+        </div>
+        <div class="grid-item">
+            CELL 9: At his job at Metacortex, a leading software company housed in an ominous high rise, Neo is berated by his boss for having a problem with authority, 
+            for thinking he's special. Neo listens to his boss, but his attention is on the persons cleaning the window of the office. 
+            Back at his bleak cubicle Neo receives a delivery as "Thomas Anderson." Upon opening the package he finds a cellphone which immediately rings. 
+            On the other end is Morpheus, who informs Neo that they've both run out of time and that "they" are coming for him. Morpheus tells him to slowly look up, 
+            toward the elevator. Agents Smith, Jones, and Brown are there, obviously looking for him, as a woman points towards Neo's cube. Morpheus tries to 
+            guide Neo out of the building but when he is instructed to get on a scaffolding and take it to the roof Neo rejects Morpheus' advice, allowing 
+            himself to be taken by the Agents.            
+        </div>
+        <div class="grid-item">
+            CELL 10: In an interrogation room the Agents confront Neo. They've had their eye on him for some time. He lives a dual existence: one life as Thomas A. Anderson, 
+            a software engineer for a Metacortex, the other life as Neo, a computer hacker "guilty of virtually every computer crime we have a law for." 
+            Agent Smith asks him to help them capture Morpheus, considered a dangerous terrorist, in exchange for amnesty. Neo gives them the finger 
+            and asks for his phone call. Mr. Smith asks what good is a phone call if he's unable to speak. Neo finds that his lips have fused together. 
+            Panicked, he is thrown on the interrogation table by the Agents and they implant a shrimp-like probe, a bug, in his stomach, entering through his navel.            
+        </div>                        
+    </div> 
+
+    <h2>4.2. Justify</h2>
+    <p>
+        Justify adalah suatu tindakan yang mengatur pemerataan sebuah item secara horizonal, atau bisa dikatakan juga
+        horizontal justification. Kita bisa menjustify 3 hal pada grid, yaitu content, item dan self.
+    </p>
+    <p>
+        justify-content artinya kita mengatur seluruh posisi horizontal dari badan grid.
+        justify-item artinya kita mengatur seluruh posisi horizontal dari item di dalam cell.
+        justify-self artinya kita mengatur satu posisi horizontal dari item di dalam cell.
+    </p>
+
+    <h3 class="content">4.2.1. Justify Content - End</h3>
+    <div class="grid-container align-justify justify-content-end">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div> 
+    <h3 class="content">4.2.2. Justify Content - Center</h3>
+    <div class="grid-container align-justify justify-content-center">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>        
+    <h3 class="content">4.2.3. Justify Content - Space Around</h3>
+    <div class="grid-container align-justify justify-content-space-around">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>     
+    <h3 class="content">4.2.4. Justify Content - Space Between</h3>
+    <div class="grid-container align-justify justify-content-space-between">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>     
+    <h3 class="content">4.2.5. Justify Content - Space evenly</h3>
+    <div class="grid-container align-justify justify-content-space-evenly">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>      
+
+    <h3 class="item">4.2.6. Justify Items - Start</h3>
+    <div class="grid-container align-justify justify-items-start">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>
+    <h3 class="item">4.2.7. Justify Items - End</h3>
+    <div class="grid-container align-justify justify-items-end">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>    
+    <h3 class="item">4.2.8. Justify Items - Center</h3>
+    <div class="grid-container align-justify justify-items-center">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>      
+
+    <h3 class="self">4.2.9. Justify Self</h3>
+    <div class="grid-container align-justify justify-self">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>                      
+    </div>
+
+    <h2>4.3. Align</h2>
+    <p>
+        Align adalah suatu tindakan yang mengatur pemerataan sebuah item secara vertical, atau bisa dikatakan juga
+        vertical alignment. Kita bisa men-align 3 hal pada grid, yaitu content, item dan self.
+    </p>
+    <p>
+        align-content artinya kita mengatur seluruh posisi vertical dari badan grid.
+        align-item artinya kita mengatur seluruh posisi vertical dari item di dalam cell.
+        align-self artinya kita mengatur satu posisi vertical dari item di dalam cell.
+    </p>    
+
+    <h3 class="content">4.3.1. Align Content - End</h3>
+    <div class="grid-container align-justify align-content-end">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div> 
+    <h3 class="content">4.3.2. Align Content - Center</h3>
+    <div class="grid-container align-justify align-content-center">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>    
+    <h3 class="content">4.3.3. Align Content - Space Around</h3>
+    <div class="grid-container align-justify align-content-space-around">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>      
+    <h3 class="content">4.3.4. Align Content - Space Between</h3>
+    <div class="grid-container align-justify align-content-space-between">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>     
+    <h3 class="content">4.3.5. Align Content - Space Evenly</h3>
+    <div class="grid-container align-justify align-content-space-evenly">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>      
+
+    <h3 class="item">4.3.6. Align Items - Start</h3>
+    <div class="grid-container align-justify align-items-start">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>        
+    <h3 class="item">4.3.7. Align Items - End</h3>
+    <div class="grid-container align-justify align-items-end">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>     
+    <h3 class="item">4.3.8. Align Items - Center</h3>
+    <div class="grid-container align-justify align-items-center">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>
+        <div class="grid-item">CELL 6: Avatar</div> 
+        <div class="grid-item">CELL 7: Shawshank Redemption</div>
+        <div class="grid-item">CELL 8: Happy Feet</div>
+        <div class="grid-item">CELL 9: Evil Dead</div>
+        <div class="grid-item">CELL 10: The Day the Earth Stood Still</div>                        
+    </div>        
+    
+    <h3 class="self">4.3.9. Align Self</h3>
+    <div class="grid-container align-justify align-self">
+        <div class="grid-item">CELL 1: The Matrix</div>
+        <div class="grid-item">CELL 2: The Lord of The Rings</div>
+        <div class="grid-item">CELL 3: IT</div>
+        <div class="grid-item">CELL 4: Avengers</div>
+        <div class="grid-item">CELL 5: Titanic</div>                     
+    </div>         
+    
+</body>
+</html>

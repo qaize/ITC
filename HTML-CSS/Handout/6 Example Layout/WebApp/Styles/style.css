@@ -1,0 +1,578 @@
+
+/*
+    Font-face adalah feature pada css yang digunakan untuk load custom font dengan berbagai format.
+    Setelah font-face, browser akan download font dimana font di host dan bisa menunjukannya lewat css.
+
+    Pada contoh dibawah ini, kita menggunakan salah satu font yang sangat main stream untuk web development dan
+    kita menggunakan 2 macam format, yaitu ttf (true type font) dan woff (web font).
+*/
+@font-face{
+    font-family: 'OpenSans';
+    src: url('../OpenSans/Regular/OpenSans-Regular.ttf') format('truetype'),
+         url('../OpenSans/Regular/OpenSans-Regular.woff') format('woff');
+}
+/*
+    Mengapa perlu menggunakan semi-bold dan bold? kenapa tidak menggunakan font-weight:bold saja?
+    Kita tetap bisa menggunakan property font-weight, tetapi bold yang dihasilkan property font-weight adalah auto generated dari CSS.
+    Terkadang satu font memiliki design unik, dimana bentuk bold nya sedikit berbeda dengan yang font designer ingin kan.
+    Apabila itu terjadi, maka kita perlu menggunakan font-face satu persatu untuk setiap font.
+*/
+@font-face{
+    font-family: 'OpenSansSemiBold';
+    src: url('../OpenSans/Semibold/OpenSans-Semibold.ttf') format('truetype'),
+         url('../OpenSans/Semibold/OpenSans-Semibold.woff') format('woff');
+}
+@font-face{
+    font-family: 'OpenSansBold';
+    src: url('../OpenSans/Bold/OpenSans-Bold.ttf') format('truetype'),
+         url('../OpenSans/Bold/OpenSans-Bold.woff') format('woff');
+}
+
+html, body{
+    /*Menggunakan OpenSans secara default pada semua element.*/
+    font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+    /*By default set width dan heightnya 100%*/
+    width:100%;
+    height:100%;
+}
+.wrapper{
+    /*
+        Ini membuat minimum tinggi seluruh wrapper 100% sesuai layar, apabila isi template
+        kosong, template tetap akan memenuhi tempatnya. Kalau tidak, apabila isi web kosong,
+        template akan terlihat aneh dan cuma separuh layar.
+    */
+    min-height: 100%;
+    min-width: 1635px;
+    
+    /*Membuat seluruh template dengan grid template*/
+    display:grid;
+    grid-template-columns: 250px 320px 1fr 1fr;
+    grid-template-rows: 80px 150px 1fr;
+    grid-template-areas:
+        "side-menu author top-menu top-menu"
+        "side-menu author header header"
+        "side-menu side-content body body";
+}
+
+/*6 Selectors di bawah adalah selector yang diatur secara template dengan grid.*/
+.side-menu{ /*side-menu adalah section paling kiri yang berwarna biru tua, berisi informasi user, main menu, dan friends.*/
+    grid-area: side-menu;
+    background-color: #003956;
+    padding-left:35px;
+    font-size: 14px;
+}
+.author{ /*author adalah section mengenai penulis.*/
+    grid-area: author;
+    background-color: #006495;
+    padding:30px;
+    color:white;
+}
+.top-menu{ /*top menu adalah tempat search topic, notification dan messages.*/
+    grid-area: top-menu;
+    border-bottom: solid 1px lightgray;
+    display:flex; /*element ini berupa grid-item tapi juga bisa memiliki sifat flex. Item dari flex dan grid bisa dijadikan container dari flex atau grid lagi.*/
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.header{ /*header adalah section dibawah top menu, yang berisikan judul dan link read heandout dan tutorial.*/
+    grid-area: header;
+    border-bottom: solid 1px lightgray;
+    display:grid; /*.header adalah grid-item sekaligus grid-container, seluruh item dari flex atau grid bisa dijadikan container dari flex atau grid lagi.*/
+    grid-template-columns:[start-column] 1fr [middle-column] 1fr [end-column];
+    grid-template-rows: [start-row] 40px [title-row] auto [description-row] 30px [tabhead-row];
+    padding: 15px 35px 0 35px;; 
+}
+.side-content{ /*side-content pada apps ini adalah tempat chapter-chapter ditulis.*/
+    grid-area: side-content;
+    background-color: #025682;
+}
+.body{ /*body yang membuat form dan table.*/
+    grid-area: body;
+    background-color: #f4f4f4;
+    padding:30px;
+}
+
+.user{
+    padding-top: 50px;
+    margin-bottom: 80px;
+}
+.user > img{
+    height:74px;
+    border-radius:37px;
+    margin-bottom: 20px;
+}
+.user > .username{
+    font-family: 'OpenSansSemiBold', Arial, Helvetica, sans-serif;
+    display:block;
+    color:white;
+    margin-bottom: 8px;
+}
+.user > .username::after{
+    color:white;
+    margin-left: 12px;
+
+    /*Dibawah ini adalah contoh menggunakan font-awesome 5 tanpa menggunakan html tag icon.*/
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f107'; /*Code content bisa dilihat di cheat sheet.*/
+}
+.user > .status{
+    display:inline-block;
+    vertical-align: top;
+    height: 14px;
+    line-height: 14px;
+}
+/*
+    pseudo-element dibawah ini digunakan untuk membuat object lingkaran di depan nama status.
+    Note: object lingkaran seperti bullet point ini tidak seharusnya dibuatkan element khusus di html, harus dibuatkan pseudo element seperti ini.
+    itu dikarenakan, extra html akan membuat DOM pada html semakin membingungkan dan team back-end developer akan bingung dengan extra html yang tidak terpakai.
+*/
+.user > .status::before{
+    content:'';
+    display:inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    width:12px;
+    height:12px;
+    border-radius: 6px;
+}
+/*
+    data-status attribute akan berubah sesuai dengan kondisi, tapi kita bisa menyiapkan dulu semua warnanya dari CSS,
+    jadi apabila offline akan berwarna abu-abu, dan kalau busy akan berwarna merah.
+*/
+.user > [data-status=online]{
+    color: #38b766;
+}
+.user > [data-status=offline]{
+    color: #c2c2c2;
+}
+.user > [data-status=busy]{
+    color: #ca4e4e;
+}
+
+
+.side-menu > nav{
+    margin-bottom: 80px;
+}
+/*
+    Kita bisa menghemat DOM dan element HTML, sehingga judul dari Main Menu bisa diciptakan dengan pseudo element
+*/
+.side-menu > nav::before{
+    content:'MAIN';
+    font-family:'OpenSansBold', Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    display:block;
+    margin-bottom: 35px;
+    color:#8aa4b3;
+}
+.side-menu .menu-item{
+    margin-bottom: 20px;
+}
+.side-menu .menu-item:last-child{
+    margin-bottom: 0;
+}
+.side-menu .menu-item > a{
+    display:inline-flex;
+    align-items: center;
+    color:#8aa4b3;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.side-menu .menu-item > a > i{
+    font-size: 26px;
+    width:43px;
+}
+.side-menu .menu-item > a:hover{
+    font-family:'OpenSansSemiBold', Arial, Helvetica, sans-serif;    
+    color:white;
+}
+
+
+.friends::before{
+    content:'FRIENDS';
+    font-family:'OpenSansBold', Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    display:block;
+    margin-bottom: 35px;
+    color:#8aa4b3;    
+}
+.friends{
+    margin:0;
+    padding:0;
+}
+.friends li{
+    font-family:'OpenSansSemiBold', Arial, Helvetica, sans-serif;   
+    color:white; 
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.friends .frame{
+    width: 50px;
+    position:relative; /*position di sini digunakan sebagai parent dari bullet point di pojok kanan bawah.*/
+}
+.friends img{
+    height:30px;
+    border-radius:15px;
+}
+/*bullet point untuk setiap status friends.*/
+.friends .frame::before{
+    content:'';
+    display:block;
+    width:14px;
+    height:14px;
+    border-radius: 7px;
+    position:absolute;
+    bottom:0;
+    left:20px;
+    border: solid 3px #003956;
+    box-sizing: border-box;
+}
+/*Selector di bawah ini digunakan untuk bullet point baik untuk user, maupun untuk friends.*/
+.user > [data-status=online]::before,
+.friends [data-status=online] .frame::before
+{
+    background-color: #38b766;
+}
+.user > [data-status=offline]::before,
+.friends [data-status=offline] .frame::before{
+    background-color: #c2c2c2;
+}
+.user > [data-status=busy]::before,
+.friends [data-status=busy] .frame::before{
+    background-color: #ca4e4e;
+}
+
+.author > h1{
+    margin:0;
+    font-family:'OpenSansBold', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size:12px;
+    display:inline-block;
+    background-color:white;
+    color:#006495;
+    padding: 8px 15px;
+    border-radius:15px;
+}
+.author > p{
+    margin: 25px 0;
+    font-size:14px;
+    line-height: 25px;
+}
+.author > span{
+    font-size:12px;    
+}
+
+.side-content > a{
+    display: flex;
+    text-decoration: none;
+    color:white;
+    padding: 25px 30px;
+}
+.side-content .chapter-number span{
+    font-family:'OpenSansBold', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+    color:#006495;
+    display:inline-block;
+    width:26px;
+    height:22px;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 4px;
+}
+.side-content .name-description{
+    font-size:12px;
+    padding-left:18px;
+}
+.side-content .name-description h3{
+    font-family:'OpenSansSemiBold', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-top:0;
+    margin-bottom: 12px
+}
+.side-content .name-description p{
+    margin:0;
+    color:#8aa4b3;
+    line-height: 25px;
+}
+.side-content > a:hover{
+    background-color: #004b72;
+}
+
+.top-menu [name=search-form]{
+    display: flex;
+    align-items: center;
+}
+.top-menu [name=search-form] [type=text]{
+    border:solid 1px lightgray;
+    outline: none;
+    border-right: none;
+    width: 300px;
+    height:40px;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 0 15px;
+}
+.top-menu [name=search-form] [type=submit]{
+    border:solid 1px lightgray;
+    border-left:none;
+    height:40px;
+    box-sizing: border-box;
+    background-color: white;
+    color:#006495;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 15px;
+    padding-right:15px;
+    outline: none;
+}
+.top-menu .communication{
+    display:flex;
+    color:gray;
+}
+.top-menu .communication .notifications{
+    margin-right: 35px;
+}
+.top-menu .communication .notifications i,
+.top-menu .communication .messages i{
+    margin-right: 8px;
+}
+
+/*
+    perhatikan .header selector di barisan atas css ini, 
+    .header adalah grid di dalam grid. Ya, sebuah grid item juga kita bisa jadikan grid-container, membuat displaynya bersifat unik, atau memiliki 2 kondisi.
+*/
+.header > h1{
+    color:#006495;
+    margin:0;
+    font-weight: normal;
+    font-family:'OpenSansBold', Arial, Helvetica, sans-serif;
+    font-size:18px;
+
+    grid-column: start-column / middle-column;
+    grid-row: start-row / title-row;
+    align-self: flex-end;
+}
+.header > p{
+    color: gray;
+    font-size:14px;
+    margin: 0;
+
+    grid-column: start-column / middle-column;
+    grid-row: title-row / description-row;
+    margin-top:10px;   
+}
+.header > a{
+    background-color:#f1ba39;
+    color:#8f6100;
+    text-decoration: none;
+    font-family:'OpenSansSemiBold', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding:12px 15px;
+    border-radius:20px;
+
+    grid-column: middle-column / end-column;
+    grid-row: start-row / description-row;
+    align-self: center;
+    justify-self: right;
+}
+.header > ul{
+    display:flex;
+    margin:0;
+    padding:0;
+}
+.header > ul > li{
+    font-family:'OpenSansSemiBold', Arial, Helvetica, sans-serif;   
+    list-style: none;
+    color:gray;
+    margin-right: 30px;
+    font-size: 16px;
+}
+.header > ul > li:last-child{
+    margin-right: 0;    
+}
+.header > ul > .selected{
+    color:#006495;
+    border-bottom: solid 2px #006495;
+}
+
+.body > .body-container{
+    background-color:white;
+    border:solid 1px lightgray;
+    display:flex;
+    border-radius: 6px;
+    font-size:12px;
+    height:100%;
+}
+.body-container > [name=classic-form]{
+    padding:30px;
+    border-right:solid 1px lightgray;
+}
+.body-container > .grid-container{
+    padding:30px;    
+}
+
+/*Seluruh standard form pada apps ini.*/
+[name=classic-form] [type=text]{
+    border:1px solid silver;
+    height:21px;
+    width: 160px;
+    border-radius: 4px;
+}
+[name=classic-form] textarea{
+    border:1px solid silver;
+    height:80px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    resize: none;   
+}
+[name=classic-form] [type=radio],
+[name=classic-form] [type=checkbox]{
+    display: none;
+}
+[name=classic-form] [type=radio] + label,
+[name=classic-form] [type=checkbox] + label{
+    display:inline-block;
+    width: 15px;
+    height:15px;
+    border: solid 2px #025682;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-left: 18px;
+    margin-right:3px;
+    vertical-align: middle;
+}
+[name=classic-form] [type=radio] + label:first-of-type,
+[name=classic-form] [type=checkbox] + label:first-of-type{
+    margin-left: 0;    
+}
+[name=classic-form] [type=radio] + label + label,
+[name=classic-form] [type=checkbox] + label + label{
+    vertical-align: middle;    
+}
+[name=classic-form] [type=radio]:checked + label,
+[name=classic-form] [type=checkbox]:checked + label{
+    background-color: #025682;
+}
+[name=classic-form] > .rows{
+    margin-bottom: 18px;
+    width:240px;
+}
+[name=classic-form] > .rows:nth-child(1),
+[name=classic-form] > .rows:nth-child(2){
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+[name=classic-form] > .rows:nth-child(4){
+    display:grid;
+    grid-template-columns: 25px auto;
+    grid-template-rows: 19px 19px 19px;
+    justify-items: left;
+}
+[name=classic-form] > .rows:nth-child(4) [type=checkbox] + label{
+    margin:0;
+}
+[name=classic-form] > .rows:nth-child(5) label{
+    display:block;
+    margin-bottom: 5px;
+}
+[name=classic-form] > .button-rows{
+    text-align: right;
+}
+[name=classic-form] > .button-rows [type=submit],
+[name=classic-form] > .button-rows a{
+    display:inline-block;
+    width:80px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 25px;
+    border:none;
+    padding:0;
+    color:white;
+    text-decoration: none;
+    color:white;
+    background-color:#006495;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*table diciptakan seluruhnya dengan menggunakan flex.*/
+.grid-container .table-header{
+    display:flex;
+    background-color:#006495;
+    color:white;
+    padding-right: 17px;
+    min-width: 640px;
+    box-sizing: border-box;
+}
+.grid-container .table-header span{
+    box-sizing: border-box;
+    padding:5px;
+    border-right:solid 1px white;
+}
+.grid-container .table-header span:last-child{
+    border-right:none;
+}
+.grid-container .table-header span:nth-child(1),
+.grid-container .table-body .row span:nth-child(1){
+    flex-basis:150px;
+    min-width: 102px;
+}
+.grid-container .table-header span:nth-child(2),
+.grid-container .table-body .row span:nth-child(2){
+    flex-basis:120px;
+    min-width: 82px;
+}
+.grid-container .table-header span:nth-child(3),
+.grid-container .table-body .row span:nth-child(3){
+    flex-basis:80px;
+    min-width: 56px;
+}
+.grid-container .table-header span:nth-child(4),
+.grid-container .table-body .row span:nth-child(4){
+    flex-basis:120px;    
+    min-width: 82px;
+}
+.grid-container .table-header span:nth-child(5),
+.grid-container .table-body .row span:nth-child(5){
+    flex-basis:150px;    
+    min-width: 102px;
+}
+.grid-container .table-header span:nth-child(6),
+.grid-container .table-body .row span:nth-child(6){
+    flex-basis:300px;
+    flex-grow:1; 
+    min-width: 199px;
+}
+.grid-container .table-body{
+    max-height: 500px;
+    overflow:auto;
+    min-width: 640px;
+    box-sizing: border-box;
+}
+.grid-container .table-body .row:nth-child(even){
+    background-color:#ced6e0
+}
+.grid-container .table-body .row:nth-child(odd){
+    background-color:#f1f2f6;
+}
+.grid-container .table-body .row{
+    display:flex;
+}
+.grid-container .table-body .row span{
+    box-sizing: border-box;
+    border-right:solid 1px gray;
+    padding:5px;
+}   
+.grid-container .table-body .row span:last-child{
+    border-right:none;
+}

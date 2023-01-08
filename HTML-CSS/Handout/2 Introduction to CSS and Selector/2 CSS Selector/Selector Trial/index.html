@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Ini adalah description mengenai website ini."> 
+        <meta name="keywords" content="Latihan,Bootcamp,Indocyber">
+        <meta name="author" content="Boby Widjaja">
+        <title>Contoh HTML</title>
+        <link rel="stylesheet" type="text/css" href="Content/selectors.css">
+        <link rel="stylesheet" type="text/css" href="Content/second-selectors.css">
+    </head>
+    <body>
+        <span>Span Pertama</span>
+        <span>Span Kedua</span>
+        <span class="general-word">General Word Span</span>
+        <p class="general-word">General Paragraph Span</p>
+
+        <!--
+            Class adalah salah satu attribute yang bisa memiliki 2 value.
+            Pada contoh kasus di bawah ini, paragraph ini memiliki 2 classes, yaitu:
+            pertama dan kedua (Note!: inget, kelasnya bukan "pertama kedua", tetapi pertama dan kedua)
+
+            Spasi pada html attribute value merupakan pemisah dari 2 value.
+        -->
+        <p class="pertama kedua" data-khusus="ketiga">
+            Same Specificity
+        </p>
+
+        <!--
+            naming-convention pada html umumnya menggunakan - hyphen pada pemisah kata, seperti contoh
+            pada class="general-word", jadi bukan menggunakan camelCase atau PascalCase.
+
+            Yang tidak boleh dilakukan adalah menggunakan tanda-tanda seperti:
+            . titik
+            : titik dua
+            = sama dengan 
+            # hash 
+            atau simbol lainnya di luar hyphen dan _ underscore, terutama bila tanda tersebut ditaruh di awal nama class.
+            Karena tanda-tanda bisa bisa tertukar dengan simbol class, id atau attribute.
+
+            Selain itu penggunakan numeric (0-9) juga tidak disarankan, apalagi berada di paling awal nama id atau class.
+            Mengapa? Saya akan berikan contoh dan potensi masalahnya.
+        -->
+        <p class="12paragraph">Numeric Paragraph</p>
+        <p class="paragraph45">Numeric Last Paragraph</p>
+
+        <div class="sample-container">
+            <span>Child</span>
+        </div>
+
+        <div>
+            <span class="sample-child">Child</span>
+        </div>
+
+        <div class="induk">
+            <span class="anak" id="unique-span">Unique Span</span>
+        </div>
+
+        <div><div class="next">Next Content</div></div>
+        <div><div class="next">Next Content</div></div>
+        
+        <span class="hovering">HOVER</span>
+
+        <div class="parent-child">
+            <p>Pertama</p>
+            <p>Kedua</p>
+            <p>Ketiga</p>
+            <p>Keempat</p>
+            <p>Kelima</p>
+        </div>
+
+        <table class="table-parent">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Andre</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Julia</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Fransisca</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Brian</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Bruce</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="breadcrumb">
+            <span>Electronic</span>
+            <span>Digital</span>
+            <span>Mobile Phone</span>
+            <span>Samsung</span>
+        </div>
+
+        <!--
+            Single name component strategy adalah strategy untuk mengirit pembuatan class dan id seminimal mungkin,
+            sehingga team back-end developer tidak perlu repot-repot memberi nama class ke banyak component, contohnya seperti di bawah ini:
+        -->
+        <div class="single-name">
+            <h1>Table Person</h1>
+            <p>This is table to show several information about some people.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Kota Lahir</th>
+                        <th>Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aldi</td>
+                        <td>Pria</td>
+                        <td>Jakarta</td>
+                        <td>250.000</td>
+                    </tr>
+                    <tr>
+                        <td>Adrian</td>
+                        <td>Pria</td>
+                        <td>Jakarta</td>
+                        <td>350.000</td>
+                    </tr>
+                    <tr>
+                        <td>Melissa</td>
+                        <td>Wanita</td>
+                        <td>Bandung</td>
+                        <td>2.350.000</td>
+                    </tr>                                       
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Customer X</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <!--
+            Bandingkan dengan yang ini, terlalu banyak yang harus diberikan class.
+            Cobalah se-maximal mungkin menggunakan single name component.
+        -->
+        <div class="separate-parts">
+            <h1 class="title">Table Person</h1>
+            <p class="description">This is table to show several information about some people.</p>
+            <table class="person-table">
+                <thead>
+                    <tr>
+                        <th class="strong-parts table-cell">Nama</th>
+                        <th class="strong-parts table-cell">Jenis Kelamin</th>
+                        <th class="strong-parts table-cell">Kota Lahir</th>
+                        <th class="strong-parts table-cell">Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="table-cell">Aldi</td>
+                        <td class="table-cell">Pria</td>
+                        <td class="table-cell">Jakarta</td>
+                        <td class="table-cell">250.000</td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Adrian</td>
+                        <td class="table-cell">Pria</td>
+                        <td class="table-cell">Jakarta</td>
+                        <td class="table-cell">350.000</td>
+                    </tr>
+                    <tr>
+                        <td class="table-cell">Melissa</td>
+                        <td class="table-cell">Wanita</td>
+                        <td class="table-cell">Bandung</td>
+                        <td class="table-cell">2.350.000</td>
+                    </tr>                                       
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="strong-parts table-cell" colspan="4">Customer X</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+            
+    </body>
+</html>

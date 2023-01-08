@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- form penting untuk submit data, setiap formulir yang kalian isi pada web biasanya menggunakan elemen ini -->
+  <!-- secara natural, pastinya pada form ada <input> yang dapat kita masukkan -->
+
+  <!-- form dapat menggunakan method get (default) atau post -->
+  <form action="" method="GET">
+    <label for="search">Search for : </label>
+    <input type="text" name="search" id="search">
+    <input type="submit" value="Go">
+  </form>
+
+  <section class="wrapper">
+    <h2>Input isi:</h2>
+
+    <form class="form-example" action="" method="POST">
+
+      <!-- contoh text -->
+      <label for="name">Name</label>
+      <div class="form-input">
+        <input type="text" name="name" id="name">
+      </div>
+
+      <!-- contoh radio button -->
+      <label for="gender">Gender</label>
+      <div class="form-input radio-button">
+        <input type="radio" name="gender" id="male" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label>
+      </div>
+
+      <!-- contoh date-time -->
+      <label for="birtDate">Birth Date</label>
+      <div class="form-input date-picker">
+        <input type="date" name="birthDate" id="birthDate">
+      </div>
+
+      <!-- contoh text biasa -->
+      <label for="phoneNumber">Phone Number</label>
+      <div class="form-input">
+        <input type="text" name="phoneNumber" id="phoneNumber">
+      </div>
+
+      <!-- contoh input email type -->
+      <label for="email">Email</label>
+      <div class="form-input">
+        <input type="email" name="email" id="email">
+      </div>
+
+      <!-- contoh input password -->
+      <label for="password">Password</label>
+      <div class="form-input">
+        <input type="password" name="password" id="password">
+      </div>
+
+      <!-- contoh input checkbox -->
+      <label for="vehicle">Kendaraan</label>
+      <div class="form-input checkbox">
+        <input type="checkbox" name="car" id="car" value="Mobil Terpilih">
+        <label for="car">Auto Mobile</label>
+        <input type="checkbox" name="motorcycle" id="motorcycle" value="Motor Terpilih">
+        <label for="motorcycle">Motorcycle</label>
+      </div>
+
+      <input type="submit" value="Submit">
+
+    </form>
+  </section>
+
+
+</body>
+
+</html>

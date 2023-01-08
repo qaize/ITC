@@ -1,0 +1,56 @@
+div.base-scroll {
+    border: solid thin black;
+    width: 300px;
+    height: 150px;
+    overflow: scroll;
+	margin-bottom:10px;
+}
+div.menghilangkan-scrolling {
+    -ms-overflow-style:none; /*For IE*/
+}
+div.menghilangkan-scrolling::-webkit-scrollbar {
+	display:none; /*For Chrome and Safari*/
+}
+div.scrolling-ie {
+  scrollbar-base-color:green;
+  /*scrollbar-3dlight-color: yellow;*/
+  scrollbar-highlight-color: red;
+  scrollbar-track-color: orange;
+  scrollbar-arrow-color: blue;
+  scrollbar-shadow-color: red;
+  /*scrollbar-dark-shadow-color: purple;*/
+}
+
+/*Scroll bar adalah keseluruhan dasar scrollbar*/
+div.scrolling-webkit::-webkit-scrollbar {
+    background-color: lightblue;
+    width: 10px;
+    height: 10px;
+}
+
+/*Button adalah 2 button atas dan bawah atau kiri dan kanan untuk secara manual menggeser scroll bar.*/
+div.scrolling-webkit::-webkit-scrollbar-button {
+    background-color: blue;
+    width: 12px;
+    height: 12px;
+}
+
+/*scrollbar thumb adalah alat content untuk di drag atas dan bawah.*/
+div.scrolling-webkit::-webkit-scrollbar-thumb {
+    background-color: aqua;
+    border-radius: 8px;
+    border: solid black thin;
+}
+
+/*scroll bar track dan scrollbar track piece adalah bagian rail dari scroll bar*/
+div.scrolling-webkit::-webkit-scrollbar-track {
+	border: solid thin black;
+}
+div.scrolling-webkit::-webkit-scrollbar-track-piece {
+	border: solid thin black;
+}
+
+/*scroll bar corner adalah satu titik pojok scrollbar apabila vertical dan horizontal scrollbar muncul.*/
+div.scrolling-webkit::-webkit-scrollbar-corner {
+	background-color:red;
+}
