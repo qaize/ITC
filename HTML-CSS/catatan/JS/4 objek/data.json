@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "firstname": "qaize",
+  "isActive": true,
+  "book": {
+    "author": "Jordan Peterson",
+    "title": "12 Rules Of Life",
+    "haveRead": false,
+    "lastPage": 127,
+    "onProgress": true
+  }
+}

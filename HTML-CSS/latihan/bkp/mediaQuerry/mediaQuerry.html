@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        color: #fff;
+        background-color: #202020;
+      }
+      .features {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .fi {
+        flex: 2;
+        background-color: yellowgreen;
+        text-align: center;
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 15px;
+      }
+      .items {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        gap: 10px;
+      }
+      .it {
+        flex: 1;
+        background-color: cyan;
+        justify-content: space-around;
+
+        align-items: center;
+        border: 2px solid black;
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          color: #202020;
+          background-color: #fff;
+        }
+        section {
+          flex-direction: column;
+        }
+      }
+
+      @media print {
+        body {
+          color: blueviolet;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="features">
+      <div class="fi">Feature Item 1</div>
+      <!-- <div style="flex: 0.5"></div> -->
+      <div class="fi">Feature Item 2</div>
+    </section>
+    <section class="items">
+      <div class="it">Item 1</div>
+      <div class="it">Item 2</div>
+      <!-- <div style="flex: 0.5"></div> -->
+      <div class="it">Item 3</div>
+      <div class="it">Item 4</div>
+    </section>
+  </body>
+</html>

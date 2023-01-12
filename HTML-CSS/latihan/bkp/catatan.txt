@@ -1,0 +1,51 @@
+
+/* css ada 3 : 
+1.In line
+2.Internal di head
+3.extenal di file baru di link ke head
+
+
+priority: 
+1.id
+2.class
+3.global properties
+
+ref css : mozila basic selector
+
+
+
+
+/* ganjil penerapan */
+/* Pseudo class  */
+/* section:nth-child(odd) {
+  background-color: #40bfaa;
+}
+
+media querry :
+
+desktop 1200px
+laptop : 992px
+tablet : 768px
+hp 480px
+
+
+section:nth-child(even) {
+  background-color: #40bf75;
+} */
+
+  /* 
+    row-gap
+    column-gap
+    
+    */
+  /* grid-template-columns: 50% 16.66% 16.66% 16.66%; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+
+
+  
+  /* ukuran harus ada jika menggunakan fr */
+  /* grid-template-rows: 100px 100px 100px; */
+
+
+  <!-- create section -->
+      <!-- untuk objek bisa menggunakan div obj=(semantic elements) -->

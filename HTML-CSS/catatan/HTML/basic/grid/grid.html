@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        gap: 10px;
+        /* 
+        row-gap
+        column-gap
+        
+        */
+        /* grid-template-columns: 50% 16.66% 16.66% 16.66%; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: 100px 100px 100px;
+        /* ukuran harus ada jika menggunakan fr */
+        /* grid-template-rows: 100px 100px 100px; */
+        grid-template-rows: 100px 100px;
+      }
+      .el {
+        border: 2px solid burlywood;
+      }
+      .el--1 {
+        grid-column: 2/4;
+      }
+      .el--2 {
+        grid-row: 1/4;
+        justify-self: stretch;
+        align-self: stretch;
+      }
+
+      .el--3 {
+        grid-row: 2/4;
+        grid-column: 4/5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="el"></div>
+      <div class="el">2</div>
+      <div class="el">3</div>
+      <div class="el">
+        <!-- <img src="../images/Power_anime_design_2.webp" alt="" /> -->
+      </div>
+      <div class="el">5</div>
+      <div class="el">6</div>
+      <div class="el">7</div>
+      <div class="el">8</div>
+      <div class="el">9</div>
+      <div class="el">10</div>
+      <div class="el">11</div>
+      <div class="el">12</div>
+    </div>
+  </body>
+</html>

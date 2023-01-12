@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Login & register */
+.containerAuth {
+  margin-top: 180px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+}
+
+.itemAuth {
+  flex: 1;
+  position: relative;
+  width: 50%;
+  display: flex;
+  border: 2px solid #fee;
+  align-items: center;
+}
+
+.authing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgAuth {
+  display: inline-block;
+  text-align: center;
+}
+
+.authTitle {
+  flex: 1;
+  color: grey;
+  padding-bottom: 40px;
+}
+
+div form {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+form input {
+  height: 40px;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+form button {
+  /* border: none; */
+  height: 40px;
+  width: 100px;
+  background-color: brown;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
+
+form button:hover {
+  background-color: grey;
+  color: black;
+}
+
+.form-group {
+  padding-right: 10px;
+  color: grey;
+}
+.authOptional {
+  flex: 1;
+}
+.authOptional a {
+  text-decoration: none;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .itemAuth {
+    flex-direction: column;
+  }
+
+  .authOptional {
+    padding-bottom: 20px;
+  }
+  .itemAuth {
+    margin-bottom: 100px;
+  }
+  .containerAuth {
+    padding-bottom: 50px;
+  }
+}
+
+/* Home */
+/* sidebar fixed */
+
+/* head fixed */
+
+/* Dashboard */
+
+.containerDashboard {
+  height: 500px;
+}
+
+.itemDashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.dashboardTitle {
+  flex: 1;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.dashboardRowStatus {
+  display: flex;
+  flex: 1;
+  color: grey;
+  justify-content: space-around;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.rowStatus {
+  padding: 20px;
+  position: relative;
+  flex: 1;
+  height: 150px;
+  border: 1px solid black;
+}
+
+.note {
+  flex: 1;
+  color: grey;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.dashboardEvent {
+  position: relative;
+  flex: 1;
+  display: flex;
+  padding: 50px;
+  border: 1px solid black;
+}
+.eventList {
+  flex: 1;
+  height: 150px;
+}
+.list {
+  flex: 1;
+  text-align: center;
+  padding-top: 40px;
+}
+.list a {
+  color: grey;
+  text-decoration: none;
+}
+.list a:hover {
+  color: brown;
+}
+
+ul li {
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboardRowStatus {
+    flex-direction: column;
+  }
+  .dashboardEvent {
+    flex-direction: column;
+  }
+}
+
+/* candidate */ ;

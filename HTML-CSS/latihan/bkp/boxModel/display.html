@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: tomato;
+      }
+      /* jenis display = inline dan block
+         setiap elemen memiliki display default masing-masing
+         yang dapat di format/diubah
+      */
+
+      /* default display div dan p adalah block */
+
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: burlywood;
+        display: inline;
+        padding: 100px;
+        margin: 100px 150px;
+        font-size: 20px;
+      }
+      p {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        display: inline;
+      }
+
+      /* display default dari display adalah inline */
+      a {
+        display: block;
+        width: 100px;
+        height: 200px;
+        background-color: yellowgreen;
+      }
+      span {
+        font-size: 100px;
+        color: blue;
+      }
+      img {
+        width: 200px;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Lorem, ipsum dolor.</div>
+
+    <p>Paragraf</p>
+    <a href="#">link</a>
+    test test<img src="../images/Power_anime_design_2.webp" alt="" />
+    test<span>test</span>test
+  </body>
+</html>

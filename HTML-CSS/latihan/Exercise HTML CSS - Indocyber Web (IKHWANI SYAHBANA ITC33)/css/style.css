@@ -1,0 +1,676 @@
+/* Properties */
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  /* min-height: 100%; */
+  height: 100%;
+}
+
+h2 {
+  font-family: "poppinsregular";
+  color: #a71f24;
+  text-decoration: none;
+  text-align: left;
+  font-size: 42px;
+}
+
+/* navigasi */
+
+.containerNav {
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  height: 75px;
+  align-items: center;
+}
+nav {
+  position: static;
+}
+
+nav a {
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+a {
+  color: rgb(71, 71, 71);
+}
+nav a:visited {
+  color: rgb(180, 180, 180);
+}
+nav a:hover {
+  text-decoration: double;
+  color: #a71f24;
+}
+nav a:active {
+  color: #a71f24;
+}
+
+@media screen and (max-width: 780px) {
+  .containerNav {
+    height: 50px;
+    font-size: small;
+  }
+  nav a {
+    font-size: 14px;
+    padding-top: 5px;
+  }
+}
+
+/* banner */
+.container {
+  height: 450px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.banner {
+  background-image: url(/images/banner_new.png);
+  background-position: center top;
+  background-color: auto 450px;
+  width: 100%;
+}
+
+.wordItem {
+  padding: 45px;
+  position: relative;
+  display: flex;
+  height: 400px;
+}
+
+.leftWord {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.data {
+  flex: 1;
+  position: static;
+  padding: 5% 10%;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.bannerButton {
+  border-radius: 10px;
+  padding: 3.5%;
+  height: 60px;
+  width: 250px;
+  background-color: #555454;
+  color: #fff;
+  text-align: center;
+}
+.bannerButton a {
+  text-decoration: none;
+  color: white;
+}
+
+.bannerButton:hover {
+  background-color: #fff;
+  color: #555454;
+  transition: 0.5s;
+}
+.bannerButton a:hover {
+  background-color: #fff;
+  color: #555454;
+  transition: 0.5s;
+}
+.h3banner {
+  font-size: 24px;
+  font-weight: bold;
+}
+.h5banner {
+  align-items: center;
+  font-size: 16px;
+  color: white;
+}
+
+.rightWord {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+  gap: 5px;
+}
+
+.dataKanan {
+  flex: 1;
+  position: -webkit-sticky;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+.dataKanan.h3banner {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* form */
+form {
+  flex: 4;
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* BODY */
+
+/* SOlution */
+.isi {
+  padding: 30px 3%;
+}
+.containerSolution {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  position: relative;
+  display: grid;
+  gap: 20px;
+  min-height: 100%;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+}
+.solutionItems {
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.solutionTitle {
+  position: absolute;
+  background-color: #a71f24;
+  width: 100%;
+  height: 27%;
+  bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5%;
+  opacity: 1;
+}
+.h5solution {
+  color: white;
+}
+
+.solutionTitle:hover {
+  opacity: 0.7;
+  position: absolute;
+  background-color: #a71f24;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 27%;
+  transition: 0.5s;
+}
+@media screen and (max-width: 780px) {
+  .containerSolution {
+    font-size: small;
+    grid-template-rows: 150px 150px;
+  }
+}
+
+/* services */
+
+.serviceBg {
+  background-image: url(/images/bg_service.jpg);
+  height: 450px;
+  padding: 5%;
+}
+
+.srvItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  text-align: center;
+}
+
+.srvh5 {
+  height: 70px;
+  margin: 25px auto;
+  max-width: 220px;
+  font-size: 18px;
+  color: white;
+}
+.serviceButton {
+  padding-bottom: 60px;
+}
+.serviceButton a {
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 15px 80px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+.serviceButton a:hover {
+  background-color: #fff;
+  color: #a71f24;
+}
+
+@media screen and (max-width: 780px) {
+  .serviceBg {
+    height: 350px;
+  }
+  .srvh5 {
+    font-size: small;
+    color: white;
+  }
+  .serviceButton a {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+  }
+}
+
+/* new update */
+.bgNews {
+  height: 500px;
+  padding: 15px;
+}
+.newContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 25px;
+  text-align: center;
+}
+.newsItem {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  transition: 0.25s ease-out;
+  padding: 5px;
+}
+.newsItem.update1 {
+  background-image: url("/images/update 1.png");
+  background-position: center;
+}
+.newsItem.update2 {
+  background-image: url("/images/update2.png");
+  background-position: left;
+}
+.newsItem.update3 {
+  background-image: url("/images/update3.png");
+  background-position: left;
+}
+
+.news3Detail {
+  color: #2f2f2f;
+  margin: 20px;
+  overflow: hidden;
+}
+.news4Detail {
+  color: #2f2f2f;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.newsItem a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 780px) {
+  .newsItem {
+    height: 100px;
+    font-size: small;
+  }
+
+  .bgNews {
+    height: 300px;
+  }
+}
+
+/* Footer */
+
+.slogan {
+  display: flex;
+  background-color: #a71f24;
+  width: 100%;
+  height: 75px;
+  padding-top: 35px;
+  justify-content: space-around;
+}
+
+footer div p {
+  text-align: center;
+  color: white;
+}
+
+.tulisan {
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 780px) {
+  .slogan {
+    height: 50px;
+    padding-top: 20px;
+  }
+}
+
+/* Login & register */
+.containerAuth {
+  margin-top: 180px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+}
+
+.itemAuth {
+  flex: 1;
+  position: relative;
+  width: 50%;
+  display: flex;
+  border: 2px solid #fee;
+  align-items: center;
+}
+
+.authing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgAuth {
+  display: inline-block;
+  text-align: center;
+}
+
+.authTitle {
+  flex: 1;
+  color: grey;
+  padding-bottom: 40px;
+}
+
+section div form {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+section div form input {
+  height: 40px;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+section div form button {
+  /* border: none; */
+  height: 40px;
+  width: 100px;
+  background-color: brown;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  margin-bottom: 20px;
+}
+
+section div form button:hover {
+  background-color: grey;
+  color: black;
+}
+
+.form-group {
+  padding-right: 10px;
+  color: grey;
+}
+.authOptional {
+  flex: 1;
+}
+.authOptional a {
+  text-decoration: none;
+  color: grey;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .itemAuth {
+    flex-direction: column;
+  }
+
+  .authOptional {
+    padding-bottom: 20px;
+  }
+  .itemAuth {
+    margin-bottom: 100px;
+  }
+  .containerAuth {
+    padding-bottom: 50px;
+  }
+}
+
+/* Home */
+
+/* sidebar fixed */
+.gridHome {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 1fr 55px;
+  height: 100%;
+}
+.gridMerge {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  background-color: #a71f24;
+}
+
+.gridLayout {
+  border: 1px solid #bdbdbd;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideTitle {
+  display: flex;
+  /* justify-content: space-; */
+  flex-direction: row;
+}
+
+.gambar {
+  flex: 1;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.judul {
+  flex: 4;
+  padding-top: 15px;
+  color: #555454;
+  text-align: center;
+}
+
+.data--1 {
+  flex: 1;
+  color: #555454;
+  text-align: right;
+}
+.data--1 a {
+  text-decoration: none;
+}
+.data--1 a:hover {
+  text-decoration: none;
+  color: #a71f24;
+}
+
+/* head fixed */
+
+.navField {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navitem {
+  flex: 1;
+  padding: 10px;
+  overflow: visible;
+}
+.search {
+  padding-left: 50px;
+  padding-right: 50%;
+  border-radius: 10px;
+}
+.logout {
+  padding: 10px;
+  text-align: right;
+}
+.inputSearch {
+  height: 30px;
+}
+
+/* Dashboard */
+
+.containerDashboard {
+  height: 300px;
+}
+
+.itemDashboard {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 125px;
+}
+
+.dashboardTitle {
+  flex: 1;
+  color: #555454;
+
+  padding-bottom: 20px;
+}
+
+.dashboardRowStatus {
+  display: flex;
+  flex: 1;
+  color: grey;
+  justify-content: space-around;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.rowStatus {
+  padding: 20px;
+  position: relative;
+  flex: 1;
+  height: 125px;
+  border: 1px solid #555454;
+  border-radius: 10px;
+}
+
+.note {
+  flex: 1;
+  color: #555454;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.dashboardEvent {
+  position: relative;
+  color: grey;
+  flex: 1;
+  display: flex;
+  padding: 50px;
+  border: 1px solid #555454;
+  border-radius: 10px;
+}
+.eventList {
+  flex: 1;
+}
+.list {
+  flex: 1;
+  text-align: left;
+  padding-top: 40px;
+}
+.list a {
+  color: brown;
+  text-decoration: none;
+  font-style: italic;
+}
+.list a:hover {
+  color: #2f2f2f;
+}
+
+ul li {
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboardRowStatus {
+    flex-direction: column;
+  }
+  .dashboardEvent {
+    font-size: small;
+  }
+}
+
+/* candidate */
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  display: block;
+}
+thead {
+  background-color: #a71f24;
+  color: white;
+  height: 50px;
+}
+tfoot {
+  background-color: #a71f24;
+  color: white;
+  height: 40px;
+}
+tfoot tr td {
+  padding-left: 40px;
+}
+tbody tr:nth-child(odd) {
+  background-color: rgb(174, 221, 235);
+}
+table thead th {
+  padding: 5px;
+}
+table tbody td {
+  padding: 7px;
+  text-align: center;
+}
+
+.marginTable {
+  padding: 50px 100px;
+}

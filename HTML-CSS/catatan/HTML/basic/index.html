@@ -6,123 +6,268 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indocyber Global Teknologi Indonesia</title>
     <link rel="stylesheet" href="style.css" />
+
+    <style>
+      h5 {
+        color: white;
+        opacity: 1;
+      }
+    </style>
   </head>
+
   <body>
     <!-- header -->
     <header>
-      <img
-        src="https://www.indocyber.co.id/assets/images/logo.png"
-        alt="indocyber "
-        class="iglo"
-      />
+      <div class="containerNav">
+        <img
+          src="https://www.indocyber.co.id/assets/images/logo.png"
+          alt="indocyber "
+          height="75px"
+        />
+        <div></div>
+        <nav>
+          <a href="#">Home</a>
+          <span></span>
+          <a href="#">About us</a>
+          <span></span>
+          <a href="#">Solution & Services</a>
+          <span></span>
+          <a href="#">Career</a>
+          <span></span>
+          <a href="#">News</a>
+          <span></span>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
     </header>
-    <!-- Navigasi -->
-    <div class="navigasi">
-      <nav>
-        <a href="#">Home</a>
-        <span></span>
-        <a href="./boxModel/boxModel.html">About us</a>
-        <!-- ini kalo open new tab pas di klik -->
-        <span></span>
-        <a href="#ser" target="_blank">Solution & Services</a>
-        <span></span>
-        <a href="./boxModel/display.html">Career</a>
-        <span></span>
-        <a href="#new">News</a>
-        <span></span>
-        <a href="./boxModel/position.html">Contact Us</a>
-      </nav>
-    </div>
 
-    <!-- isi -->
     <main>
-      <!-- create section -->
-      <!-- untuk objek bisa menggunakan div obj=(semantic elements) -->
-      <section>
-        <img src="./images/dashboard.jpg" width="100%" alt="iglo" />
-        <!-- <img src="./images/Power_anime_design_2.webp" width="100%" alt="iglo" /> -->
+      <!-- Banner -->
+
+      <div class="container">
+        <div class="container banner">
+          <div class="wordItem">
+            <div class="leftWord">
+              <div class="data">
+                <h3 class="h3banner">CUTTING-EDGE SOLUTION IN EVERY CHANGE</h3>
+              </div>
+              <div class="data">
+                We provide solutions on the digital marketing and IT side. With
+                state of the art technology to provide new ease and
+                breakthrough.
+              </div>
+              <div class="data">
+                <div class="bannerButton">MORE INFO ABOUT US</div>
+              </div>
+            </div>
+            <div class="rightWord">
+              <h3 class="dataKanan h3banner">Need a Solution?</h3>
+              <h5 class="h5banner">
+                Please feel free to tell your problem to us
+              </h5>
+              <form action="#">
+                <input type="text" name="firstName" placeholder="first name" />
+                <input type="email" name="email" placeholder="email" />
+                <input type="text" name="Contact" placeholder="Contact" />
+                <input type="text" name="Company" placeholder="Company" />
+                <textarea
+                  name="Message"
+                  id=""
+                  cols="10"
+                  rows="5"
+                  placeholder="Message"
+                ></textarea>
+                <button>submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="isi">
+        <!-- bagusnya ditaruh di css gambarnya biar responsive -->
+        <h2>Solution</h2>
+        <div class="containerSolution">
+          <div class="solutionItems">
+            <a href="#">
+              <img
+                src="./images/img_sol_mobile.jpg"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+              <div class="solutionTitle">
+                <h5>iMOBILE SOLUTION</h5>
+              </div>
+            </a>
+          </div>
+          <div class="solutionItems">
+            <a href="#">
+              <img
+                src="./images/img_sol_ifinance.jpg"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+              <div class="solutionTitle">
+                <h5>Loan Orgination Finance</h5>
+              </div>
+            </a>
+          </div>
+          <div class="solutionItems">
+            <a href="#">
+              <img
+                src="./images/img_sol_intisys.jpg"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+              <div class="solutionTitle">
+                <h5>Retail Solution</h5>
+              </div>
+            </a>
+          </div>
+          <div class="solutionItems">
+            <a href="#">
+              <img
+                src="./images/img_sol_idist.jpg"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+              <div class="solutionTitle">
+                <h5>Distribution Solution</h5>
+              </div>
+            </a>
+          </div>
+          <div class="solutionItems">
+            <a href="#">
+              <img
+                src="./images/img_sol_idealer.jpg"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+              <div class="solutionTitle">
+                <h5>Dealer Solution</h5>
+              </div>
+            </a>
+          </div>
+          <div class="solutionItems">
+            <a href="#">
+              <img
+                src="./images/img_sol_bi.png"
+                alt=""
+                width="100%"
+                height="100%"
+              />
+              <div class="solutionTitle">
+                <h5>BI & Analytics Solution</h5>
+              </div>
+            </a>
+          </div>
+        </div>
       </section>
-      <div class="slogan">
-        <p class="sloganParagraf">CUTTING EDGE SOLUTION IN EVERY CHANGE</p>
-      </div>
-      <div class="isi">
-        
-        <section id="sol" class="bagian bagian--1">
-          <h2>Solutions</h2>
-          <div class="list">
-            <ol>
-              <li>iMobile Solution</li>
-              <li>Loan Origination Solution</li>
-              <li>Retail Solution</li>
-              <li>Distribution Solution</li>
-              <li>Dealer Solution</li>
-              <li>BI & Analytics Solution</li>
-            </ol>
+
+      <!-- bagusnya ditaruh di css gambarnya biar responsive -->
+      <section>
+        <h2 class="isi">Services</h2>
+        <div class="serviceBg">
+          <div class="srvItem">
+            <div>
+              <img
+                src="./images/icon_serv_itprofoutsrc.png"
+                alt="itprofesional"
+              />
+              <h5 class="srvh5">IT Professional Services</h5>
+              <div class="serviceButton">
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+
+            <div>
+              <img src="./images/icon_serv_customdev.png" alt="" />
+              <h5 class="srvh5">IT Custom Development</h5>
+              <div class="serviceButton">
+                <a href="#">More Detail</a>
+              </div>
+            </div>
+
+            <div>
+              <img src="./images/icon_serv_middleware.png" alt="Middleware" />
+              <h5 class="srvh5">Middleware</h5>
+              <div class="serviceButton">
+                <a href="#">More Detail</a>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="ser" class="bagian">
-          <h2>Services</h2>
-          <div class="list">
-            <ul>
-              <li>IT Professional Services</li>
-              <li>IT Custom Development</li>
-              <li>Middleware</li>
-            </ul>
+      <section class="isi">
+        <h2>News Update</h2>
+        <div class="bgNews">
+          <div class="newContainer">
+            <div class="newsItem">
+              <a href="#">
+                <div class="newsItem update1"></div>
+                <h3 class="news3Detail">
+                  Indocyber is Announced a Partnership with KewMann
+                </h3>
+                <h4 class="news4Detail">
+                  In November 2020, Malaysia Digital Economy Corporation (MDEC)
+                  has announced partnership between Indocyber with KewMann, an
+                  Artificial Intelligence and big data company that leverage on
+                  behavioral science to optimize outcome to help more
+                  organizations. This partnership goal is to help more
+                  organizations successfully embark into Artificial Intelligence
+                  (AI) & big data analytics journey to achieve their desired
+                  goals and objectives.
+                </h4>
+              </a>
+            </div>
+            <div class="newsItem">
+              <a href="#">
+                <div class="newsItem update2"></div>
+                <h3 class="news3Detail">
+                  OIO appointed by Indocyber Global Teknologi
+                </h3>
+                <h4 class="news4Detail">
+                  Indocyber Global Teknologi (“Indocyber”) announce a new
+                  project with Singapore Exchange-listed company OIO Holdings
+                  Limited (“OIO”) to digitize academic certificates in Indonesia
+                  on the blockchain.
+                </h4>
+              </a>
+            </div>
+            <div class="newsItem">
+              <a href="#">
+                <div class="newsItem update3"></div>
+                <h3 class="news3Detail">FINHACK 2019</h3>
+                <h4 class="news4Detail">
+                  PT Bank Central Asia,Tbk menyelenggarakan sebuah rangkaian
+                  acara seputar Teknologi Informasi (TI) yang diadakan setiap
+                  tahun yang dinamakan Finhacks, final-nya diadakan pada tanggal
+                  23 November 2019 yang bertempat di The Hall, Senayan City,
+                  lantai 8, Jakarta Selatan. Disini semua para praktisi TI
+                  berkumpul, berkolaborasi dan berinovasi dalam menciptakan
+                  solusi yang inovatif dalam bidang finansial. Di tahun ini tema
+                  yang diangkat adalah inovasi yang berbasis teknologi
+                  Blockchain.
+                </h4>
+              </a>
+            </div>
           </div>
-        </section>
-
-        <section id="new" class="bagian">
-          <article>
-            <h2>News Update</h2>
-            <div class="newsupdate">
-              <h3>Indocyber is Announced a Partnership with KewMann</h3>
-              <img src="./images/update 1.png" alt="update1" />
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam,
-                odio magnam cum dolor ad quod nisi! Dolores enim id molestiae
-                nisi laudantium iusto labore, maxime fugiat dolorum sequi
-                impedit ab.
-                <br />
-                <a href="#"> Continue Reading..</a>
-              </p>
-            </div>
-          </article>
-
-          <article>
-            <div class="newsupdate">
-              <h3>OIO appointed by Indocyber Global Teknologi</h3>
-              <img src="./images/update2.png" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel,
-                corporis labore, animi impedit dolorem recusandae amet maxime
-                non mollitia placeat laboriosam officia dicta ipsam dolorum esse
-                fuga! Doloribus, inventore nisi! <br />
-                <a href="#"> Continue Reading..</a>
-              </p>
-            </div>
-          </article>
-
-          <article>
-            <div class="newsupdate">
-              <h3>FINHACK 2019</h3>
-              <img src="./images/update3.png" alt="" />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deleniti aspernatur tempore at, odit quam dolorum nihil ad
-                aperiam recusandae, harum laudantium quidem fugit suscipit ut!
-                Laborum totam nostrum corporis. Quisquam! <br />
-                <a href="#"> Continue Reading.. </a>
-              </p>
-            </div>
-          </article>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <!-- Footer -->
     <footer>
       <div class="slogan">
-        <p>Copyright &copy; Indocyber 2023</p>
+        <h5 class="tulisan">
+          Copyright © 2021 by PT. Indocyber Global Teknologi
+        </h5>
+        <div class="tulisan">Follow us</div>
       </div>
     </footer>
   </body>

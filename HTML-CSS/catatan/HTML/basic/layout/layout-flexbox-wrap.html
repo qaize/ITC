@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox-wrap</title>
+
+    <!-- Urutan eksekusi 
+        diperhatikan saat selector properties
+        se level -->
+
+    <!-- flex memiliki turunan berturut
+        1.flex grow
+        2.flex shrink
+        3.flex basis
+
+        flex : 1(1/0) 2(1/0) 3(% px)
+        
+        -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 36px;
+        font-family: sans-serif;
+      }
+      .container {
+        border: 5px dotted orange;
+        display: flex;
+        /* flex-direction: column; */
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+      .el {
+      }
+      .el--1 {
+        flex: 1;
+        /* flex-shrink: 1; */
+        /* flex-grow: 1; */
+        flex-basis: 200px;
+        background-color: #afc;
+        order: 4;
+      }
+      .el--2 {
+        flex: 2;
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+        flex-basis: 300px;
+        background-color: #c7a;
+        order: 3;
+      }
+      .el--3 {
+        flex: 1;
+        /* flex-grow: 1; */
+        /* flex-shrink: 1; */
+        flex-basis: 200px;
+        background-color: rgb(241, 107, 119);
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="el el--1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, autem!
+      </div>
+      <div class="el el--2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+        aliquam.
+      </div>
+      <div class="el el--3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, illum.
+      </div>
+    </div>
+  </body>
+</html>
