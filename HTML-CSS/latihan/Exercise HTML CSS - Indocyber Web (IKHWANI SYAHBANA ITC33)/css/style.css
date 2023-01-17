@@ -162,11 +162,13 @@ nav a:active {
 
 /* form */
 form {
-  flex: 4;
+  /* flex: 1;
   position: static;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 5px; */
+
+  padding: 10px;
 }
 
 /* BODY */
@@ -497,6 +499,9 @@ section div form button:hover {
   border: 1px solid #bdbdbd;
   display: flex;
   flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10%;
 }
 
 .sideTitle {
@@ -704,4 +709,7 @@ table tbody td {
 }
 
 .add {
+}
+.inputCan {
+  padding: 5%;
 }

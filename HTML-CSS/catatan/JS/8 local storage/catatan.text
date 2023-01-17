@@ -1,0 +1,14 @@
+localstorage mirip seperti hashmap
+parameternya (key,value)
+
+window.localstorage
+window.localstorage.setItem(key,val)
+localstorage.getItem(key)
+
+
+  //   update nillai
+  localStorage.setItem(2, (document.querySelector(".val").textContent = "z"));
+  // mengamiibl nilai
+  localStorage.getItem(1);
+  // menghapus item
+  localStorage.removeItem(1);

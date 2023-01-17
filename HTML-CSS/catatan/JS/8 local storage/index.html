@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form action="">
+      <input class="set" type="submit" value="set" />
+      <input class="get" type="submit" value="get" />
+      <input class="remove" type="submit" value="remove" />
+      <input class="clear" type="submit" value="clear" />
+      <input class="refresh" type="submit" value="refresh" />
+      <div class="group">
+        <label for="val">values</label>
+        <input class="val" type="text" name="value" id="val" />
+      </div>
+      <div>
+        <label for="key">key</label>
+        <input class="key" type="text" name="key" id="key" />
+      </div>
+    </form>
+
+    <table style="border: 2px solid black">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Nilai</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="hasilGet"></div>
+  </body>
+</html>
