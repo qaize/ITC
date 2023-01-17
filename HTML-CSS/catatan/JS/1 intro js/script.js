@@ -53,35 +53,35 @@ console.log(test.toUpperCase());
 // orange - hati-hati
 // merah - if trobos true polisi true - tilang
 
-// let state = prompt("Warna Lampu ?");
-// let polisi = confirm("Apakah ada Polisi ?");
-// let sifatPengemudi = confirm("Apakah anda keras kepala ?");
+let state = prompt("Warna Lampu ?");
+let polisi = confirm("Apakah ada Polisi ?");
+let sifatPengemudi = confirm("Apakah anda keras kepala ?");
 
-// let kembalian = "";
-// switch (state) {
-//   case "hijau": {
-//     kembalian = "Melaju";
-//     break;
-//   }
-//   case "kuning":
-//     kembalian = "Hati-Hati";
-//     break;
-//   case "merah":
-//     if (polisi && sifatPengemudi) {
-//       kembalian = "Busted";
-//       break;
-//     } else if (!polisi && sifatPengemudi) {
-//       kembalian = "Tewas";
-//       break;
-//     } else {
-//       kembalian = "Berhenti";
-//       break;
-//     }
-//   default:
-//     kembalian = "bukan lampu lalu lintas";
-// }
+let kembalian = "";
+switch (state) {
+  case "hijau": {
+    kembalian = "Melaju";
+    break;
+  }
+  case "kuning":
+    kembalian = "Hati-Hati";
+    break;
+  case "merah":
+    if (polisi && sifatPengemudi) {
+      kembalian = "Busted";
+      break;
+    } else if (!polisi && sifatPengemudi) {
+      kembalian = "Tewas";
+      break;
+    } else {
+      kembalian = "Berhenti";
+      break;
+    }
+  default:
+    kembalian = "bukan lampu lalu lintas";
+}
 
-// window.alert(kembalian);
+window.alert(kembalian);
 
 console.log(1 + "1" + 1 + 1);
 console.log("1" + (1 + 1 + 1));

@@ -1,0 +1,7 @@
+
+git init
+git add *
+git commit -m "4 commit"
+git branch -M main
+git remote add origin https://github.com/qaize/ITC.git
+git push -u origin main

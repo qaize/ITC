@@ -1,0 +1,24 @@
+document
+
+document.element
+
+document.querrySelectorAll(".class")
+document.querrySelector(".class") - >indeks pertama
+document.querrySelector(".class")[0] - >indeks spesifik
+
+
+querryselector - > dapat di tampilkan
+
+
+
+Menambahkan class pada sebuah element
+
+objekList QuerrySelector -> objek.classList;
+objekList QuerrySelector -> objek.classList.add("namaclass")
+objekList QuerrySelector -> objek.classList.remove("namaclass")
+
+
+
+
+document.querrySelector("Button")
+

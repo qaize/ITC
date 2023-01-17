@@ -1,0 +1,4 @@
+BOM - > browser object Model
+Berisikan tambahan objek
+
+JS -> lebih ke behavior tampilan web

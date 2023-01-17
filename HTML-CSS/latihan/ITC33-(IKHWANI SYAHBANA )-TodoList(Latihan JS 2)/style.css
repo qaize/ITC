@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+
+.todo-list {
+  order: 2;
+  display: flex;
+
+  flex-wrap: wrap;
+  gap: 10px;
+
+  color: #fff;
+
+  justify-content: center;
+}
+
+.day {
+  flex: 0 1 300px;
+  background-color: #3d3fb9;
+  min-height: 200px;
+  border-radius: 10px;
+}
+.day::before {
+  display: block;
+  background-color: #101652;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.monday::before {
+  content: "Monday";
+}
+.tuesday::before {
+  content: "Tuesday";
+}
+.wednesday::before {
+  content: "Wednesday";
+}
+.thursday::before {
+  content: "Thursday";
+}
+.friday::before {
+  content: "Friday";
+}
+
+.todo {
+  padding: 5px;
+  margin: 0 0 5px 0;
+  background-color: #7b7cdd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo:nth-child(even) {
+  padding: 5px;
+  margin: 0 0 5px 0;
+  background-color: #9d9edd;
+}
+
+form {
+  width: 250px;
+  /* height: 200px; */
+  background-color: #3d3fb9;
+  border: solid 5px #101652;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+form::before {
+  display: block;
+  width: 100%;
+  text-align: center;
+  content: "TO DO!";
+  font-size: 36px;
+  color: white;
+  padding: 10px 0;
+  margin: 0 0 20px;
+}
+
+input[type="text"] {
+  font-size: 16px;
+  padding: 10px;
+  align-self: stretch;
+}
+
+input[type="submit"] {
+  align-self: stretch;
+  display: block;
+}
