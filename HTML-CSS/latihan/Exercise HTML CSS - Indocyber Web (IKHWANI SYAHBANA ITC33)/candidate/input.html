@@ -9,6 +9,35 @@
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <div class="inputCan"></div>
+    <div class="inputCan">
+      <form class="formCandidate" action="">
+        <div class="group">
+          <label for="nama"> Nama : </label>
+          <input class="nama" type="text" id="nama" />
+        </div>
+        <div class="group">
+          <label for="phone"> No HP : </label>
+          <input class="phone" type="number" id="phone" />
+        </div>
+        <div class="group">
+          <label for="email">Email : </label>
+          <input class="email" type="text" id="email" />
+        </div>
+        <div class="group">
+          <label for="domisili"> Domisili : </label>
+          <input class="domisili" type="text" id="domisili" />
+        </div>
+        <div class="group">
+          <label for="univ">University : </label>
+          <input class="univ" type="text" id="univ" />
+        </div>
+        <input
+          class="tambahin"
+          type="button"
+          value="tambah mahasiswa"
+          onclick="manageData()"
+        />
+      </form>
+    </div>
   </body>
 </html>

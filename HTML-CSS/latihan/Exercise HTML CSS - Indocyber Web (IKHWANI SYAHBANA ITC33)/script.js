@@ -1,103 +1,167 @@
 "use strict";
 
-let listKandidat = [];
 let parseData = JSON.parse(localStorage.getItem("daftarKandidat"));
-let refresh = document.querySelector(".refresh");
-let buttonAdd = document.querySelector(".tambahin");
-buttonAdd.addEventListener("click", function () {
-  // event.defaultPrevented();
+let listKandidat = [];
+let id = "";
+// event.defaultPrevented();
+(function main() {
+  selectData();
+})();
+
+function manageData() {
   let inputNama = document.querySelector(".nama").value;
   let inputPhone = Number(document.querySelector(".phone").value);
   let inputEmail = document.querySelector(".email").value;
   let inputDomisili = document.querySelector(".domisili").value;
   let inputUniversity = document.querySelector(".univ").value;
-
-  if (parseData == null) {
-    listKandidat.push(
-      objectMaker(
-        inputNama,
-        inputPhone,
-        inputEmail,
-        inputDomisili,
-        inputUniversity
-      )
-    );
+  let data = {
+    name: inputNama,
+    phone: inputPhone,
+    email: inputEmail,
+    domisili: inputDomisili,
+    university: inputUniversity,
+  };
+  if (
+    inputNama.trim() == "" ||
+    inputPhone == 0 ||
+    inputEmail.trim() == "" ||
+    inputDomisili.trim() == "" ||
+    inputUniversity.trim() == ""
+  ) {
+    alert("fill all the field");
   } else {
-    listKandidat = parseData;
-    listKandidat.push(
-      objectMaker(
-        inputNama,
-        inputPhone,
-        inputEmail,
-        inputDomisili,
-        inputUniversity
-      )
-    );
+    if (id == "") {
+      if (parseData == null) {
+        listKandidat.push(data);
+        localStorage.setItem("daftarKandidat", JSON.stringify(listKandidat));
+        // localStorage.clear();
+      } else {
+        listKandidat = parseData;
+        listKandidat.push(data);
+        localStorage.setItem("daftarKandidat", JSON.stringify(listKandidat));
+        // localStorage.clear();
+      }
+    }
   }
-  localStorage.setItem("daftarKandidat", JSON.stringify(listKandidat));
-});
+  localStorage;
+}
 
-function objectMaker(nama, phone, email, domisili, university) {
-  let z = {
-    name: nama,
-    phone: phone,
-    email: email,
-    domsili: domisili,
-    university: university,
+function selectData() {
+  listKandidat = getData();
+  if (listKandidat != null) {
+    let html = " ";
+    let inp = " ";
+    let tr;
+    let tdNama;
+    let tdNomer;
+    let tdemail;
+    let tddomicile;
+    let tdUniv;
+    let tdAction;
+
+    for (let key in listKandidat) {
+      // tr = document.createElement("tr");
+      // tdNama = document.createElement("td");
+      // tdNomer = document.createElement("td");
+      // tdemail = document.createElement("td");
+      // tddomicile = document.createElement("td");
+      // tdUniv = document.createElement("td");
+      // tdAction = document.createElement("td");
+      // tdNama.textContent = listKandidat[key].name;
+      // tdNomer.textContent = listKandidat[key].phone;
+      // tdemail.textContent = listKandidat[key].email;
+      // tddomicile.textContent = listKandidat[key].domsili;
+      // tdUniv.textContent = listKandidat[key].university;
+      // const aDel = document.createElement("a");
+      // const aEdit = document.createElement("a");
+      // const ButtonEdit = document.createElement("button");
+      // const ButtonDelete = document.createElement("button");
+      // const iaDel = document.createElement("i");
+      // const iaEdit = document.createElement("i");
+      // ButtonEdit.append(iaEdit);
+      // ButtonDelete.append(iaDel);
+      // aEdit.append(ButtonEdit);
+      // aDel.append(ButtonDelete);
+      // tdAction.append(aDel, aEdit);
+
+      // ButtonEdit.classList.add("buttonEdit");
+      // ButtonDelete.classList.add("buttonDelete");
+      // iaDel.classList.add("fas");
+      // iaDel.classList.add("fa-hammer");
+      // iaEdit.classList.add("fas");
+      // iaEdit.classList.add("fa-angry");
+      // aDel.classList.add("delete");
+      // tr.append(tdNama, tdNomer, tdemail, tddomicile, tdUniv, tdAction);
+      // document.getElementById("root").append(tr);
+
+      inp = `<tr><td>${listKandidat[key].name}</td><td>${listKandidat[key].phone}</td><td>${listKandidat[key].email}</td>
+      <td>${listKandidat[key].domisili}</td><td>${listKandidat[key].university}</td><td><a href= "javascript:void(0)" onclick="hapus(${key})">hapus</a>
+      <a id="myBtn"  href= "javascript:void(0)"  onclick="editData(${key})">Edit</a></td></tr>`;
+      html = html + inp;
+    }
+    document.getElementById("root").innerHTML = html;
+  }
+}
+
+function editData() {
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on the button, open the modal
+  btn.onclick = function () {
+    modal.style.display = "block";
   };
 
-  return z;
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }
 
-for (const key in JSON.parse(localStorage.getItem("daftarKandidat"))) {
-  const tr = document.createElement("tr");
-  const mhsBaru = document.querySelector("tbody");
-  const tdNama = document.createElement("td");
-  const tdNomer = document.createElement("td");
-  const tdemail = document.createElement("td");
-  const tddomicile = document.createElement("td");
-  const tdUniv = document.createElement("td");
-  const tdAction = document.createElement("td");
-  const aDel = document.createElement("a");
-  const aEdit = document.createElement("a");
-  const ButtonEdit = document.createElement("button");
-  const ButtonDelete = document.createElement("button");
-  const iaDel = document.createElement("i");
-  const iaEdit = document.createElement("i");
-  ButtonEdit.append(iaEdit);
-  ButtonDelete.append(iaDel);
-  aEdit.append(ButtonEdit);
-  aDel.append(ButtonDelete);
-  tdAction.append(aEdit);
-  tdAction.append(aDel);
-  mhsBaru.append(tr);
-  tdNama.textContent = parseData[key].name;
-  tdNomer.textContent = parseData[key].phone;
-  tdemail.textContent = parseData[key].email;
-  tddomicile.textContent = parseData[key].domsili;
-  tdUniv.textContent = parseData[key].university;
-  ButtonEdit.classList.add("buttonEdit");
-  ButtonDelete.classList.add("buttonDelete");
-  aDel.classList.add("delete");
-  aEdit.classList.add("Edit");
-  iaDel.classList.add("fas");
-  iaDel.classList.add("fa-hammer");
-  iaEdit.classList.add("fas");
-  iaEdit.classList.add("fa-angry");
-  tr.append(tdNama);
-  tr.append(tdNomer);
-  tr.append(tdemail);
-  tr.append(tddomicile);
-  tr.append(tdUniv);
-  tr.append(tdAction);
+function hapus(rid) {
+  let listKandidat = getData();
+  listKandidat.splice(rid, 1);
+  localStorage.setItem("daftarKandidat", JSON.stringify(listKandidat));
+  selectData();
+}
 
-  let deleteList = document.querySelector(".delete");
-  deleteList.addEventListener("click", (event) => {
-    // event.preventDefault();
-    listKandidat = parseData;
-    listKandidat.splice(key, 1);
+function getDataLocal() {
+  // unset 0
+  const ajax = new XMLHttpRequest();
+  //   1
+  ajax.open("GET", "http://127.0.0.1:5501/data.json");
+  ajax.send();
+  ajax.onreadystatechange = () => {
+    console.log(`state : ${ajax.readyState} status : ${ajax.status} `);
+  };
+  // fungsi load data kalo ready state 4
+  ajax.onload = function () {
+    listKandidat = JSON.parse(ajax.responseText);
     localStorage.setItem("daftarKandidat", JSON.stringify(listKandidat));
-    listKandidat = parseData;
-    location.reload();
-  });
+    selectData();
+  };
 }
+
+function clearData() {
+  localStorage.clear();
+  location.reload();
+}
+
+function getData() {
+  return JSON.parse(localStorage.getItem("daftarKandidat"));
+}
+
+// let deleteList = document.querySelector(".delete");

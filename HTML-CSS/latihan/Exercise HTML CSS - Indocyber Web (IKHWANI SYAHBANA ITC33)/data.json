@@ -1,0 +1,30 @@
+[
+  {
+    "name": "iwan",
+    "phone": 818011,
+    "email": "iwan@mail",
+    "domisili": "Mataram",
+    "university": "UNRAM"
+  },
+  {
+    "name": "abul",
+    "phone": 818012311,
+    "email": "abul@mail",
+    "domisili": "Mataram",
+    "university": "UNRAM"
+  },
+  {
+    "name": "daffa",
+    "phone": 81123011,
+    "email": "daffa@mail",
+    "domisili": "Mataram",
+    "university": "UNRAM"
+  },
+  {
+    "name": "zen",
+    "phone": 8180121,
+    "email": "zen@mail",
+    "domisili": "Mataram",
+    "university": "UNRAM"
+  }
+]

@@ -7,9 +7,18 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/FA/css/all.min.css" />
-    <script src="/script.js" defer></script>
   </head>
   <body>
+    <!-- <button id="myBtn">Open Modal</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
     <div class="gridHome">
       <div class="gridLayout">
         <div class="sideTitle">
@@ -53,81 +62,55 @@
       </div>
       <div class="gridLayout">
         <header>
-          <nav></nav>
+          <nav class="navField">
+            <div class="navitem">a</div>
+            <div class="navitem">a</div>
+            <div class="navitem">a</div>
+          </nav>
         </header>
-        <h1>Candidate</h1>
-        <form class="formCandidate" action="">
-          <div class="group">
-            <label for="nama"> Nama : </label>
-            <input class="nama" type="text" id="nama" />
+        <div class="isiGrid">
+          <h1>Candidate</h1>
+          <div>
+            <input
+              class="bajax"
+              type="button"
+              value="Tambah data Dummy"
+              onclick="getDataLocal()"
+            />
+            <input
+              class="bajax"
+              type="button"
+              value="Clear seluruh Data"
+              onclick="clearData()"
+            />
           </div>
-          <div class="group">
-            <label for="phone"> No HP : </label>
-            <input class="phone" type="number" id="phone" />
-          </div>
-          <div class="group">
-            <label for="email">Email : </label>
-            <input class="email" type="text" id="email" />
-          </div>
-          <div class="group">
-            <label for="domisili"> Dimisili : </label>
-            <input class="domisili" type="text" id="domisili" />
-          </div>
-          <div class="group">
-            <label for="univ">University : </label>
-            <input class="univ" type="text" id="univ" />
-          </div>
-          <div class="group">
-            <input class="tambahin" type="submit" value="tambah mahasiswa" />
-          </div>
-        </form>
-        <table class="tmhs">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Phone Number</th>
-              <th>Email</th>
-              <th>Domicile</th>
-              <th>University</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Nur Wahid</td>
-              <td>081231284790</td>
-              <td>nur.wahid@gmail.com</td>
-              <td>Kebumen</td>
-              <td>Universitas Teknologi Yogyakarta</td>
-              <td class="action">
-                <a href="#">
-                  <button class="buttonDelete">
-                    <i class="fas fa-hammer"></i>
-                  </button>
-                </a>
-                <a href="#">
-                  <button class="buttonEdit">
-                    <i class="fas fa-angry"></i>
-                  </button>
-                </a>
-              </td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="5">1 from 3</td>
-              <td class="footTable">
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-              </td>
-            </tr>
-          </tfoot>
-        </table>
+          <table class="tmhs">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Email</th>
+                <th>Domicile</th>
+                <th>University</th>
+                <th colspan="1">Action</th>
+              </tr>
+            </thead>
+            <tbody id="root"></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">1 from 3</td>
+                <td class="footTable">
+                  <a href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
       <div class="gridLayout gridMerge"></div>
     </div>
-
-    <!-- <footer></footer> -->
   </body>
+  <script src="/script.js"></script>
 </html>
